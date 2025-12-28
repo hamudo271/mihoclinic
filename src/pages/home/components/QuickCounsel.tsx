@@ -84,7 +84,7 @@ export default function QuickCounsel() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed right-8 top-1/2 -translate-y-1/2 bg-primary text-white px-6 py-4 rounded-l-full shadow-lg hover:bg-[#F50057] transition-all z-50 cursor-pointer whitespace-nowrap"
+        className="fixed right-8 top-1/2 -translate-y-1/2 bg-primary text-white px-6 py-4 rounded-l-full shadow-lg hover:bg-[#3A0060] transition-all z-50 cursor-pointer whitespace-nowrap"
       >
         빠른 상담 문의
       </button>
@@ -156,7 +156,7 @@ export default function QuickCounsel() {
 
                 <button
                   onClick={() => setStep(2)}
-                  className="w-full py-3 bg-primary text-white rounded-lg hover:bg-[#F50057] transition-all cursor-pointer whitespace-nowrap"
+                  className="w-full py-3 bg-primary text-white rounded-lg hover:bg-[#3A0060] transition-all cursor-pointer whitespace-nowrap"
                 >
                   다음
                 </button>
@@ -232,7 +232,7 @@ export default function QuickCounsel() {
                   </button>
                   <button
                     onClick={() => setStep(3)}
-                    className="flex-1 py-3 bg-primary text-white rounded-lg hover:bg-[#F50057] transition-all cursor-pointer whitespace-nowrap"
+                    className="flex-1 py-3 bg-primary text-white rounded-lg hover:bg-[#3A0060] transition-all cursor-pointer whitespace-nowrap"
                   >
                     다음
                   </button>
@@ -314,7 +314,7 @@ export default function QuickCounsel() {
                   </button>
                   <button
                     onClick={handleSubmit}
-                    className="flex-1 py-3 bg-primary text-white rounded-lg hover:bg-[#F50057] transition-all cursor-pointer whitespace-nowrap"
+                    className="flex-1 py-3 bg-primary text-white rounded-lg hover:bg-[#3A0060] transition-all cursor-pointer whitespace-nowrap"
                   >
                     상담 신청
                   </button>

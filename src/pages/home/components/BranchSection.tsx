@@ -110,7 +110,7 @@ export default function BranchSection() {
 
         <a
           href="/reservation"
-          className="flex items-center justify-center gap-3 max-w-md mx-auto px-8 py-4 bg-primary text-white rounded-full hover:bg-[#F50057] transition-all cursor-pointer"
+          className="flex items-center justify-center gap-3 max-w-md mx-auto px-8 py-4 bg-primary text-white rounded-full hover:bg-[#3A0060] transition-all cursor-pointer"
         >
           <span className="font-medium whitespace-nowrap">온라인 예약 바로가기</span>
           <i className="ri-calendar-check-line text-xl"></i>

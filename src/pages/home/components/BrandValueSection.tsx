@@ -138,7 +138,7 @@ export default function BrandValueSection() {
 
             <a
               href="/brandReservation.php"
-              className="inline-block px-8 py-4 bg-primary text-white rounded-full hover:bg-[#F50057] transition-all cursor-pointer whitespace-nowrap"
+              className="inline-block px-8 py-4 bg-primary text-white rounded-full hover:bg-[#3A0060] transition-all cursor-pointer whitespace-nowrap"
             >
               미호 전지점 <strong>바로가기</strong>
             </a>
