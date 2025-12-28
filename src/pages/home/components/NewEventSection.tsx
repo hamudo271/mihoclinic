@@ -119,7 +119,7 @@ export default function NewEventSection() {
         .event-pagination .swiper-pagination-bullet-active {
           width: 24px;
           border-radius: 4px;
-          background: #FF80AB;
+          background: #4E0080;
         }
       `}</style>
         </section>

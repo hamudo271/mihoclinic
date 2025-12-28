@@ -8,7 +8,7 @@ export default {
         sans: ['Noto Sans KR', 'sans-serif'],
       },
       colors: {
-        primary: '#FF80AB',
+        primary: '#4E0080',
         secondary: '#F5F5F5',
       },
     },
