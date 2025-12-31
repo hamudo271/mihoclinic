@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* 
+C00262 르네
+*/
+
+@import url('../../fonts.googleapis.com/css2%EF%B9%96family=EB+Garamond%EF%B9%95wght@400%EF%B9%94500%EF%B9%94600%EF%B9%94700%EF%B9%94800&display=swap.css');
+
+*{font-family:'SUIT', 'Noto Sans KR', sans-serif; line-height:normal; letter-spacing:-0.1pt; color:#333;}
+.mainTitle{position:relative;}
+.mainTitle p{font-size:14pt; color:#c6818d; letter-spacing:2pt; font-weight:500; padding-bottom:10px;}
+.mainTitle h3{font-size:28pt; color:#333333; line-height:1.5; font-weight:400;}
+.mainTitle h3 b{font-weight:600;}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* [세션시술전후] 6번배너 */
+.MainSectionBnf{content:""; clear:both; display:block; position:relative; width:100%; background-image:url('../img/C00262/MainSectionBnf_Bg.jpg'); background-repeat:no-repeat; background-size:cover; padding:195px 0 85px 0;}
+.MainSectionBnf .Inner{width:100%; position:relative;}
+	/* 타이틀 */
+	.MainSectionBnf .mainTitle{text-align:center;}
+	.MainSectionBnf .mainTitle h3{color:#fff;}
+	.MainSectionBnf .mainTitle h3 b{font-weight:700; color:#fff;}
+	
+	/* 슬라이드 */
+	.MainSectionBnf .SwiperBnf{width:730px; margin:45px auto 0 auto; display:block;}
+	.MainSectionBnf .SwiperBnf .ImgBox{}
+	.MainSectionBnf .SwiperBnf .ImgBox img{width:100%;}
+	.MainSectionBnf .SwiperBnf + p{font-size:12pt; color:#51272e; font-weight:500; line-height:1.5; display:block; text-align:center; margin-top:32px; letter-spacing:-0.5px;}
+	
+	/* 슬라이드_버튼 */
+	.MainSectionBnf .SwiperBnf_Arrow{position:absolute; top:40%; width:910px; margin-left:-455px; z-index:2; left:50%;}
+	.MainSectionBnf .SwiperBnf_Arrow > div{position:relative; display:inline-table; vertical-align:middle; width:fit-content; text-align:left;}
+	.MainSectionBnf .SwiperBnf_Arrow > div img{cursor:pointer; transition-duration:300ms;}
+	.MainSectionBnf .SwiperBnf_Arrow > div img:hover{opacity:.8; transition-duration:300ms;}
+	.MainSectionBnf .SwiperBnf_Arrow .SwiperBnf_Left{}
+	.MainSectionBnf .SwiperBnf_Arrow .SwiperBnf_Left img{}
+	.MainSectionBnf .SwiperBnf_Arrow .SwiperBnf_Right{float:right;} 
+	.MainSectionBnf .SwiperBnf_Arrow .SwiperBnf_Right img{} 
+	
+	/* 링크이동버튼 */
+	.MainSectionBnf .LinkBox{position:relative; width:730px; margin:0 auto; margin-top:48px; display:block;}
+	.MainSectionBnf .LinkBox a{display:table; width:100%; border-radius:15px; text-align:center; background-color:#884c56; transition-duration:300ms; padding:17px 0;}
+	.MainSectionBnf .LinkBox a:hover{background-color:#66333b; transition-duration:300ms;}
+	.MainSectionBnf .LinkBox span{display:inline-table; vertical-align:middle; font-size:16pt; letter-spacing:0; font-weight:500; color:#fff; line-height:1; padding-right:10px;}
+	.MainSectionBnf .LinkBox img{display:inline-table; vertical-align:middle;}
+	
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* [세션01] 1번배너 */
+.MainSection01{content:""; clear:both; display:block; position:relative; width:100%;}
+.MainSection01{padding:0px;}
+.MainSection01 .Inner{width:100%; position:relative;}
+	/*텍스트*/
+	.MainSection01 .TextBox{display:block; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:100; text-align:center;}
+	.MainSection01 .TextBox p{font-family:'EB Garamond','Noto Sans KR', sans-serif; font-size:14pt; color:#fff;}
+	.MainSection01 .TextBox h3{font-size:28pt; line-height:1.5; font-weight:600; padding:35px 0; color:#fff;}
+	.MainSection01 .TextBox h5{font-size:14pt; line-height:1.5; font-weight:300; color:#fff;}
+	.MainSection01 .TextBox h5 span{font-weight:600; text-decoration: underline; color:#fff;}
+	/*스크롤바*/
+	.MainSection01 .scroll{position:absolute; left:50%; bottom:0; transform:translate(-50%,0);}
+	.MainSection01 .scroll .bar{position:absolute; left:50%; bottom:0; height:50px; width:2px; background:rgba(255,255,255,0.5); overflow:hidden;}
+	.MainSection01 .scroll .bar::after{content:''; animation:scrollSqr 1.8s ease infinite; position:absolute; left:0; top:0; width:2px; height:10px; background:#fff; text-align:center;}
+	.MainSection01 .scroll p{color:#fff; font-weight:500; font-size:12pt; padding-bottom:60px;}
+	@keyframes scrollSqr{ 0%{top:0;} 100%{top:100%;} }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* [세션02] 2번배너 */
+.MainSection02{content:""; clear:both; display:block; position:relative; width:100%; background:#f7f7f7; padding-top:120px; padding-bottom:150px;}
+.MainSection02 .Inner{position:relative;}
+.MainSection02::before{content:''; background:url('../img/C00262/mainSection02_back.png')no-repeat; position:absolute; right:0; top:0; width:500px; height:100%;}
+.MainSection02 .mainTitle{text-align:center;}
+	/*박스*/
+	.MainSection02 .Banner02{position:relative; display:table;}
+	.MainSection02 .Banner02 .BannerThum{position:relative; display:inline-table; width:50%; padding:0 10px; padding-top:60px;}
+	.MainSection02 .Banner02 .BannerThum img{border-radius:25px;}
+	/*박스 텍스트*/
+	.MainSection02 .BannerThum .TextBox{padding-top:30px;}
+	.MainSection02 .BannerThum .TextBox p{font-size:14pt; color:#c6818d; letter-spacing:1pt; font-weight:500; padding-bottom:10px;}
+	.MainSection02 .BannerThum .TextBox h3{font-size:16pt; font-weight:700;}
+	.MainSection02 .BannerThum .TextBox h5{font-weight:400; font-size:14pt; line-height:1.5; padding-top:16px; padding-bottom:40px;}
+	/*링크*/
+	.MainSection02 .BannerThum .TextBox a{border:1px solid #a8525d; border-radius:10px; padding:10px 20px; position:relative; transition:0.2s;}
+	.MainSection02 .BannerThum .TextBox a p{display:inline-block; color:#a8525d; font-size:14pt; font-weight:700; letter-spacing:-0.1pt; vertical-align:middle; padding-bottom:0; transition:0.2s;}
+	.MainSection02 .BannerThum .TextBox a span{display:inline-block; vertical-align:middle; width:40px; height:1px; background:#a8525d; position:relative; margin-left:10px;}
+	.MainSection02 .BannerThum .TextBox a span::before{content:''; width:8px; height:1px; background:#a8525d; position:absolute; right:0; bottom:3px; transform:rotate(45deg);}
+	.MainSection02 .BannerThum .TextBox a:hover{background:#a8525d;}
+	.MainSection02 .BannerThum .TextBox a:hover p{color:#fff;}
+	.MainSection02 .BannerThum .TextBox a:hover span{background:#fff;}
+	.MainSection02 .BannerThum .TextBox a:hover span::before{background:#fff;}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* [세션03] 3번배너 */
+.MainSection03{content:""; clear:both; display:block; position:relative; width:100%; padding-top:120px; padding-bottom:0;}
+.MainSection03 .Inner{position:relative; padding:0;}
+.MainSection03 .mainTitle{text-align:left; position:absolute; left:58%; top:120px; z-index:1;}
+	/*슬라이드-이미지*/
+	.MainSection03 .MultiImgSlider .slick-slide li .ThumBox{background:transparent;}
+	.MainSection03 .MultiImgSliderArea{width:1300px; margin:0 auto;}
+	.MainSection03 .slick-slide{z-index:0 !important;}
+	.MainSection03 .MultiImgSliderArea .Inner{min-width:0;}
+	.MainSection03 .MultiImgSliderArea .sldWrap1{width:55%; display:inline-block; vertical-align:top; position:relative;}
+	.MainSection03 .MultiImgSliderArea .sldWrap2{width:40%; display:inline-block;  vertical-align:top; padding-left:80px; margin-top:180px; position:relative;} 
+	.MainSection03 .MultiImgSliderArea .sldWrap2 .MultiImgSlider{height:680px;}
+	.MainSection03 .MultiImgSliderArea .sldWrap2 .MultiImgSlider .slick-track{transform:translateY(0) !important;}
+	.MainSection03 .sldWrap2 .slick-slide{height:55px;}	
+	
+	/*슬라이드-페이징*/
+	.MainSection03 .swbtn_box{background:#fff; position:absolute; bottom:0; right:0; width:fit-content; padding:20px 40px;}
+	.MainSection03 .swbtn_box .pagenumber3{display:inline-block; color:#999999;}
+	.MainSection03 .swbtn_box .pagenumber3 span:first-child{color:#a8525d; font-weight:600; padding-right:5px;}
+	.MainSection03 .swbtn_box .pagenumber3 span:last-child{padding-left:5px;}
+	
+	.MainSection03 .pagenumber3{display:inline-block; width:fit-content;}
+	.MainSection03 .pagenumber3	li{display:none; font-weight:400; color:#999999; font-size:14pt; vertical-align:middle;}
+	.MainSection03 .pagenumber3 li.slick-active{display:inline-block;}
+	/*슬라이드 -프로그래스바*/
+	.MainSection03 .swbtn_box .progress3{position:relative; display:inline-block; width:280px; height:2px; background:#ccc; vertical-align:middle; margin:0 20px;}
+	.MainSection03 .swbtn_box .progress3.active ::after{content:''; position:absolute; background:#333333; width:1px; height:2px; top:0; left:0; animation:progressBar 3s forwards;}
+	@keyframes progressBar{ 0%{width:1px;} 100%{width:100%;} }
+	/*슬라이드 - 화살표*/
+	.MainSection03 .swbtn_box .arw_btn{position:relative; display:inline-block; vertical-align:middle;}
+	.MainSection03 .swbtn_box .sld_btn_prev{display:inline-block; color:#333; font-weight:500; font-size:16pt; font-family:'SUIT', 'Noto Sans KR', sans-serif; margin-right:20px; cursor:pointer;}
+	.MainSection03 .swbtn_box .sld_btn_next{display:inline-block; color:#333; font-weight:500; font-size:16pt; font-family:'SUIT', 'Noto Sans KR', sans-serif; cursor:pointer;}
+
+	/*슬라이드-텍스트*/
+	.MainSection03 .sldWrap2 .ThumTxt{text-align:left; width:100%; position:relative; transition:0.2s; cursor:pointer;}
+	.MainSection03 .sldWrap2 .ThumTxt h5{font-size:14pt; display:inline-block; vertical-align:middle; color:#999999; font-weight:500;}
+	.MainSection03 .sldWrap2 .ThumTxt h6{font-size:14pt; text-align:right; color:#a8525d; display:inline-block; vertical-align:middle; position:absolute; top:50%; transform:translate(0,-50%); right:50px; opacity:0;}
+	.MainSection03 .sldWrap2 .ThumTxt h6 span{font-size:14pt; color:#333333; padding-left:6px;}
+	.MainSection03 .sldWrap2 .ThumBox a{width:100%; height:100%; position:absolute; top:0; left:0; display:none;}
+	.MainSection03 .sldWrap2 .ThumTxt p{display:inline-block; vertical-align:middle; width:fit-content; position:absolute; top:50%; transform:translate(0,-50%); right:30px; opacity:0; font-size:18pt; font-weight:600; font-family:'SUIT', 'Noto Sans KR', sans-serif;}
+	/*슬라이드 - 텍스트액션*/
+	.MainSection03 .sldWrap2 .slick-current{height:88px;}	
+	.MainSection03 .sldWrap2 .slick-current .ThumTxt{background:#f2f2f2; padding:16px 30px; border-radius:10px;}
+	.MainSection03 .sldWrap2 .slick-current h5{font-size:16pt; font-weight:700; color:#333; transition:0.3s;}
+	.MainSection03 .sldWrap2 .slick-current h6{opacity:1;}
+	.MainSection03 .sldWrap2 .slick-current .ThumBox8 h6{display:none;}
+	.MainSection03 .sldWrap2 .slick-current .ThumBox a{display:block;}
+	.MainSection03 .sldWrap2 .slick-current p{opacity:1;}
+	.MainSection03 .sldWrap2 .ThumBox10 h6{display:none;}
+	.MainSection03 .sldWrap2 .ThumBox10 a{}
+	/*슬라이드 - 텍스트호버*/
+	.MainSection03 .sldWrap2 .slick-slide:hover{/*height:88px;*/}
+	.MainSection03 .sldWrap2 .slick-slide:hover .ThumTxt{/*background:#f2f2f2; padding:16px 30px; border-radius:10px;*/}
+	.MainSection03 .sldWrap2 .slick-slide:hover .ThumTxt h5{/*font-size:16pt;*/ font-weight:700; color:#333;}
+	.MainSection03 .sldWrap2 .slick-slide:hover .ThumTxt h6{/*opacity:1;*/}
+	.MainSection03 .sldWrap2 .slick-slide:hover .ThumTxt a{/*opacity:1;*/}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* [세션04] 4번배너 */
+.MainSection04{content:""; clear:both; display:block; position:relative; width:100%; background:linear-gradient(to bottom, #fefdfd, #f5ebed); padding-top:60px; padding-bottom:150px;}
+.MainSection04 .Inner{position:relative;}
+.MainSection04 .mainTitle{text-align:center; padding-bottom:80px;}
+	/*슬라이드*/
+	.MainSection04 .sectionWrap{position:relative;}
+	.MainSection04 .Banner_swiper04{width:100%;}
+	/*슬라이드 화살표*/
+	.MainSection04 .sectionWrap .swiper-button{position:absolute; top:50%; transform:translate(0,-50%);}
+	.MainSection04 .sectionWrap .swiper-button span{font-size:46pt; font-family:'SUIT', 'Noto Sans KR', sans-serif; font-weight:100; color:#c6818d; transition:0.3s; cursor:pointer;}
+	.MainSection04 .sectionWrap .swiper-button span:hover{color:#000;}
+	.MainSection04 .sectionWrap .swiper-button-prev4{left:-80px;}
+	.MainSection04 .sectionWrap .swiper-button-next4{right:-80px;}
+	/*슬라이드 버튼*/
+	.MainSection04 .sectionWrap .swiper-pagination4{position:relative; margin-top:30px; text-align:center;}
+	.MainSection04 .sectionWrap .swiper-pagination4 .swiper-pagination-bullet{background:#666666; width:6px; height:6px; margin:0 6px; opacity:1; border-radius:500px;}
+	.MainSection04 .sectionWrap .swiper-pagination4 .swiper-pagination-bullet-active{background:#a8525d; width:70px;}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* [세션05] 5번배너 */
+.MainSection05{content:""; clear:both; display:block; position:relative; width:100%; background:#fff; padding-top:120px; padding-bottom:150px;}
+.MainSection05 .Inner{position:relative; width:100%; min-width:100%;}
+.MainSection05 .mainTitle{text-align:center; padding-bottom:80px;}
+	/*약속*/
+	.MainSection05 .sectionWrap{width:100%; position:relative; text-align:center;}
+	.MainSection05 .sectionWrap .Banner05{width:100%; position:relative; display:table;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum{display:table-cell; width:calc(100%/4); background:#d2b4b8; padding:100px 0; cursor:pointer; transition:0.3s; border-right:1px solid #fff;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum:last-child{border:0;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum h5{font-family:'MaruBuri', 'Noto Sans KR', sans-serif; font-weight:400; font-size:32pt; letter-spacing:-0.2pt; color:#fff; transition:0.3s;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum .circle{display:block; width:10px; height:10px; border-radius:500px; background:#a8525d; margin:24px auto; transition:0.3s;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum p{color:#fff; font-size:16pt; line-height:1.5; font-weight:500; transition:0.3s; padding-top:0;}
+	/*호버*/
+	.MainSection05 .sectionWrap .Banner05 .BannerThum:hover{background:#fff2f4;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum:hover h5{color:#333;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum:hover .circle{background:#a8525d;}
+	.MainSection05 .sectionWrap .Banner05 .BannerThum:hover p{color:#333;}
+	/*하단텍스트*/
+	.MainSection05 .sectionWrap h6{font-size:16pt; font-weight:600; padding-top:80px;}
+	.MainSection05 .sectionWrap p{font-size:14pt; line-height:1.5; padding-top:40px;}
+

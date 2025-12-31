@@ -1,0 +1,56 @@
+/*문자열설정*/
+@charset "utf-8";
+
+@font-face {
+font-family: 'NotoSerif';
+font-style: normal;
+font-weight: 200;
+src: local('NotoSerif'), url('NotoSerif-Thin.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'NotoSerif';
+font-style: normal;
+font-weight: 300;
+src: local('NotoSerif'), url('NotoSerif-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'NotoSerif';
+font-style: normal;
+font-weight: 400;
+src: local('NotoSerif'), url('NotoSerif-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'NotoSerif';
+font-style: normal;
+font-weight: 500;
+src: local('NotoSerif'), url('NotoSerif-Medium.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'NotoSerif';
+font-style: normal;
+font-weight: 600;
+src: local('NotoSerif'), url('NotoSerif-SemiBold.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'NotoSerif';
+font-style: normal;
+font-weight: 700;
+src: local('NotoSerif'), url('NotoSerif-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'NotoSerif';
+font-style: normal;
+font-weight: 800;
+src: local('NotoSerif'), url('NotoSerif-Black.ttf') format('truetype');
+}

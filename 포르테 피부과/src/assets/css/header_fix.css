@@ -1,0 +1,82 @@
+/* Fix for Header conflicts between main and sub CSS */
+.header.type-main {
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header.type-main .logo .white {
+  opacity: 1 !important;
+  display: block !important;
+}
+
+.header.type-main .logo .color {
+  opacity: 0 !important;
+  display: block !important;
+}
+
+/* Scrolled state for main header */
+.header.type-main.scrolled {
+  background-color: #fff !important;
+  border-bottom: 1px solid #eee;
+}
+
+.header.type-main.scrolled .logo .white {
+  opacity: 0 !important;
+}
+
+.header.type-main.scrolled .logo .color {
+  opacity: 1 !important;
+}
+
+/* Fix Dropdown visibility */
+/* Assuming .nav-list__item:hover .nav-list--depth2 should be visible */
+.header .nav-list__item {
+  position: relative; /* Ensure absolute child aligns to this */
+}
+
+.header .nav-list__item:hover .nav-list--depth2 {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* If original CSS uses a different mechanism, we enforce standard hover block here */
+.nav-list--depth2 {
+  display: none; /* Default hidden */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white; /* Dropdown usually white? Or transparent? */
+  min-width: 150px;
+  padding: 10px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Adjust dropdown style for main transparent header if needed */
+.header.type-main .nav-list--depth2 {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.nav-list__item.depth-2 .link {
+  display: block;
+  padding: 5px 20px;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nav-list__item.depth-2 .link:hover {
+  color: #dfb46c; /* Gold color from other CSS */
+  font-weight: 600;
+}
+
+/* Ensure header links are visible on transparent bg */
+.header.type-main .nav-list__item.depth-1 > .link {
+  color: #fff !important;
+}
+
+.header.type-main.scrolled .nav-list__item.depth-1 > .link {
+  color: #000 !important;
+}

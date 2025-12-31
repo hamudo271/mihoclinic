@@ -1,0 +1,50 @@
+/*문자열설정*/
+@charset "utf-8";
+
+@font-face {
+	font-family: 'GmarketSans';
+	src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+		 url('GmarketSansBold.woff2') format('woff2'),
+		 url('GmarketSansBold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GmarketSans';
+	src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+		 url('GmarketSansMedium.woff2') format('woff2'),
+		 url('GmarketSansMedium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GmarketSans';
+	src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+		 url('GmarketSansLight.woff2') format('woff2'),
+		 url('GmarketSansLight.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

@@ -1,0 +1,11 @@
+/*문자열설정*/
+@charset "utf-8";
+
+/*woff  ------------------------------------------------------------------------- */
+
+@font-face {
+font-family: 'baskerville-old-face';
+font-style: normal;
+font-weight: 400;
+src: local('baskerville-old-face'), url('baskerville-old-face.ttf') format('truetype');
+}

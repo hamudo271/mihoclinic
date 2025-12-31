@@ -1,0 +1,37 @@
+/*문자열설정*/
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 300 700;
+  src: local('Cormorant'), url('Cormorant-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 300 700;
+  src: local('Cormorant'), url('Cormorant-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 300 700;
+  src: local('Cormorant'), url('Cormorant-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 300 700;
+  src: local('Cormorant'), url('Cormorant-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 300 700;
+  src: local('Cormorant'), url('Cormorant-Bold.ttf') format('truetype');
+}

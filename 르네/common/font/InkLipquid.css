@@ -1,0 +1,12 @@
+/*문자열설정*/
+@charset "utf-8";
+
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('InkLipquid.woff') format('woff'),
+		 url('InkLipquid.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

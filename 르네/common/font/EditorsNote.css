@@ -1,0 +1,106 @@
+/*문자열설정*/
+@charset "utf-8";
+
+@font-face {
+    font-family: 'EditorsNote-Thin';
+    font-weight: 100;
+    font-style: normal;
+    src: local('EditorsNote-Thin'), url('EditorsNote-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-ThinItalic';
+    font-weight: 100;
+    font-style: italic;
+    src: local('EditorsNote-ThinItalic'), url('EditorsNote-ThinItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EditorsNote-Extralight';
+    font-weight: 200;
+    font-style: normal;
+    src: local('EditorsNote-Extralight'), url('EditorsNote-Extralight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-ExtralightItalic';
+    font-weight: 200;
+    font-style: italic;
+    src: local('EditorsNote-ExtralightItalic'), url('EditorsNote-ExtralightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EditorsNote-Light';
+    font-weight: 300;
+    font-style: normal;
+    src: local('EditorsNote-Light'), url('EditorsNote-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-LightItalic';
+    font-weight: 300;
+    font-style: italic;
+    src: local('EditorsNote-LightItalic'), url('EditorsNote-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EditorsNote-Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: local('EditorsNote-Regular'), url('EditorsNote-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-Italic';
+    font-weight: 400;
+    font-style: italic;
+    src: local('EditorsNote-Italic'), url('EditorsNote-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EditorsNote-Medium';
+    font-weight: 500;
+    font-style: normal;
+    src: local('EditorsNote-Medium'), url('EditorsNote-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-MediumItalic';
+    font-weight: 500;
+    font-style: italic;
+    src: local('EditorsNote-MediumItalic'), url('EditorsNote-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EditorsNote-Semibold';
+    font-weight: 600;
+    font-style: normal;
+    src: local('EditorsNote-Semibold'), url('EditorsNote-Semibold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-SemiboldItalic';
+    font-weight: 600;
+    font-style: italic;
+    src: local('EditorsNote-SemiboldItalic'), url('EditorsNote-SemiboldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EditorsNote-Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: local('EditorsNote-Bold'), url('EditorsNote-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-BoldItalic';
+    font-weight: 700;
+    font-style: italic;
+    src: local('EditorsNote-BoldItalic'), url('EditorsNote-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EditorsNote-Hairline';
+    font-weight: 800;
+    font-style: normal;
+    src: local('EditorsNote-Hairline'), url('EditorsNote-Hairline.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EditorsNote-HairlineItalic';
+    font-weight: 800;
+    font-style: italic;
+    src: local('EditorsNote-HairlineItalic'), url('EditorsNote-HairlineItalic.ttf') format('truetype');
+}

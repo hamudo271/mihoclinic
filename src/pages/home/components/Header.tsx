@@ -7,76 +7,54 @@ interface HeaderProps {
 
 export default function Header({ isScrolled }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showLangDropdown, setShowLangDropdown] = useState(false);
 
   // Combine scrolled state with menu open state for styling
   const isDarkInfo = isScrolled || isMenuOpen;
 
   const menuItems = [
     {
-      title: '미호뷰티그룹',
+      title: '미호의원',
       submenu: [
-        { name: '미호 소개', link: '#' },
+        { name: '미호의원 소개', link: '#philosophy' },
+        { name: '진료 철학', link: '#philosophy' },
+        { name: '원장 소개', link: '#philosophy' },
         { name: '비급여 진료비 안내', link: '/non-benefit' },
-        { name: '학술활동', link: '#' },
-        { name: '기사·언론홍보', link: '#' },
-        { name: '공부하는 미호', link: '#' },
-        { name: '스타와 미호', link: '#' },
-        { name: '미호 앰버서더', link: '#' },
-        { name: '지점안내·오시는길', link: '#' },
       ],
     },
     {
-      title: '시술안내',
+      title: '진료 안내',
       submenu: [
-        { name: '톡신', link: '#' },
-        { name: '필러/스컬트라', link: '#' },
-        { name: '윤곽/조각/제로핏 주사', link: '#' },
-        { name: '실리프팅', link: '#' },
-        { name: '레이저리프팅', link: '#' },
-        { name: '여드름/모공', link: '#' },
-        { name: '색소', link: '#' },
-        { name: '스킨부스터', link: '#' },
-        { name: '스킨케어', link: '#' },
-        { name: '제모', link: '#' },
-        { name: '체형', link: '#' },
-        { name: '항노화수액', link: '#' },
+        { name: '리프팅·수분·탄력', link: '#treatments' },
+        { name: '필러·보톡스', link: '#treatments' },
+        { name: '점·기미·주근깨', link: '#treatments' },
+        { name: '여드름·홍조', link: '#treatments' },
+        { name: '피부질환', link: '#treatments' },
+        { name: '제모', link: '#treatments' },
+        { name: '수액클리닉', link: '#treatments' },
+        { name: '기능의학센터', link: '#treatments' },
       ],
     },
-
     {
-      title: '이벤트',
+      title: '예약·상담',
       submenu: [
-        { name: '전체 이벤트', link: '#' },
-        { name: '지점 이벤트', link: '#' },
+        { name: '전화 예약', link: 'tel:055-363-2575' },
+        { name: '온라인 예약', link: 'https://booking.naver.com/booking/13/bizes/1093628' },
+        { name: '카카오톡 상담', link: 'http://pf.kakao.com/_Jxdixoxj' },
+        { name: '진료시간 안내', link: '#consultation' },
       ],
     },
     {
-      title: '예약하기',
+      title: '오시는 길',
       submenu: [
-        { name: '서울', link: '#' },
-        { name: '인천·경기', link: '#' },
-        { name: '대전·충청', link: '#' },
-        { name: '부산 대구 울산 경상', link: '#' },
-        { name: '광주·전라', link: '#' },
-        { name: '강원', link: '#' },
-        { name: '제주', link: '#' },
+        { name: '위치 안내', link: '#location' },
+        { name: '네이버 지도', link: 'https://naver.me/FOk2dKnO' },
       ],
-    },
-    {
-      title: '전후사진',
-      submenu: [{ name: '전후사진', link: '#' }],
     },
   ];
 
-  const languages = [
-    { name: 'Korean', link: '#' },
-    { name: 'English', link: '#' },
-    { name: 'Japanese', link: '#' },
-    { name: 'Chinese', link: '#' },
-    { name: 'Vietnamese', link: '#' },
-    { name: 'Thai', link: '#' },
-    { name: 'Indonesian', link: '#' },
+  const quickLinks = [
+    { name: '블로그', link: 'https://blog.naver.com/miho3632575', icon: 'ri-blogger-line' },
+    { name: '인스타그램', link: 'https://www.instagram.com/miho_clinic', icon: 'ri-instagram-line' },
   ];
 
   return (
@@ -102,51 +80,27 @@ export default function Header({ isScrolled }: HeaderProps) {
 
             <nav className="flex items-center gap-8">
               <div className="flex items-center gap-6 text-sm">
-                <a
-                  href="#"
-                  className={`hover:opacity-70 transition-opacity whitespace-nowrap cursor-pointer ${isDarkInfo ? 'text-gray-700' : 'text-white'
-                    }`}
-                >
-                  미호 코스메틱
-                </a>
-                <a
-                  href="#"
-                  className={`hover:opacity-70 transition-opacity whitespace-nowrap cursor-pointer ${isDarkInfo ? 'text-gray-700' : 'text-white'
-                    }`}
-                >
-                  가맹문의
-                </a>
                 <span
-                  className={`whitespace-nowrap ${isDarkInfo ? 'text-gray-700' : 'text-white'
+                  className={`whitespace-nowrap font-medium ${isDarkInfo ? 'text-gray-700' : 'text-white'
                     }`}
                 >
-                  대표번호 1661-4842
+                  <i className="ri-phone-line mr-1"></i>
+                  055-363-2575
                 </span>
-                <div className="relative">
-                  <button
-                    onClick={() => setShowLangDropdown(!showLangDropdown)}
-                    className={`flex items-center gap-1 hover:opacity-70 transition-opacity whitespace-nowrap cursor-pointer ${isDarkInfo ? 'text-gray-700' : 'text-white'
-                      }`}
-                  >
-                    <i className="ri-global-line"></i>
-                    <span>Language</span>
-                    <i className="ri-arrow-down-s-line text-xs"></i>
-                  </button>
-                  {showLangDropdown && (
-                    <div className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[140px]">
-                      {languages.map((lang, index) => (
-                        <a
-                          key={index}
-                          href={lang.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-                        >
-                          {lang.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                <div className="flex items-center gap-3">
+                  {quickLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`hover:opacity-70 transition-opacity cursor-pointer ${isDarkInfo ? 'text-gray-700' : 'text-white'
+                        }`}
+                      title={link.name}
+                    >
+                      <i className={`${link.icon} text-lg`}></i>
+                    </a>
+                  ))}
                 </div>
               </div>
             </nav>

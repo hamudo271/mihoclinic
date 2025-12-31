@@ -1,0 +1,281 @@
+@charset "utf-8";
+@import url('../../cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('../../fonts.googleapis.com/css2%EF%B9%96family=Italiana&display=swap.css');
+@import url('../../fonts.googleapis.com/css2%EF%B9%96family=Montserrat%EF%B9%95wght@100%EF%B9%94200%EF%B9%94300%EF%B9%94400%EF%B9%94500%EF%B9%94600%EF%B9%94700%EF%B9%94800%EF%B9%94900&display=swap.css');
+@font-face {
+	font-family: "Montserrat";
+	font-style: 500;
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+ @font-face {
+	font-family: "SUIT";
+	font-style: 500;
+	unicode-range: U+AC00-D7A3;
+}
+
+/*
+르네의원
+C00262
+*/
+
+/* ================================================================================================= */
+/* 기본구성 */
+body *{font-family:'Montserrat', 'SUIT', 'Noto Sans SC' ;word-break:break-word;}
+body{top:0 !important; padding:0 !important;}
+body.mainBody{padding:0 !important; top:0 !important;}
+.SubNav.Fixed{display:block; position: relative !important; top:0 !important;}
+
+
+/* ================================================================================================= */
+/* 팝업 */
+/*body .LayerPopSlider{width:32vw; height:100vh;}
+body .LayerPopSlider .LayerPopSlider dt{height:calc(100vh - 70px)}
+body .LayerPopSlider .MultiBarSlider .slick-list .slick-slide a{height:calc(100vh - 70px);}
+body .LayerPopSlider .MultiBarSlider .slick-list .slick-slide a img{width:100%; height:100%; object-fit:cover; }*/
+
+body .LayerPopSliderArea{} /* 네트워크6 */
+		body .LayerPopSliderArea .LayerPopSlider{top:13%;}  /* 네트워크6 */
+		body .LayerPopSliderArea .LayerPopSlider .MultiBarSlider ul.SliderThum_BtnPage li button{background-color:#fff; color:#272727;} 
+		body .LayerPopSliderArea .LayerPopSlider .MultiBarSlider ul.SliderThum_BtnPage li.slick-active button{background-color:#a8525d; color:#fff; font-weight:bold;}
+
+
+/* ================================================================================================= */
+/* 헤더 */
+
+/* 헤더메뉴 */
+header .HeaderNav_Area *{line-height:1;}
+header .HeaderNav_Area{background-color:rgb(255 255 255 / 90%);}
+header .HeaderNav_Area:after{content:''; width:10000px; height:1px; left:50%; position:absolute; bottom:0; margin-left:-5000px; background-color:#fff; transform:scale(0.5);}
+header .HeaderNav_Area{position:fixed; top:0px; left:0px; right:0px; z-index:998; background:none;}
+
+
+/* 헤더Fixed */
+body.BodyFixed .HeaderNav_Area{position:fixed; top:0px; width:100%; background-color:rgb(167 160 158 / 90%); transition-duration:300ms;}
+body.BodyFixed header.Fixed .HeaderNav_Area{background-color:rgb(255 255 255 / 90%); transition-duration:300ms; box-shadow:3px 3px 30px 0 rgba(0, 0, 0, 0.15);}
+body.BodyFixed header.Fixed .HeaderNav_GNBmenu{height:80px; transition-duration:200ms;}
+body.BodyFixed header.Fixed .HeaderNav_GNBmenu a{color:#404041; font-weight:500; transition-duration:200ms;}
+body.BodyFixed header.Fixed .HeaderNav_GNBtop{height:80px; transition-duration:200ms;}
+body.BodyFixed header.Fixed .HeaderNav_GNBtop .Member *{color:#404041;}
+body.BodyFixed header.Fixed .HeaderNav_GNBtopBox .LeftBox a img{filter:invert(82%) sepia(0%) saturate(852%) hue-rotate(341deg) brightness(102%) contrast(86%); transition-duration:200ms;}
+
+/*일부 페이지 헤더 수정*/
+body .aboutHealthWrap header .HeaderNav_Area{position:relative;}
+body .aboutHealthWrap header .HeaderNav_GNBmenu a{color:#404041; font-weight:500; transition-duration:200ms;}
+body .aboutHealthWrap header .HeaderNav_GNBtopBox .LeftBox a img{filter:invert(82%) sepia(0%) saturate(852%) hue-rotate(341deg) brightness(102%) contrast(86%); transition-duration:200ms;}
+body .aboutHealthWrap header .HeaderNav_Area:after{content:''; width:10000px; height:1px; left:50%; position:absolute; bottom:0; margin-left:-5000px; background-color:#000; transform:scale(0.5);}
+
+body .memberWrap header .HeaderNav_Area{position:relative;}
+body .memberWrap header .HeaderNav_GNBmenu a{color:#404041; font-weight:500; transition-duration:200ms;}
+body .memberWrap header .HeaderNav_GNBtopBox .LeftBox a img{filter:invert(82%) sepia(0%) saturate(852%) hue-rotate(341deg) brightness(102%) contrast(86%); transition-duration:200ms;}
+body .memberWrap header .HeaderNav_Area:after{content:''; width:10000px; height:1px; left:50%; position:absolute; bottom:0; margin-left:-5000px; background-color:#000; transform:scale(0.5);}
+
+body .ViewWrap.BnfWrap header .HeaderNav_Area{position:relative;}
+body .ViewWrap.BnfWrap header .HeaderNav_GNBmenu a{color:#404041; font-weight:500; transition-duration:200ms;}
+body .ViewWrap.BnfWrap header .HeaderNav_GNBtopBox .LeftBox a img{filter:invert(82%) sepia(0%) saturate(852%) hue-rotate(341deg) brightness(102%) contrast(86%); transition-duration:200ms;}
+body .ViewWrap.BnfWrap header .HeaderNav_Area:after{content:''; width:10000px; height:1px; left:50%; position:absolute; bottom:0; margin-left:-5000px; background-color:#000; transform:scale(0.5);}
+
+
+	/* ----------------------------------------------------------------------------------------------------------- */
+	/* GNB */
+	header .HeaderNav_GNB{}
+	
+		/* ----------------------------------------------------------------------------------------------------------- */
+		/* 상단메뉴 */
+		header .HeaderNav_GNBtop{height:110px; display:table !important; width:90%; margin:0 auto; transition-duration:200ms;}
+		header .HeaderNav_GNBtopBox{position:relative; display:table-cell; width:100%; margin:0 auto; vertical-align:middle; text-align:right;}
+		header .HeaderNav_GNBtopBox > div{vertical-align:middle;}
+		header .HeaderNav_GNBtopBox > *{}
+		
+			/* 왼쪽(메뉴가위치할영역) ------------------------------------------------------------------------------------------ */
+			header .HeaderNav_GNBtopBox .CentBox{display:inline-table; width:50%;}
+					
+			/* 중앙 ------------------------------------------------------------------------------------------ */
+			header .HeaderNav_GNBtopBox .LeftBox{display:inline-table; width:25%; text-align:left; position:absolute; left:0; top:45%; margin-top:-25px;}
+			header .HeaderNav_GNBtopBox .LeftBox .Logo{display:block; max-width:fit-content; width:100%;}
+			header .HeaderNav_GNBtopBox .LeftBox a img{max-height:60px; transition-duration:200ms;}
+				
+			/* 오른쪽 ------------------------------------------------------------------------------------------ */
+			header .HeaderNav_GNBtopBox .RightBox *{padding:0;}
+			header .HeaderNav_GNBtopBox .RightBox{display:inline-table; width:23%; text-align:right;}
+			
+				/* 회원로그인 */
+				header .HeaderNav_GNBtop .Member *{font-size:12pt;	color:#fff; line-height:1; font-family:'EB Garamond','Noto Sans KR', sans-serif;}
+				header .HeaderNav_GNBtop .Member{display:inline-table; text-align:right;}
+				header .HeaderNav_GNBtop .Member ul{}
+				header .HeaderNav_GNBtop .Member ul li{padding-right:20px;}
+				header .HeaderNav_GNBtop .Member ul li:nth-child(1){}
+				header .HeaderNav_GNBtop .Member ul li + li{}
+
+		/* ----------------------------------------------------------------------------------------------------------- */
+		/* 주메뉴 */
+		header .HeaderNav_GNBmenu{position:absolute; display:table; border:none; height:110px; left:50%; margin-left:-500px; top:0; width:1000px; min-width:1000px; text-align:center;}
+		header .HeaderNav_LargeMenu .MenuBig a{font-size:14pt;}
+
+			/* 대메뉴 ------------------------------------------------------------------------------------------ */
+			header .HeaderNav_GNBmenu .HeaderNav_LargeMenu{display:table-cell; vertical-align:middle; width:35%;}
+				header .HeaderNav_GNBmenu .HeaderNav_LargeMenu .HeaderNav_Menu{display:inline-table; width:auto;}
+				header .HeaderNav_GNBmenu .HeaderNav_LargeMenu .HeaderNav_Menu + .HeaderNav_Menu{margin-left:4em;}
+				header .HeaderNav_GNBmenu a{color:#fff; font-size:12.5pt; font-weight:400;}
+				header .HeaderNav_GNBmenu .MenuBig > a{z-index:2; position:relative;}
+			
+			/* 소메뉴 ------------------------------------------------------------------------------------------ */
+			header .HeaderNav_SmallMenuCube .SubNav_Hide02{display:none;}
+			header .HeaderNav_SmallMenuCube{top:0; width:254px; left:50%; margin-left:-127px; padding-top:3em; display:block; opacity:0; visibility:hidden;-webkit-transform:translateY(10px); transform:translateY(10px); z-index:1;}
+			body.BodyFixed header .HeaderNav_SmallMenuCube{top:0%;}
+			body:not(.BodyFixed) header .HeaderNav_SmallMenuCube{padding-top:3.9em;}
+			header .HeaderNav_Menu:hover .HeaderNav_SmallMenuCube{opacity:1; visibility:visible; -webkit-transform:translateY(0); -ms-transform:translateY(0);  transform:translateY(0); -webkit-transition:all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+				header .HeaderNav_SmallMenuCube dl{width:100%; background-color:rgb(255 255 255 / 90%); border:none; box-shadow:0px 7px 13px 3px rgba(0, 0, 0, 0.05);}
+				header .HeaderNav_SmallMenuCube dl:before{display:none;}
+				header .HeaderNav_SmallMenuCube dl dt{}
+				header .HeaderNav_SmallMenuCube dl dd{padding:30px; text-align:left;}
+				header .HeaderNav_SmallMenuCube dl dd a{color:#404041; font-weight:500; word-break:break-word; text-align:left; font-size:11.5pt !important;}
+				header .HeaderNav_SmallMenuCube dl dd a.Action{color:#c6818d;}
+				header .HeaderNav_SmallMenuCube dl dd a:hover{opacity:.8; color:#c6818d;}
+				header .HeaderNav_SmallMenuCube dl dd a + a{margin-top:20px;}
+
+/* 서브페이지의 메뉴 */
+.SubNav{display:none !important;}
+.SubNav.Made{display:block !important; margin-bottom:0;}
+.SubNav .SubNav_Small{margin-top:0;}
+.SubNav .InnerContainer{width:1400px; min-width:1400px;}
+.SubNav ul.List{position:relative; display:table; width:100%; border:none; border-radius:0; overflow:visible; text-align:center;}
+.SubNav .SubNav_Hide02{display:none; height:0; opacity:0;}
+.SubNav ul.List *{font-weight:500;}
+
+	.SubNav ul li.TextBox{position:relative; display:inline-table; width:calc(100% / 8); border-bottom:2px solid #f4f6f8; overflow:visible;}
+	.SubNav ul li.TextBox{border-left:none; border-right:none;}
+	.SubNav ul li.TextBox:first-child{}
+	.SubNav ul li.TextBox:nth-child(8n+1):before{position:absolute; width:500vw; content:''; bottom:-2px; background-color:#f4f6f8; height:2px; z-index:2; margin-left:-200vw;}
+	.SubNav ul li a{position:relative; display:table-cell; vertical-align:middle; font-size:11pt; font-weight:500; padding:0; overflow:visible;}
+	.SubNav ul li a.Active{font-weight:600;}
+	.SubNav ul li a:hover{transition-duration:.3s; background:none;}
+	.SubNav ul li:hover a{background:none;}
+	.SubNav ul li a div{position:absolute; display:block; width:50px; height:2px; opacity:0; bottom:-2px; z-index:2; left:50%; margin-left:-25px;} /* 기본숨김 */
+	.SubNav ul li a.Active div,
+	.SubNav ul li a:hover div{transition-duration:.3s; opacity:1; background-color:#404041;}
+	.SubNav ul li span{position:relative; display:block; width:100%; text-align:center; padding:20px 0; letter-spacing:0;}
+	.SubNav .ColorBg{background-color:#d1a28b;color:#fff;}
+	.SubNav .ColorTxt{color: #404041;}
+	.SubNav ul li a:not(.Active) .ColorBg{background-color:#b6babc;}
+	.SubNav ul li a:not(.Active) .ColorTxt{color: #b6babc;}
+
+/* 시술이벤트 메뉴 */
+.ClinicCateList .Inner{width:1370px; min-width:1370px;}
+.ClinicCateList ul.List{position:relative;display:table;width:100%;border:none;border-radius:0;overflow:visible;text-align: left;}
+.ClinicCateList ul.List *{font-weight:500;}
+
+	.ClinicCateList ul li.TextBox{position:relative;display:inline-table;width:calc(100% / 7); border:none; border-bottom:2px solid #f4f6f8; overflow:visible; vertical-align:top;}
+	.ClinicCateList ul li.TextBox{border-left:none; border-right:none;}
+	.ClinicCateList ul li.TextBox:first-child{}
+	.ClinicCateList ul li.TextBox:nth-child(6n+1){border-left:none;}
+	.ClinicCateList ul li.TextBox:nth-child(6n+1):before{position:absolute; width:500vw; content:''; bottom:-2px; background-color:#f4f6f8; height:2px; z-index:2; margin-left:-200vw;}
+	.ClinicCateList ul li a{position:relative; display:table-cell; vertical-align:middle; font-size:12pt; font-weight:500; padding:0; overflow:visible;}
+	.ClinicCateList ul li a.Active{font-weight:600;}
+	.ClinicCateList ul li a:hover{transition-duration:.3s; background:none;}
+	.ClinicCateList ul li:hover a{background:none;}
+	.ClinicCateList ul li a div{position:absolute; display:block; width:50px; height:2px; opacity:0; bottom:-2px; z-index:2; left:50%; margin-left:-25px;} /* 기본숨김 */
+	.ClinicCateList ul li a.Active div,
+	.ClinicCateList ul li a:hover div{transition-duration:.3s; opacity:1; background-color:#404041;}
+	.ClinicCateList ul li span{position:relative; display:block; width:100%; text-align:center; padding:20px 0; letter-spacing:0;}
+	.ClinicCateList .ColorTxt{color: #404041 !important;}
+	.ClinicCateList ul li a:not(.Active) .ColorBg{background-color:#b6babc;}
+	.ClinicCateList ul li a:not(.Active) .ColorTxt{color: #b6babc !important;}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */	
+/* 푸터 */
+.Footer_Area{padding-bottom:0; color:#333;}
+.Footer_Area *{font-family:'Marcellus','SUIT',"Noto Sans KR","돋음, Dotum","Arial","sans-serif";}
+/*푸터 - 상단영역*/
+.aboutAboutWrap .Company_Area {display: none;}
+.Company_Area{content:""; clear:both; display:block; position:relative; width:100%; background:#f7f7f7; padding:0;}
+.Company_Area .Inner{width:100%;}
+/*푸터 - 지도*/
+.Company_Area .Link{width:50%; display:inline-table; vertical-align:middle !important;}
+.Banner26Other .aboutmap26{height:700px;}
+/*푸터 - 오른쪽영역 */
+.mapRight{display:inline-table; width:50%; vertical-align:middle !important;}
+.Company_Area .rightArea{position:relative; padding-left:100px;}
+.Company_Area .rightArea h6{display:inline-block; vertical-align:top; font-size:14pt; letter-spacing:0pt; font-weight:400; position:relative; padding-left:16px;}
+.Company_Area .rightArea h6::after{content:''; position:absolute; left:0; top:0; width:6px; height:100%; background:#a8525d;}
+.Company_Area .rightArea p{display:inline-block; vertical-align:top;} 
+	/*푸터 - 상단텍스트 */
+	.Company_Area .rightTitle{display:block; padding-left:100px; position:relative;}
+	.Company_Area .rightTitle p{color:#c6818d; font-size:14pt; letter-spacing:4pt; font-weight:500;}
+	.Company_Area .rightTitle h3{font-size:28pt; font-weight:400; line-height:1.5; padding-top:10px; position:relative; width:fit-content;}
+	.Company_Area .rightTitle h3::after{content:''; width:100%; height:1px; background:#666666; position:absolute; left:0; bottom:-40px;}
+	.Company_Area .rightTitle h3 b{font-weight:700;}
+	/*푸터 - 네이버예약 */
+	.Company_Area .naverBtn{display:inline-block; width:30%; margin-top:80px; vertical-align:top;}
+	.Company_Area .naverBtn p{position:relative; display:block; width:100%; height:100%; margin-top:20px;}
+	.Company_Area .naverBtn p .naverHover{position:absolute; top:0; left:0; opacity:0; transition:0.3s;}
+	.Company_Area .naverBtn p:hover .naverHover{opacity:1;}
+	.Company_Area .naverBtn img{width:85%;}
+	/*푸터 - 전화번호 */
+	.Company_Area .Tel{display:inline-block; width:50%; margin-top:80px; vertical-align:top;}
+	.Company_Area .Tel a p{font-size:22pt; display:block; padding-top:20px;}
+	/*푸터 - 시간 */
+	.Company_Area .Time{display:block; width:100%; margin-top:50px;}
+	.Company_Area .Time label{width:50%; vertical-align:top; display:block; padding-top:20px;}
+	.Company_Area .Time label pre{font-size:14pt; line-height:26pt;}
+	.Company_Area .Time pre.Right {padding-left:30px;}
+	.Company_Area .Time label pre.Left{font-weight:600; width:50%;}
+
+/*푸터 - 하단영역 */
+.Bottom_Area .Add .Inner{width:100%;}
+.Bottom_Area{background:#2a313f; position:relative; display:block; padding:20px 0; padding-bottom:80px;}
+.Bottom_Area *{color:#fff; font-family:'SUIT',"Noto Sans KR","돋음, Dotum","Arial","sans-serif";}
+.Bottom_Area .rightBox{display:block; width:100%; vertical-align:middle;}
+.Bottom_Area .leftBox{display:block; width:100%; vertical-align:middle;}
+.Bottom_Area .Add strong{margin-bottom:0;}
+
+.Bottom_Area .Link{border:0; text-align:center; margin:20px 0;}
+.Bottom_Area .leftBox .Link .Inner{width:100%; min-width:100%;}
+.Bottom_Area .Link ul{text-align:center;}
+.Bottom_Area .Link ul li:first-child a{padding-left:0;}
+.Bottom_Area .Link ul li a{transition:0.3s;}
+.Bottom_Area .Link ul li a:hover{color:#f7ede3;}
+
+.Bottom_Area #SkipNavAdd{text-align:center;}
+.Bottom_Area #SkipNavAdd .Item02{color:#efd5ca;}
+.Bottom_Area #SkipNavAdd .Item03{color:#efd5ca;}
+.Bottom_Area #SkipNavAdd .Item04{color:#efd5ca;}
+.Bottom_Area #SkipNavAdd .Item05{color:#efd5ca;}
+.Bottom_Area #SkipNavAdd .Item06{color:#efd5ca;}
+.Bottom_Area #SkipNavAdd b{color:#efd5ca;}
+
+.Bottom_Area .Add p .create{color:#fff;}
+
+/* ================================================================================================= */
+/*빠른상담*/
+.form-inline{display:none;}
+.ClinicAskForm{display:none !important;}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */	
+/* 퀵메뉴 */
+
+.QuickArea{}
+.QuickArea section{margin-right:20px; top:220px;} 
+.QuickArea_Link{border-radius:100px 100px 0 0;}
+.QuickArea_Link ul{border-radius:100px 100px 0 0; background:#2a313f;}
+.QuickArea_Link li{border:none; padding:15px 0;}
+.QuickArea_Link li:nth-child(2){padding-top:20px;}
+.QuickArea_Link li:nth-last-child(2){padding-bottom:20px;}
+.QuickArea_Link a .bannerImg{display:block; width:auto;border-radius:100px; background-color:#ffffff; z-index:2; position:relative;}    
+.QuickArea_Link a:hover .bannerImg{background:#ccc; transition:0.4s;}    
+.QuickArea_Link a span{color:#fff; font-size:11pt;}
+
+.QuickArea_Link li:first-child a:before{display:none;}
+.QuickArea_Link li:last-child a:before{display:none;}
+.QuickArea_Link li a:hover:before{background-color:#fff;}
+.QuickArea_Link .Quick_GoTop a{background:#101624; padding:5px 0;}
+.QuickArea_Link .Quick_GoTop a p span{display:none;}
+.QuickArea_Link .Quick_GoTop a i{color:#fff;}
+
+
+/* 버튼 */
+.QuickArea_Btn a{background-color:#101624; margin-top:50px;}
+/* 링크 */
+.QuickArea_Link .Tel {display:none;}
+.QuickArea_Link .Tel a p{text-align:left;}
+.QuickArea_Link .Quick_GoTop{}

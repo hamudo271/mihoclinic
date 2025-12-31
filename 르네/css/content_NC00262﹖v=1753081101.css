@@ -1,0 +1,220 @@
+@charset "utf-8";
+@import url(common.css);
+
+/* C00262
+르네의원 */
+
+@import url('../../fonts.googleapis.com/css2%EF%B9%96family=EB+Garamond%EF%B9%95wght@400%EF%B9%94500%EF%B9%94600%EF%B9%94700%EF%B9%94800&display=swap.css');
+
+/* ========================================================================================================================================= */
+/* 키비주얼 */
+.TopVisual{position:relative; display:block; height:600px; background-size:cover; background-repeat:no-repeat; background-position:center;}
+.TopVisual .visualTitle{position:absolute; width:100%; text-align:center; top:55%; left:50%; transform:translate(-50%,-50%);}
+.TopVisual .visualTitle p{font-family:'EB Garamond','Noto Sans KR', sans-serif; font-size:14pt; color:#fff;}
+.TopVisual .visualTitle h3{font-size:28pt; line-height:1.5; font-weight:600; padding-top:12px; color:#fff;}
+
+/* ========================================================================================================================================= */
+/* 게시판 */
+/* 전후사진 */
+.boardWrap.BnfWrap .SubNav_Small2{padding-top:2em;}
+.boardWrap.BnfWrap .SubNav_Small2 li{}
+.boardWrap.BnfWrap .SubNav_Small2 li a{font-size:12.5pt; background-color:#e9e9e9; border:none; color:#000; border-radius:5px; padding:8px; font-weight:600; width:calc(100% - 10px);}
+.boardWrap.BnfWrap .SubNav_Small2 li:not(.Action) a:hover{opacity:.8; transition-duration:.3s;}
+.boardWrap.BnfWrap .SubNav_Small2 li.Action a{background-color:#444; border:none; color:#fff; font-weight:600;}
+body .BnfWrap .boardThumList a .Thumb{height:338px;}
+body .BnfWrap .boardThumList a .Thumb img{max-height:338px; height:338px; object-fit:cover;}
+body .BnfWrap .boardview thead tr:nth-child(2){display:none;}
+body .BnfWrap .boardThumList a .Title span{display:none;}
+
+/* ========================================================================================================================================= */
+/* 서브페이지 버튼 */
+.subBtnWrap{position:relative; width:100%;}
+.subBtnWrap .subBtn {position:absolute;}
+.subBtnWrap .subBtn a{border:1px solid #a8525d; border-radius:10px; padding:10px 20px; position:relative; transition:0.2s;}
+.subBtnWrap .subBtn a p{display:inline-block; color:#a8525d; font-size:14pt; font-weight:700; letter-spacing:-0.1pt; vertical-align:middle; padding-bottom:0; transition:0.2s;}
+.subBtnWrap .subBtn a span{display:inline-block; vertical-align:middle; width:40px; height:1px; background:#a8525d; position:relative; margin-left:10px;}
+.subBtnWrap .subBtn a span::before{content:''; width:8px; height:1px; background:#a8525d; position:absolute; right:0; bottom:3px; transform:rotate(45deg);}
+.subBtnWrap .subBtn a:hover{background:#a8525d;}
+.subBtnWrap .subBtn a:hover p{color:#fff;}
+.subBtnWrap .subBtn a:hover span{background:#fff;}
+.subBtnWrap .subBtn a:hover span::before{background:#fff;}
+
+/*서브페이지 전후사진*/
+.subBnfWrap{position:relative; width:100%; padding:120px 0; background:#fff;}
+.subBnfWrap .bnfTitle{text-align:center; letter-spacing:-0.3pt; padding-bottom:50px;}
+.subBnfWrap .bnfTitle p{font-size:14pt; color:#c6818d; letter-spacing:2pt; font-weight:500; padding-bottom:10px;}
+.subBnfWrap .bnfTitle h3{font-size:28pt; color:#333333; line-height:1.5; font-weight:400;}
+.subBnfWrap .bnfTitle h3 b{font-weight:600;}
+	/*슬라이드*/
+	.subBnfWrap .MultiImgSlider .slick-slide li .ThumBox{background:transparent;}
+	.subBnfWrap .Inner{width:940px; min-width:940px;}
+	.subBnfWrap .slick-button button{background:transparent; font-family:'SUIT', 'Noto Sans KR', sans-serif; font-size:40pt; color:#404041; font-weight:200;}
+	.subBnfWrap .slick-button button:hover{color:#9c7f77;}
+	.subBnfWrap .slick-button .slick-button-prevBnf{position:absolute; left:-100px; top:42%;}
+	.subBnfWrap .slick-button .slick-button-nextBnf{position:absolute; right:-100px; top:42%;}
+	/*버튼*/
+	.subBnfWrap .bnfBtn{position:relative; margin:0 auto; width:fit-content; padding-top:60px;}
+	/*하단문구*/
+	.subBnfWrap p.caution{font-size:13pt; text-align:center; padding-top:60px; line-height:1.5; color:#aaa;}
+
+/*전후사진 - 특정페이지 배경색*/
+.skinWrap .subBnfWrap{background:#fafafa;}
+
+/* 서브페이지 패키지 */
+.subPakageWrap{position:relative; width:100%; padding:120px 0; background:#f6f6f6;}
+.subSection04Bg {background:#f6f6f6 !important;}
+.subSection05Bg {background:#fff !important;}
+.botoxWrap .subPakageWrap, .weddingWrap .subPakageWrap, .depilationWrap .subPakageWrap{background:#fff;}
+.subPakageWrap .pakTitle{text-align:center; letter-spacing:-0.3pt; padding-bottom:50px;}
+.subPakageWrap .pakTitle p{font-size:14pt; color:#c6818d; letter-spacing:2pt; font-weight:500; padding-bottom:10px;}
+.subPakageWrap .pakTitle h3{font-size:28pt; color:#333333; line-height:1.5; font-weight:400;}
+.subPakageWrap .pakTitle h3 b{font-weight:600;}
+.subPakageWrap .pakTitle h6{font-size:14pt; color:#333; font-weight:400; padding-top:16px;}
+
+.subPakageWrap .pakBtn{text-align:center; position:relative;}
+.subPakageWrap .pakBtn a{display:block; border:1px solid #a8525d; border-radius:10px; padding:30px 0; position:relative; transition:0.2s; width:600px; margin:0 auto;}
+.subPakageWrap .pakBtn a h5{display:block; font-size:22pt; color:#333333; font-weight:600; letter-spacing:-0.1pt; transition:0.2s; padding-bottom:16px; line-height:1;}
+.subPakageWrap .pakBtn a p{display:inline-block; color:#a8525d; font-size:14pt; font-weight:700; letter-spacing:-0.1pt; vertical-align:middle; padding-bottom:0; transition:0.2s;}
+.subPakageWrap .pakBtn a span{display:inline-block; vertical-align:middle; width:40px; height:1px; background:#a8525d; position:relative; margin-left:10px;}
+.subPakageWrap .pakBtn a span::before{content:''; width:8px; height:1px; background:#a8525d; position:absolute; right:0; bottom:3px; transform:rotate(45deg);}
+
+.subPakageWrap .pakBtn a:hover{background:#a8525d;}
+.subPakageWrap .pakBtn a:hover h5{color:#fff;}
+.subPakageWrap .pakBtn a:hover p{color:#fff;}
+.subPakageWrap .pakBtn a:hover span{background:#fff;}
+.subPakageWrap .pakBtn a:hover span::before{background:#fff;}
+
+/* 서브페이지 패키지_인링크 */
+.pakWrap{position:relative; background:#fff;}
+.pakWrap .pakInner{width:1300px; margin:0 auto; text-align:center; padding-top:100px; padding-bottom:150px;}
+.pakWrap .pakInner img{width:100%;}
+/*.pakWrap .pakInner img:nth-child(2){padding-top:100px;}
+.pakWrap .pakInner img:nth-child(3){padding-top:100px;}*/
+
+/* 서브페이지 링크연결 */
+.subLinkWrap{content:""; clear:both; display:block; position:relative; width:100%; text-align:center; overflow:hidden; background:url('../clinicInfoRele/img/sub_link_back.jpg'); display:block; height:600px; background-repeat:no-repeat; background-position-y:40%; background-attachment:fixed; padding:0px; overflow:hidden;}
+.subLinkWrap .linkInner{display:table-cell; text-align:center; vertical-align:middle; width:1920px; height:600px; margin:0 auto;}
+
+.subLinkWrap .linkTitle{}
+.subLinkWrap .linkTitle p{font-size:14pt; color:#fff2f4; letter-spacing:2pt; font-weight:500; padding-bottom:10px;}
+.subLinkWrap .linkTitle h3{font-size:28pt; color:#fff; line-height:1.5; font-weight:400;}
+.subLinkWrap .linkTitle h3 b{font-weight:600;}
+
+.subLinkWrap .linkCont{position:relative; width:1320px; margin:0 auto; display:table; padding-top:50px;}
+.subLinkWrap .linkCont .linkBtn{display:table-cell; width:calc(100%/7); padding:0 10px;}
+.subLinkWrap .linkCont .linkBtn5{width:15%;}
+.subLinkWrap .linkCont .linkBtn a{background:rgba(168,82,93,0.8); border-radius:500px; width:100%; display:block; padding:20px 0; color:#fff; transition:0.2s; font-size:14pt; font-weight:500;}
+.subLinkWrap .linkCont .linkBtn a:hover{background:#fff; color:#000; font-weight:600;}
+
+/* ========================================================================================================================================= */
+/* 어바웃 - 둘러보기/오시는길 */
+.aboutMapWrap .Company_Area{display:none;}
+.mapTitle{text-align:center;}
+.mapTitle p{font-size:14pt; color:#c6818d; letter-spacing:2pt; font-weight:500; padding-bottom:10px;}
+.mapTitle h3{font-size:28pt; color:#333; line-height:1.5; font-weight:400;}
+.mapTitle h3 b{font-weight:600;}
+.subSection01 {text-align:center;}
+
+	/*둘러보기*/
+	.About_GalleryArea{position:relative; width:100%; padding-top:120px; padding-bottom:150px; background:#f7f7f7;}
+	.About_GalleryArea::before{content:''; background:url('../img/C00262/mainSection02_back.png')no-repeat; position:absolute; right:0; top:0; width:500px; height:100%;}
+	.About_GalleryArea .MultiImgSliderArea{padding-top:40px;}
+	.About_GalleryArea .MultiImgSliderArea .Inner{background:transparent;}
+	.About_GalleryArea .MultiImgSliderArea .slick-button{position:absolute; top:43%; width:100%; left:0; z-index:1;}
+	.About_GalleryArea .MultiImgSliderArea .slick-button .slick-button-prev01{position:absolute; left:-6%; width:45px; height:45px; font-size:15pt; background-color:#f7f7f7; border-radius:100px; color:#2c2c2c; border:1px solid #2c2c2c; transition:0.2s;}
+	.About_GalleryArea .MultiImgSliderArea .slick-button .slick-button-next01{position:absolute; right:-6%; width:45px; height:45px; font-size:15pt; background-color:#f7f7f7; border-radius:100px; color:#2c2c2c; border:1px solid #2c2c2c; transition:0.2s;}
+	.About_GalleryArea .MultiImgSliderArea .slick-button .slick-button-prev01 svg{width:20px; height:20px;}
+	.About_GalleryArea .MultiImgSliderArea .slick-button .slick-button-next01 svg{width:20px; height:20px;}
+	.About_GalleryArea .MultiImgSliderArea .slick-button .slick-button-prev01:hover{background:#2c2c2c; color:#fff;}
+	.About_GalleryArea .MultiImgSliderArea .slick-button .slick-button-next01:hover{background:#2c2c2c; color:#fff;}
+	.About_GalleryArea .MultiImgSliderArea .MultiImgSlider.slider-for .slick-slide li .ThumBox{background:none !important}
+	.About_GalleryArea .MultiImgSlider.slider-nav .slick-slide{height:5em !important;}
+	/*오시는길*/
+	.aboutMapArea{position:relative; width:100%; padding-top:120px; padding-bottom:150px;}
+	.aboutMapArea .mapInner{width:1400px; margin:0 auto; display:table; padding-top:80px;}
+	.aboutMapArea .mapInner .mapLeft{display:inline-table; width:45%; position:relative; vertical-align:top;}
+	.aboutMapArea .mapInner .mapRight{display:inline-table; width:50%; padding-left:5%; position:relative; vertical-align:top;}
+	/*오시는길 - 왼쪽*/
+	.aboutMapArea .mapInner .mapLeft .mapCont{width:100%;}
+	.aboutMapArea .mapInner .mapLeft #aboutmap{width:100%; height:500px; display:block; position:relative;}
+	/*오시는길 - 오른쪽 */
+	.aboutMapArea .mapInner .mapRight .mapCont{width:100%; display:table;}
+	.aboutMapArea .mapInner .mapRight .mapCont .contTitle{display:inline-table; width:25%; border-top:1px solid #000; vertical-align:top; padding-top:24px;}
+	.aboutMapArea .mapInner .mapRight .mapCont .contBox{display:inline-table; width:75%; border-top:1px solid #999; vertical-align:top; padding-top:24px;}
+	.aboutMapArea .mapInner .mapRight .mapCont .contBox .boxT{display:flex; align-items: flex-start; width:100%; padding-top:12px;}
+	.aboutMapArea .mapInner .mapRight .mapCont1 .boxT:first-child{padding-top:0;}
+	.aboutMapArea .mapInner .mapRight .mapCont2 .boxT:first-child{padding-top:0;}
+	.aboutMapArea .mapInner .mapRight .mapCont3 .boxT:first-child{padding-top:0;}
+	.aboutMapArea .mapInner .mapRight .mapCont2{margin-top:40px;}
+	.aboutMapArea .mapInner .mapRight .mapCont3{margin-top:40px;}
+
+	.aboutMapArea .mapInner .mapRight .mapCont .contTitle h5{font-size:18pt; font-weight:600; color:#333;}
+	.aboutMapArea .mapInner .mapRight .mapCont .contBox h6{display:inline-block; font-size:14pt; font-weight:600; color:#333; width:120px; line-height: 36px;}
+	.aboutMapArea .mapInner .mapRight .mapCont .contBox p{display:inline-block; font-size:14pt; font-weight:400; color:#666; line-height: 36px;}
+
+/* ========================================================================================================================================= */
+/* 어바웃 - 장비소개 */
+.About_DeviceArea{position:relative; width:100%; padding-top:20px; padding-bottom:50px;}
+.About_DeviceArea::before{content:''; background:url('../img/C00262/mainSection02_back_02.png')no-repeat; position:absolute; right:0; top:0; width:500px; height:100%;}
+	/*박스*/
+	.About_DeviceArea .deviceBox{position:relative; display:table; padding:100px 0; border-bottom:1px solid #ececec;}
+	.About_DeviceArea .deviceBox:last-child{border-bottom:0;}
+	.About_DeviceArea .deviceBox .deviceImg{display:table-cell; width:50%; vertical-align:middle;}
+	.About_DeviceArea .deviceBox .deviceCont{display:table-cell; width:50%; vertical-align:middle;}
+	.About_DeviceArea .deviceBox:nth-child(odd) .deviceCont{padding-left:80px;}
+	/*박스 - 태그*/
+	.About_DeviceArea .deviceCont .deviceTagWrap{position:relative; display:block;}
+	.About_DeviceArea .deviceCont .deviceTagWrap .deviceTag{display:inline-block; vertical-align:middle; padding-left:12px;}
+	.About_DeviceArea .deviceCont .deviceTagWrap .deviceTag:first-child{padding-left:0;}
+	.About_DeviceArea .deviceCont .deviceTagWrap .deviceTag .sharp{display:inline-block; width:30px; height:30px; background:#c6818d; border-radius:5px; vertical-align:middle; position:relative;}
+	.About_DeviceArea .deviceCont .deviceTagWrap .deviceTag .sharp::after{content:'#'; position:absolute; color:#fff; top:50%; left:50%; transform:translate(-50%,-50%); font-family:'SUIT', 'Noto Sans KR', sans-serif; font-size:14pt; font-weight:600;}
+	.About_DeviceArea .deviceCont .deviceTagWrap .deviceTag p{display:inline-block; vertical-align:middle; color:#c6818d; padding-left:8px; font-weight:600; font-size:16pt;}
+	/*박스 - 제목 */
+	.About_DeviceArea .deviceCont .deviceTitle{position:relative; display:block; padding:36px 0;}
+	.About_DeviceArea .deviceCont .deviceTitle h5{font-size:28pt; font-weight:600; color:#333; line-height:1.5;}
+	.About_DeviceArea .deviceCont .deviceTitle p{font-size:14pt; font-weight:400; color:#333; line-height:1.5; padding-top:10px;}
+	/*박스 - 정보*/
+	.About_DeviceArea .deviceCont .deviceInfoWrap{position:relative; display:block; display:none;}
+	.About_DeviceArea .deviceCont .deviceInfoWrap .deviceInfo{display:block; width:100%; padding-top:20px;}
+	.About_DeviceArea .deviceCont .deviceInfoWrap .deviceInfo:first-child{padding-top:0;}
+	.About_DeviceArea .deviceCont .deviceInfoWrap .deviceInfo span{display:inline-block; font-size:14pt; color:#9c7f76; border:1px solid #9c7f76; padding:6px 20px; border-radius:5px; font-weight:600;}
+	.About_DeviceArea .deviceCont .deviceInfoWrap .deviceInfo p{display:inline-block; padding-left:20px; font-size:14pt; color:#9c7f76; font-weight:600;}
+
+/* ========================================================================================================================================= */
+/* 어바웃 > 의료진소개 */
+.aboutDoctorWrap{}
+	.About_DoctorAea .Inner{width:100%; min-width:100%;}
+	.About_DoctorAea .boardThumList2{}
+	.About_DoctorAea .boardThumList2 .List{border:none; overflow:hidden;}
+	.About_DoctorAea .boardThumList2 .List ul{width:100%;}
+	.About_DoctorAea .boardThumList2 .List li{margin:0; padding:120px 0; position:relative; width:100%;}
+	.About_DoctorAea .boardThumList2 .List li{background:#fff;}
+	.About_DoctorAea .boardThumList2 .List li:nth-child(2n){background-color:#f9f9f9;}
+	.About_DoctorAea .boardThumList2 .List li:before{content:''; background:url('../img/C00262/mainSection02_back_02.png')no-repeat; position:absolute; right:0; top:0; width:500px; height:100%; z-index: 1;}
+	.About_DoctorAea .boardThumList2 .List li:nth-child(even):before{background:url('../img/C00262/mainSection02_back_03.png')no-repeat;}
+	.About_DoctorAea .boardThumList2 .List li .ThumBg{position:absolute; right:30px; bottom:-60px;}
+	.About_DoctorAea .boardThumList2 .List li:nth-child(2n) .ThumBg img{opacity:.5;}
+	.About_DoctorAea .boardThumList2 .List li label{min-width:1300px; width:1300px;}
+	.About_DoctorAea .boardThumList2 .ViewThum{border:none;}
+	.About_DoctorAea .boardThumList2 .ViewThum dl{padding:0; background:none;}
+	.About_DoctorAea .boardThumList2 .ViewThum dt{display:inline-table;}
+	.About_DoctorAea .boardThumList2 .ViewThum dt .Thumb{display:block; border-radius: 0 0 130px 0; overflow:hidden; width:500px; height:500px; margin-left:25px;}
+	.About_DoctorAea .boardThumList2 .ViewThum dt .Thumb img{width:100%;}
+	.About_DoctorAea .boardThumList2 .ViewThum dd{display:inline-table; width:775px; padding-left:52px;}
+	.About_DoctorAea .boardThumList2 .ViewThum dd .Title{display:none;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Welcome{display:block; width:100%; vertical-align:top; color:#333; font-size:26pt;  font-weight:700; line-height:normal;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Welcome p{position: relative; line-height: 50px;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Welcome p span:nth-child(1) {position: absolute; top: 25px; display: inline-block; width: 48%; height: 25px;
+	background-color: rgba(168, 82, 93, 0.2); z-index: -1;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Welcome p span:last-child {position: absolute; top:75px; display: inline-block; width: 40%; height: 25px;
+	background-color: rgba(168, 82, 93, 0.2); z-index: -1;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Welcome strong{font-weight:600; color:#cd9892; padding-bottom:7px; display:inline-block;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Career{display:block; width:100%; vertical-align:top; padding-top:25px; color:#333; font-size:12pt;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Career p{}
+	.About_DoctorAea .boardThumList2 .ViewThum .Career p:before{content:""; clear:both; display:inline-block; position:relative; left:0; bottom:4px; width:5px; height:5px; background-color:#ddd; border-radius:5px; margin-right:7px;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Career a{display:block; width:50%; background-color:#cd9892; color:#fff; text-align:center; padding:20px 0; font-size:13pt; margin-top:10px; border-radius:0; line-height:1.2em; border-radius:5px; display:none;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Career a:hover{background-color:#dbb5b1;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Career strong{font-weight:600; color:#cd9892; padding-bottom:7px; display:inline-block;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Name{letter-spacing:0; font-size:18pt; line-height:1.5em; padding:30px 0; color:#555555; font-weight:400;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Name strong{font-size:32pt; letter-spacing:3px; font-weight:500;}
+	.About_DoctorAea .boardThumList2 .ViewThum .Name strong:after{content:''; position:absolute;left: -19%; bottom:0;width: 131%;height: 1px;background-color: #bebebe;}

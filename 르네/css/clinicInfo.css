@@ -1,0 +1,198 @@
+@charset "utf-8"; 
+.Footer_Area .Contact_Quick{} /* 빠른상담신청 다시 노출(20190725) display:none; */
+/* ----------------------------------------------------------------------------------------- */
+.clinicInfoWrap #contents .Inner{text-align:center;}
+.clinicInfoWrap #contents .InnerContainer{text-align:center;}
+/* ----------------------------------------------------------------------------------------- */
+/* 비용문의(시술페이지전용) */
+.ClinicAskForm{content:""; clear:both; display:block; position:relative; margin:auto; box-sizing:border-box; margin:15px auto;} 
+.ClinicAskForm fieldset{position:relative; text-align:left; }
+.ClinicAskForm > .Title{font-weight:bold; font-size:20pt; text-align:center; margin-bottom:15px;}
+	/* 신청영역 */
+	.ClinicAskForm_ApplyArea{position:relative;}
+	.ClinicAskForm_ApplyArea table{}
+  			/* 시술선택  */
+			.ClinicAskForm .SelectBranch dl{}
+			/* 지점선택  */
+			.ClinicAskForm .SelectBranch dl{}
+			/* 동의 */
+			.ClinicAskForm .AgreeBox{content:""; clear:both; display:block;}
+			/* 신청버튼 */
+			.ClinicAskForm_Btn{content:""; clear:both; display:block; position:relative; width:100%; text-align:center; margin:auto; }
+			.ClinicAskForm_Btn button{display:inline-block; color:#ffffff; font-size:14pt; font-weight:bold; letter-spacing:1px; text-align:center; background-color:#bd0122; border:none; border-radius:5px; cursor:pointer; box-shadow:1px 1px 3px 0px #959595;  padding:1.5% 10%;}
+			.ClinicAskForm_Btn button:hover{background-color:#e8447e;}	
+	/* 통합일경우 */
+	.ClinicAskForm.ForComm{}
+	/* 지점일경우 */
+	.ClinicAskForm.ForBranch{}
+
+/* ----------------------------------------------------------------------------------------- */
+/* [공통] 동영상삽입 : 시술페이지내 */
+/*
+.clinicInfoWrap .sub_contents_wrap .Movie_IframArea{}
+.clinicInfoWrap .sub_contents_wrap .Movie_Iframe{position:absolute; width:1040px; left:50%; margin-left:-520px;  bottom:60px;}
+.clinicInfoWrap .sub_contents_wrap .Movie_Iframe iframe{position:absolute; bottom:0px; width:100%; height:54.25%;}
+.clinicInfoWrap .sub_contents_wrap .Movie_Iframe video{position:absolute; bottom:0px; width:100%;}
+
+.clinicInfoWrap .Movie_IframTopArea{width:54%; margin-top:3%;}
+*/
+
+.Clinic_BackMovieSection{} /* 배경깔고영상올림(네트워크1) */
+.Clinic_BackMovieSection .Movie_Iframe{position:absolute; width:1040px; left:50%; margin-left:-520px;  bottom:60px;}
+.Clinic_BackMovieSection .Movie_Iframe iframe{position:absolute; bottom:0px; width:100%; height:54.25%;}
+.Clinic_BackMovieSection .Movie_Iframe video{position:absolute; bottom:0px; width:100%;}
+
+
+/* ----------------------------------------------------------------------------------------- */
+/* 리스트1 : 여성검진리스트 */
+.Clinic_Link{content:""; clear:both; display:block; position:relative; text-align:center; margin:auto; background-repeat:no-repeat; background-position:top center;}
+.Clinic_Link section.Inner{padding:80px 0px 50px 0px;}
+.Clinic_Link section.InnerContainer{padding:80px 0px 50px 0px;}
+.Clinic_Link ul{}
+.Clinic_Link li{float:left; width:20%; margin-bottom:40px;}
+.Clinic_Link a{display:block; position:relative; width:90%; height:inherit; text-align:center; margin:auto; border-radius:10px; background-color:#fff;}
+.Clinic_Link a span{position:absolute; left:50%; margin-left:-10%; top:-20px; color:#fff;  font-size:13pt; font-weight:bold; background-color:#ff7a7a; font-family: 'Roboto',sans-serif; border-radius:50%; padding:10px 10px;}
+.Clinic_Link a strong{display:block; height:6em; color:#333; font-size:14pt; line-height:1.5em; padding:2em 1em;}
+.Clinic_Link a strong small{color:#c9c9c9; font-size:11pt;}
+.Clinic_Link a p{color:#888;  font-size:11pt; background-color:#f8f8f8; border-top:1px dashed #c9c9c9; border-radius:0px 0px 11px 11px; padding:25px;}
+
+/* ----------------------------------------------------------------------------------------- */
+/* 카운트업(20200423) */
+.Clinic_CountUp{content:""; clear:both; display:block; position:relative; background-color:#f4f4f4; padding:1em 0.5em;}
+.Clinic_CountUp .Inner{}
+
+/* ----------------------------------------------------------------------------------------- */
+/* [이벤트] 시술페이지내 썸네일리스트삽입(20200423) */
+.Clinic_EventItemArea{display:block; position:relative; padding:4em 0px 2em 0px;}
+.Clinic_EventItemArea .Inner{}
+.Clinic_EventItemArea fieldset{text-align:left;}
+.Clinic_EventItemArea .CategoryTitle{font-size:28pt; letter-spacing:4px; font-weight:normal; text-align:center;}
+
+	/* 썸네일*/
+	.Clinic_EventItemArea ul{content:""; clear:both; display:block; position:relative;} 
+	.Clinic_EventItemArea li{position:relative; display:inline-table; width:24%; height:9em; vertical-align:top; text-align:center; margin:auto;}
+	.Clinic_EventItemArea li.LabelThum{display:none;}  /* 일단숨기고 필요한것만노출 */  
+	.Clinic_EventItemArea li.LabelThum_1{display:inline-table;}
+	.Clinic_EventItemArea li.LabelThum_2{display:inline-table;}
+	.Clinic_EventItemArea li.LabelThum_3{display:inline-table;}
+	.Clinic_EventItemArea li.LabelThum_4{display:inline-table;}
+	.Clinic_EventItemArea .LabelThum .Icon_More{}
+
+.Clinic_EventItemArea fieldset .Title{font-size:28pt; letter-spacing:4px; font-weight:normal; text-align:center; margin-bottom:0.5em;}
+.Clinic_EventItemArea .LabelThum label .More{display:block;}
+
+/* ----------------------------------------------------------------------------------------- */
+/* [이벤트] 시술페이지내 ItemViewBest 삽입(20210604) */
+.Event_BestEventArea *{font-family:'Montserrat',"Noto Sans KR","돋음, Dotum","Arial","sans-serif" !important;}
+.Event_BestEventArea{padding-top:60px;}
+.Event_BestEventArea .BasicTitle{display:block; width:16%; margin:0 auto; border-radius:100px;position:relative; font-size:25px; font-weight:500; text-align:center; border:1px solid #444; color:#444;  padding:15px 0px 15px 0px; background-color:#fff;}
+
+/* ====================================================================== */
+/* 시술페이지템플릿 */
+.ClinicInfoArea{font-size:13pt; font-weight:300; word-break:keep-all;  font-family:'Noto Sans CJK SC', 'Noto Sans KR','돋음, Dotum','Arial','sans-serif"'; }
+.ClinicInfoArea .Section{display:block; position:relative; padding:6em 0px;}
+.ClinicInfoArea .Section .Inner{}
+	/* 세션타이틀 */
+	.Clinic_SectionTitle{display:block; position:relative; margin-bottom:3em;}
+	.Clinic_SectionTitle span{display:block; text-transform:uppercase; font-size:10pt; line-height:3em; letter-spacing:0.5em; font-weight:200; opacity:0.3;}
+	.Clinic_SectionTitle p{display:block; font-size:34pt; line-height:1.8em; font-weight:200; letter-spacing:0.2em;}
+	.Clinic_SectionTitle p strong{}
+		/* 구분 */
+		.NC00005 .Clinic_SectionTitle p{font-size:2.6em; letter-spacing:0; color:#025fad;} /* 네트워크2 */
+	/* 동영상삽입 */
+	.Clinic_MovieSection{background-color:#f9f9f9;}
+	.Clinic_MovieSection .Movie_IframArea{width:80%;}
+	.CenterFixedBox .Clinic_MovieSection .Inner{width:1300px; min-width:1300px;} 
+	.Clinic_MovieSection.TopMovie{padding:5em 0em;} /* 상단에따로삽이될때 */
+	.Clinic_MovieSection.TopMovie .Movie_IframArea{}
+		/* 구분 */
+		.NC00005 .Clinic_MovieSection{padding:5em 0px;} /* 네트워크2 */
+		.eventNewWrap .Clinic_MovieSection{background-color:#fff;} /* 네트워크6 */
+		.NC00084 .Clinic_MovieSection { background: url('../clinicInfoSw/img/MovieSection_bg01.jpg') no-repeat; height: 879px; } /*스완성형외과*/
+		.NC00084 .Clinic_MovieSection .Movie_IframArea{width:40%; padding-top:200px; padding-left:1.5em; display:inline-block;} /*스완성형외과*/
+		.NC00084 .Clinic_MovieSection h4{font-size:18pt; font-weight:600; word-break:keep-all;  font-family:'Noto Sans CJK SC', 'Noto Sans KR','돋음, Dotum','Arial','sans-serif"'; padding-top: 10px; text-align:left; line-height:1.6em; letter-spacing:-0.03em;} /*스완성형외과*/
+		.NC00084 .Clinic_MovieSection p{font-size:12pt; font-weight:300; word-break:keep-all;  font-family:'Noto Sans CJK SC', 'Noto Sans KR','돋음, Dotum','Arial','sans-serif"'; text-align:left; line-height:1.4em; letter-spacing:-0.03em;} /*스완성형외과*/
+
+		.NC00084 .Clinic_MovieSection2 { background: url('../clinicInfoSw/img/MovieSection_bg02.jpg') no-repeat; height: 879px; } /*스완성형외과*/
+		.NC00084 .Clinic_MovieSection2 .Movie_IframArea{width:40%; padding-top:200px; padding-left:1.5em; display:inline-block;} /*스완성형외과*/
+		.NC00084 .Clinic_MovieSection2 h4{font-size:18pt; font-weight:600; word-break:keep-all;  font-family:'Noto Sans CJK SC', 'Noto Sans KR','돋음, Dotum','Arial','sans-serif"'; padding-top: 10px; text-align:left; line-height:1.6em; letter-spacing:-0.03em;} /*스완성형외과*/
+		.NC00084 .Clinic_MovieSection2 p{font-size:12pt; font-weight:300; word-break:keep-all;  font-family:'Noto Sans CJK SC', 'Noto Sans KR','돋음, Dotum','Arial','sans-serif"'; text-align:left; line-height:1.4em; letter-spacing:-0.03em;} /*스완성형외과*/
+	/* 주의사항및부작용 */
+	.Section.Clinic_CarefulSection{}
+	.Clinic_CarefulSection{}
+	.Clinic_CarefulSection .List{display:inline-table; position:relative; text-align:left; margin:auto;}
+	.Clinic_CarefulSection .List li{display:block; position:relative; margin-bottom:1em;}
+	.Clinic_CarefulSection .List li:last-child{margin-bottom:0px;}
+	.Clinic_CarefulSection .List label{display:inline-table; position:relative; text-align:left;}
+	.Clinic_CarefulSection .List label em{display:table-cell; width:30px;}
+	.Clinic_CarefulSection .List label em b{display:block; position:relative; width:30px; height:30px; text-align:center; vertical-align:middle; background-color:#1d1d1d; border-radius:50%; overflow:hidden;}
+	.Clinic_CarefulSection .List label em b:after{content: ''; display:block; position:absolute; top:10%; left:30%; width:7px; height:15px; border-bottom:3px solid #fff; border-right:3px solid #fff; transform:rotate( 45deg ); -webkit-transform:rotate( 45deg );-moz-transform:rotate( 45deg );}
+	.Clinic_CarefulSection .List label p{display:table-cell;letter-spacing:0px; vertical-align:middle; padding-left:0.5em;}
+		/* 구분 */
+		.NC00001 .Clinic_CarefulSection{background-image:url('../clinicInfo/img/carefulSection_bg.jpg'); } /* 네트워크1 */
+
+	/* 장점배너*/
+	.Section.Clinic_AdvantageBanner{}
+	.Clinic_AdvantageBanner{background-color:#000; background-repeat:no-repeat;}
+	.Clinic_AdvantageBanner .Inner{}
+	.Clinic_AdvantageBanner .BannerBox{display:block; position:relative; font-weight:300;}
+	.Clinic_AdvantageBanner .BannerBox dl{display:table; position:relative; width:100%; }
+	.Clinic_AdvantageBanner .BannerBox dt{display:table-cell; position:relative; width:55%; vertical-align:middle; text-align:center; background-color:#fff; box-shadow: 1px 1px 5px rgba(0,0,0, 0.1); padding:3em 4em 6em 4em;}
+	.Clinic_AdvantageBanner .BannerBox dd{display:table-cell; position:relative; width:45%; vertical-align:middle;}
+	.Clinic_AdvantageBanner .BannerBox em{display:block; margin-bottom:3em;}
+	.Clinic_AdvantageBanner .BannerBox em span{display:block; text-transform:uppercase; font-size:10pt; line-height:2em; letter-spacing:1em; font-weight:200; opacity:0.3;}
+	.Clinic_AdvantageBanner .BannerBox em p{display:block; font-size:26pt; line-height:1.8em; font-weight:200; letter-spacing:0.2em; }
+	.Clinic_AdvantageBanner .BannerBox em p strong{}
+	.Clinic_AdvantageBanner .BannerBox label{display:table; position:relative; width:100%; text-align:left;  }
+	.Clinic_AdvantageBanner .BannerBox label big{display:table-cell; position:relative; width:45%; text-align:center; vertical-align:middle;}
+	.Clinic_AdvantageBanner .BannerBox label big span{}
+	.Clinic_AdvantageBanner .BannerBox label big span i{display:inline-block; width:2.5em; height:2.5em; line-height:2.5em; color:#fff; font-size:16pt; font-weight:100; vertical-align:middle;text-align:center; background-color:#b2be2d; border-radius:50%; margin-bottom:0.5em; overflow:hidden;}
+	.Clinic_AdvantageBanner .BannerBox label big strong{display:block; vertical-align:middle; font-size:20pt; line-height:1.4em;}
+	.Clinic_AdvantageBanner .BannerBox label p{display:table-cell; position:relative; height:8em; vertical-align:middle; font-size:13pt; line-height:1.6em; font-weight:300;}
+	.Clinic_AdvantageBanner .BannerBox img{display:block;}
+	.Clinic_AdvantageBanner .MultiSlider ul.SliderThum_BtnPage{width:55%; left:0px; bottom:2em;}
+	.Clinic_AdvantageBanner .MultiSlider ul.SliderThum_BtnPage li button{border-width:1px;}
+		/* 구분 */
+		.NC00001 .Clinic_AdvantageBanner{background-image:url('../clinicInfo/img/common_advantage_bg.jpg'); } /* 네트워크1 */
+		.NC00001 .ClinicInfoKind02 .Clinic_AdvantageBanner{} /* 네트워크1 */
+		.NC00001 .ClinicInfoKind02 .Clinic_AdvantageBanner .BannerBox label big span i{background-color:#f59ba5;}
+		.NC00001 .ClinicInfoKind03 .Clinic_AdvantageBanner .BannerBox label big span i{background-color:#232a58;}	
+
+
+/* ----------------------------------------------------------------------------------------- */
+/* [템플릿]상단 헤더타입1(왼쪽사진오른쪽설명) */
+.clinicHead_Type1{display:block; position:relative; padding:3em 0em 6em 0em;}
+.clinicHead_Type1 .Inner{}
+.clinicHead_Type1 dl{display:table; position:relative; width:100%; margin:auto;}
+.clinicHead_Type1 dt{display:table-cell; position:relative; vertical-align:top; width:50%; text-align:right; }
+.clinicHead_Type1 dlimg{max-width:100%;}
+.clinicHead_Type1 dd{display:table-cell; position:relative; vertical-align:top;  line-height:1.5em; text-align:left; padding:2em;}
+.clinicHead_Type1 .InfoText{display:block; position:relative; min-height:25em;}
+.clinicHead_Type1 .InfoText em{display:block; position:relative; margin-bottom:2em;}
+.clinicHead_Type1 .InfoText em strong{display:block; font-size:28pt; font-weight:600; }
+.clinicHead_Type1 .InfoText em span{display:block; font-size:15pt; margin-top:1em;}
+.clinicHead_Type1 .InfoText p{display:block; position:relative; font-size:11pt;}
+.clinicHead_Type1 .InfoText p strong{display:block;}
+.clinicHead_Type1 .InfoText p + p{margin-top:1em;}
+.clinicHead_Type1 .Link{display:block; position:absolute; bottom:2em; width:50%;} /* 위에문구가많아도 같은위치에뜨게 absolute사용 */
+.clinicHead_Type1 .Link a{display:block; font-size:13pt; text-align:center; padding:0.3em; border:1px solid #000;}
+.clinicHead_Type1 .Link a.LinkBtn1{color:#fff; line-height:2em; background-color:#000;}
+.clinicHead_Type1 .Link a.LinkBtn1:hover{}
+.clinicHead_Type1 .Link a.LinkBtn2{}
+.clinicHead_Type1 .Link a.LinkBtn2:hover{}
+.clinicHead_Type1 .Link ul{display:table; position:relative; width:100%; margin-top:0.5em;}
+.clinicHead_Type1 .Link li{display:table-cell; width:50%;}
+	/* 구분 */
+	.NC00030 .clinicHead_Type1 .Link a.LinkBtn2:hover{background-color:#fabf3a;}{}
+
+
+/* [템플릿]하단 관련시술링크1(관련링크필요한것만노출시키기) */
+.clinicCmmend_Type1{display:block; position:relative; padding:6em 0em;}
+.clinicCmmend_Type1 .Inner{}
+.clinicCmmend_Type1 .Link{display:block; position:relative; margin-top:3em;}
+.clinicCmmend_Type1 .Link li{display:inline-table; text-align:center; padding:0px 0.5em;}
+.clinicCmmend_Type1 .Link a{display:block;}
+.clinicCmmend_Type1 .Link img{display:block;  max-width:100%;}
+
+
+/* ====================================================================== */

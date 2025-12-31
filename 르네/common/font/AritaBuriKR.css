@@ -1,0 +1,42 @@
+/*문자열설정*/
+@charset "utf-8";
+
+/*woff  ------------------------------------------------------------------------- */
+
+@font-face {
+font-family: 'AritaBuriKR-HairLine';
+font-style: normal;
+font-weight: 200;
+src: local('baskerville-old-face'), url('AritaBuriKR-HairLine.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'AritaBuriKR-Light';
+font-style: normal;
+font-weight: 300;
+src: local('baskerville-old-face'), url('AritaBuriKR-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'AritaBuriKR-Medium';
+font-style: normal;
+font-weight: 400;
+src: local('baskerville-old-face'), url('AritaBuriKR-Medium.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'AritaBuriKR-SemiBold';
+font-style: normal;
+font-weight: 500;
+src: local('baskerville-old-face'), url('AritaBuriKR-SemiBold.ttf') format('truetype');
+}
+
+
+@font-face {
+font-family: 'AritaBuriKR-Bold';
+font-style: normal;
+font-weight: 600;
+src: local('baskerville-old-face'), url('AritaBuriKR-Bold.ttf') format('truetype');
+}

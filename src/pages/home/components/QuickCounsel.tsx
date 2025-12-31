@@ -4,7 +4,6 @@ export default function QuickCounsel() {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    branch: '',
     date: '',
     time: '',
     name: '',
@@ -15,51 +14,13 @@ export default function QuickCounsel() {
     marketingAgree: false,
   });
 
-  const branches = [
-    '강남본점',
-    '강동천호점',
-    '강서점',
-    '건대점',
-    '관악서울대입구점',
-    '광주점',
-    '구리점',
-    '김포점',
-    '노원점',
-    '명동점',
-    '목동점',
-    '미아사거리점',
-    '부산서면점',
-    '부천점',
-    '분당점',
-    '세종점',
-    '송파점',
-    '수원인계점',
-    '신논현점',
-    '안산점',
-    '안양점',
-    '압구정점',
-    '원주점',
-    '이천점',
-    '인천부평점',
-    '인천송도점',
-    '일산주엽점',
-    '전주점',
-    '제주점',
-    '천안불당점',
-    '천안신부점',
-    '청주점',
-    '파주점',
-    '평택점',
-    '홍대점',
-  ];
-
   const handleSubmit = () => {
     if (!formData.privacyAgree) {
       alert('개인정보 제공에 동의해주세요.');
       return;
     }
 
-    if (!formData.branch || !formData.date || !formData.time || !formData.name || !formData.phone || !formData.gender) {
+    if (!formData.date || !formData.time || !formData.name || !formData.phone || !formData.gender) {
       alert('필수 항목을 모두 입력해주세요.');
       return;
     }
@@ -68,7 +29,6 @@ export default function QuickCounsel() {
     setIsOpen(false);
     setStep(1);
     setFormData({
-      branch: '',
       date: '',
       time: '',
       name: '',
@@ -112,22 +72,18 @@ export default function QuickCounsel() {
                   STEP <span className="font-bold">01</span>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    지점 선택 <span className="text-primary">*</span>
-                  </label>
-                  <select
-                    value={formData.branch}
-                    onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
-                  >
-                    <option value="">지점을 선택해 주세요.</option>
-                    {branches.map((branch, index) => (
-                      <option key={index} value={branch}>
-                        {branch}
-                      </option>
-                    ))}
-                  </select>
+                {/* 미호의원 주소 정보 */}
+                <div className="bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                  <div className="flex items-start gap-3">
+                    <i className="ri-map-pin-line text-primary text-xl mt-0.5"></i>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900 mb-1">미호의원</p>
+                      <p className="text-xs text-gray-600 leading-relaxed">
+                        경상남도 양산시 동면 금오13길 20<br />
+                        센텀빌딩 4층 402호
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div>

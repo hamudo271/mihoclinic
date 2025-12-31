@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
-import Header from './components/Header';
-import MainBanner from './components/MainBanner';
-import BranchSection from './components/BranchSection';
-import NewEventSection from './components/NewEventSection';
-import NewSignatureSection from './components/NewSignatureSection';
-import BeforeAfterSection from './components/BeforeAfterSection';
-import BrandValueSection from './components/BrandValueSection';
-import PromisesSection from './components/PromisesSection';
-import BusinessSection from './components/BusinessSection';
-import SnsSection from './components/SnsSection';
+import ForteHeader from './components/ForteHeader';
+import ForteMainVisual from './components/ForteMainVisual';
+import ForteServiceSection from './components/ForteServiceSection';
+import ForteCategorySection from './components/ForteCategorySection';
+import ForteTreatmentSection from './components/ForteTreatmentSection';
+import MihoReservationSection from './components/MihoReservationSection';
+import MihoLocationSection from './components/MihoLocationSection';
 import Footer from './components/Footer';
 import QuickCounsel from './components/QuickCounsel';
+import '../../styles/miho-header.css';
+import '../../styles/miho-main.css';
 
 
 export default function HomePage() {
@@ -32,16 +31,13 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header isScrolled={isScrolled} />
-      <MainBanner />
-      <BranchSection />
-      <NewEventSection />
-      <NewSignatureSection />
-      <BeforeAfterSection />
-      <BrandValueSection />
-      <PromisesSection />
-      <BusinessSection />
-      <SnsSection />
+      <ForteHeader isScrolled={isScrolled} />
+      <ForteMainVisual />
+      <ForteServiceSection />
+      <ForteCategorySection />
+      <ForteTreatmentSection />
+      <MihoReservationSection />
+      <MihoLocationSection />
       <Footer />
       <QuickCounsel />
 

@@ -1,0 +1,843 @@
+/* Miho Main Visual - 미호 + 스노우 스타일 조합 */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+.miho-main-visual {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.miho-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.miho-swiper .swiper-slide {
+  opacity: 0 !important;
+  transition: opacity 1s ease-in-out;
+}
+
+.miho-swiper .swiper-slide-active {
+  opacity: 1 !important;
+}
+
+.miho-slide-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.miho-slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  transition: transform 8s ease-out;
+}
+
+.miho-slide-item:hover .miho-slide-bg {
+  transform: scale(1);
+}
+
+.miho-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(0, 0, 0, 0.4) 0%, 
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.miho-slide-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.miho-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.miho-swiper .swiper-slide:not(.swiper-slide-active) .miho-slide-eng,
+.miho-swiper .swiper-slide:not(.swiper-slide-active) .miho-slide-subtitle,
+.miho-swiper .swiper-slide:not(.swiper-slide-active) .miho-slide-title,
+.miho-swiper .swiper-slide:not(.swiper-slide-active) .miho-slide-desc,
+.miho-swiper .swiper-slide:not(.swiper-slide-active) .miho-slide-buttons {
+  opacity: 0 !important;
+  visibility: hidden;
+}
+
+.miho-slide-eng {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+.miho-swiper .swiper-slide-active .miho-slide-eng {
+  animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+.miho-slide-subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.4s forwards;
+}
+
+.miho-swiper .swiper-slide-active .miho-slide-subtitle {
+  animation: fadeInUp 1s ease 0.4s forwards;
+}
+
+.miho-slide-title {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: clamp(48px, 9vw, 120px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.5s forwards;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+}
+
+.miho-swiper .swiper-slide-active .miho-slide-title {
+  animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+@media (max-width: 768px) {
+  .miho-slide-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+}
+
+.miho-slide-desc {
+  font-size: clamp(16px, 2vw, 22px);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.8;
+  margin-bottom: 48px;
+  max-width: 680px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+.miho-swiper .swiper-slide-active .miho-slide-desc {
+  animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+.miho-swiper .swiper-slide-active .miho-slide-buttons {
+  animation: fadeInUp 1s ease 0.9s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.miho-slide-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.9s forwards;
+}
+
+.miho-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.miho-btn-primary {
+  background: #fff;
+  color: #1a1a1a;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.miho-btn-primary:hover {
+  background: #f8f8f8;
+  color: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.miho-btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.miho-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Swiper Pagination */
+.miho-swiper .swiper-pagination {
+  bottom: 40px !important;
+}
+
+.miho-swiper .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  opacity: 1;
+  margin: 0 8px !important;
+}
+
+.miho-arc-loader {
+  transform: rotate(-90deg);
+}
+
+.miho-arc-path {
+  stroke-dasharray: 88;
+  stroke-dashoffset: 88;
+  transition: stroke-dashoffset 5s linear;
+}
+
+.miho-swiper .swiper-pagination-bullet-active .miho-arc-path {
+  stroke-dashoffset: 0;
+}
+
+/* Service Section - 미호 + 스노우 스타일 조합 */
+.miho-service-section {
+  padding: 160px 0 120px;
+  background: linear-gradient(to bottom, #ffffff 0%, #fafafa 50%, #ffffff 100%);
+  position: relative;
+}
+
+.miho-service-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.miho-service-text {
+  text-align: center;
+  margin-bottom: 100px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.miho-service-label {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 5px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.miho-service-title {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.miho-service-desc {
+  font-size: clamp(18px, 2vw, 22px);
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.miho-service-subdesc {
+  font-size: clamp(15px, 1.5vw, 18px);
+  color: #666;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.miho-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 100px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+.miho-service-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  aspect-ratio: 3/4;
+  background: #000;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.miho-service-item:hover {
+  transform: translateY(-8px);
+}
+
+.miho-service-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 60%);
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.miho-service-item:hover::before {
+  opacity: 0.7;
+}
+
+.miho-service-item figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.miho-service-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), filter 0.6s ease;
+  filter: brightness(0.85) grayscale(15%);
+}
+
+.miho-service-item:hover img {
+  transform: scale(1.12);
+  filter: brightness(1) grayscale(0%);
+}
+
+.miho-service-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 48px 40px;
+  color: #fff;
+  z-index: 3;
+  transform: translateY(15px);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+  opacity: 0.95;
+}
+
+.miho-service-item:hover .miho-service-item-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.miho-service-item-overlay h4 {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 400;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.miho-service-item-overlay p {
+  font-size: 14px;
+  opacity: 0.95;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Category Section - 미호 + 스노우 스타일 조합 */
+.miho-category-section {
+  padding: 160px 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+  position: relative;
+}
+
+.miho-category-banner {
+  margin-bottom: 80px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.miho-category-banner-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.miho-category-logo {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.miho-category-logo h3 {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.miho-category-logo p {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: #666;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.miho-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+.miho-category-item {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.miho-category-inner {
+  background: #fff;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.miho-category-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  transition: border-color 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.miho-category-inner:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.miho-category-inner:hover::before {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.miho-category-text {
+  padding: 32px;
+}
+
+.miho-category-num {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+}
+
+.miho-category-title {
+  display: block;
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 16px 0 10px;
+  letter-spacing: -0.5px;
+}
+
+.miho-category-subtitle {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.miho-category-desc {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.miho-category-img {
+  width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Treatment Section - 미호 + 스노우 스타일 조합 */
+.miho-treatment-section {
+  padding: 160px 0;
+  background: linear-gradient(to bottom, #f8f8f8 0%, #ffffff 100%);
+}
+
+.miho-treatment-header {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.miho-treatment-label {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 5px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.miho-treatment-title {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.miho-treatment-desc {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: #666;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.miho-treatment-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 60px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.miho-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.miho-tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1a1a1a;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.miho-tab-btn:hover {
+  background: rgba(0, 0, 0, 0.02);
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.miho-tab-btn.active {
+  background: transparent;
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.miho-tab-btn.active::after {
+  transform: scaleX(1);
+}
+
+.miho-tab-btn i {
+  font-size: 20px;
+}
+
+.miho-treatment-panel {
+  display: none;
+}
+
+.miho-treatment-panel.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.miho-treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 40px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+.miho-treatment-card {
+  background: #fff;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.miho-treatment-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.miho-treatment-card-img {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.miho-treatment-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.miho-treatment-card:hover .miho-treatment-card-overlay {
+  opacity: 1;
+}
+
+.miho-treatment-card-content {
+  padding: 24px;
+}
+
+.miho-treatment-card-content h4 {
+  font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.miho-treatment-card-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.miho-treatment-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.miho-treatment-card-link:hover {
+  gap: 10px;
+  color: #000;
+}
+
+/* Treatment Features */
+.miho-treatment-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 80px;
+  padding-top: 80px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.miho-feature-item {
+  text-align: center;
+}
+
+.miho-feature-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 28px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  font-size: 32px;
+  transition: all 0.3s ease;
+}
+
+.miho-feature-item:hover .miho-feature-icon {
+  border-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.miho-feature-item h4 {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 300;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.miho-feature-item p {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .miho-service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  .miho-category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  .miho-treatment-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .miho-service-section,
+  .miho-category-section,
+  .miho-treatment-section {
+    padding: 100px 0 80px;
+  }
+
+  .miho-service-title,
+  .miho-treatment-title {
+    font-size: 36px;
+  }
+
+  .miho-container {
+    padding: 0 24px;
+  }
+
+  .miho-service-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .miho-category-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .miho-treatment-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .miho-category-banner-img {
+    height: 200px;
+  }
+}

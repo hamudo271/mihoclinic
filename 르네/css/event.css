@@ -1,0 +1,1366 @@
+@charset "utf-8"; 
+/* 
+이벤트전용입니다
+- 신청폼을 css로 숨겨도 에러발생하지 않습니다.
+*/
+#contents{padding-right:0px !important;}
+.FooterNetwork_Area.nowSubPage .NetworkBranch_Area{padding-right:0px;}
+.FooterBusinessInfo_Area.nowSubPage .InnerContainer{padding-right:0px;} 
+.FooterBusinessInfo_Area{} /* 하단푸터여백 퀵숨김처리로여백삭제  */
+.ContactQuickArea{display:none !important;} /* 폰모양숨기기 */
+.event ~ .Quick_SideArea{display:none;}
+.event ~ .Quick_BottomArea{display:none;}
+.eventWrap ~ .Quick_BottomArea {display:none !important;}
+.eventWrap.EventDetailPage  .Quick_BottomArea{display:none !important;}
+.event ~ footer .Contact_Quick{display:none}
+/* ----------------------------------------------------------------------------------------- */
+/* 기본세팅 */
+.event.{}
+.eventWrap .event *{font-family:'Montserrat',"Noto Sans KR","돋음, Dotum","Arial","sans-serif" !important;}
+fieldset,
+form{margin:0px; padding:0px;}
+section.InnerContainer{display:block; position:relative;}
+/* 통합과지점구분 */
+.event.EventForComm{}
+.event.EventForBranch{}
+/* 나눔스퀘어라운드 */
+@import url('https://www.rene-clinic.com/css/font/NanumSquare.css');
+@import url('https://www.rene-clinic.com/css/font/NanumSquareRound.css');
+
+
+/* ========================================================================================= */
+/* 타이틀 */
+.CategoryTitle{content:""; clear:both; display:block; position:relative; font-size:17pt; font-weight:700; text-align:center; font-family:'NanumSquareRound',sans-serif; padding:40px 0px;}
+.CategoryTitle2{content:""; clear:both; display:block; position:relative; text-align:center; padding:3em 0px;}
+.CategoryTitle2 strong{display:block; font-size:30pt; line-height:1.6em; font-weight:600;}
+.CategoryTitle2 p{display:block; color:#9a9a9a; font-size:18pt; font-weight:300;}
+
+/* 아이콘 */
+.Icon{}
+.Icon_Best{display:inline-block; position:absolute; top:-5px; left:-5px; color:#fff; font-size:10pt; font-style:italic !important; line-height:1em; font-family:'Roboto',sans-serif; background-color:#bd0122; padding:4px 10px 4px 6px;}
+.Icon_Best:after{content:""; clear:both; display:inline-block; position:absolute; left:0%; top:100%; width:0px; height:0px; border-top:5px solid  #a1021e; border-bottom:5px solid transparent; border-right:5px solid  none; border-left:5px solid  transparent;}
+.Icon_Ribbon{display:inline-block; position:absolute; top:5px; left:-8px; height:32px; line-height:34px; color:#fff; font-size:11pt;  font-style:normal !important; font-family:'Roboto',sans-serif; background-color:#bd0122; padding:0px 15px 0px 10px;}
+.Icon_Ribbon span{display:inline-block; position:absolute; left:0%; top:100%; width:0px; height:0px; border-top:5px solid  #a1021e; border-bottom:5px solid transparent; border-right:5px solid  none; border-left:5px solid  transparent;}
+.Icon_Ribbon:before{content: ""; position:absolute;  bottom: 0;  width:0;  height:0;  right:-13px; border-top:16px solid #bd0122; border-left:0px solid transparent; border-right:13px solid transparent; border-bottom:16px solid #bd0122;}
+
+/* 실시간이벤트신청자수 */
+.Icon_Live{display:inline-table; position:absolute; top:-10px; left:-6px; width:auto; vertical-align:middle; letter-spacing:-1px; line-height:1em; border:1px solid #bd0122; border-radius:0px 3px 3px 0px; background-color:#bd0122; z-index:10;}
+.Icon_Live span{display:table-cell; width:auto; vertical-align:middle; color:#fff; font-size:11pt;  letter-spacing:-1px; font-weight:bold;  padding:5px 7px; }
+.Icon_Live strong{display:table-cell; vertical-align:middle; font-size:10pt; background-color:#fff; border-radius: 0px 3px 3px 0px; padding:5px 10px; }
+.Icon_Live:after{content:""; clear:both; display:inline-block; position:absolute; top:100%; left:-1px; margin-top:1px; width:0px; height:0px; border-top:3px solid  #a1021e; border-bottom:3px solid transparent; border-right:3px solid #a1021e; border-left:3px solid transparent;}
+.Icon_LiveMessage{content:""; clear:both; display:table; position:relative; width:auto; font-size:12pt; line-height:1em; letter-spacing:-1px; border-radius:10px; border:2px solid #bd0122; background-color:#bd0122; margin-top:1%; overflow:hidden; z-index:99;}
+.Icon_LiveMessage span{display:table-cell; color:#fff; font-size:12pt; line-height:1em; padding:10px 15px; }
+.Icon_LiveMessage strong{display:table-cell; background-color:#fff; padding:10px 15px; }
+.Icon_LiveMessage strong b{display:none;}
+
+.Icon_BoxText1{display:inline-table;} /* 진행중 */
+.Icon_BoxText1 span{display:inline-block; color:#c0121e; font-weight:400; border:1px solid #c0121e; padding:0.5em 1em; ;}
+.Icon_BoxText2{display:inline-table;} /* 더보기 */
+.Icon_BoxText2 span{display:inline-block; color:#fff; font-weight:200; background-color:#000; padding:0.5em 1em; cursor:pointer;}
+
+	/* 구분 */
+	.NC00030 .Icon_BoxText2 span{font-weight:500; background-color:#fabf3a;}
+
+
+/* 배지 */
+.BadgeClub{display:block; position:relative; width:100%;}
+.Badge{}
+.Badge_Best{display:inline-block; color:#fff; font-size:10pt; line-height:1em; letter-spacing:1px; font-weight:normal; font-family:'Roboto',sans-serif; background-color:#bd0122; padding:7px 12px 5px 12px;}
+.Badge_Hot{display:inline-block; color:#fff; font-size:10pt; line-height:1em; letter-spacing:1px; font-weight:normal; font-family:'Roboto',sans-serif; background-color:#bd0122; padding:7px 12px 5px 12px;}
+.Badge_Percent{display:block; position:absolute; top:-15px; right:-15px; width:50px; height:50px; line-height:50px; color:#fff; font-size:13pt; font-weight:750; border-radius:50%; text-align:center; background:#bd0122; overflow:hidden;}
+
+/* 태그 */
+.TagBox{display:block; position:relative; height:2em; text-align:left;}
+.TagIcon{display:inline-table; position:relative; color:#393939; font-size:8.5pt; line-height:1.8em; letter-spacing:-1px; text-align:center; text-transform:uppercase; border:1px solid #ddd; border-radius:2px; background-color:#fff; padding:0px 3px; overflow:hidden; }
+.TagIcon + .TagIcon{margin-left:-1px;}
+.TagIcon_Event{}
+.TagIcon_New{color:#fff; background-color:#f0597d; border-color:#f0597d;} 
+.TagIcon_Favour{} /* 인기 color:#fff; background-color:#f0a6aa; border-color:#f0a6aa; */
+.TagIcon_Best{color:#fff; background-color:#bdada5; border-color:#bdada5;}
+.TagIcon_Day{color:#fff; background-color:#393939; border-color:#393939;}  /* 단5일만 */
+.TagIcon_Md{}  /* 직원추천 */
+.TagIcon_Many{} /* 문의폭주 */ 
+	/* 인트라넷보기용 */
+	.alert .TagIcon{border-collapse: initial;}
+	.table.table-bordered .TagBox{}
+	.table.table-bordered .TagIcon{display:inline-block; width:1.3em; line-height:1.3em; word-break: keep-all; letter-spacing:3px; padding:0px 2px;}
+	.table.table-bordered .TagIcon:first-letter{}
+	/* eventBoard용 */
+	.Event_Label_ThumBoard .TagBox{height:1.5em;}
+	
+	/* 구분 */
+	.NC00030 .Event_Label_ThumBoard .TagBox{display:none;}
+
+/* 리본배지 */
+.BadgeRibbon{display:block; position:absolute; top:0px; left:0px; margin-top:8px; margin-left:-18px; width:70px; color:#fff; line-height:1.6em; font-size:8pt; letter-spacing:-1px; text-align:center; transform: translateY(0px) rotate(-45deg);  border-bottom:1.6em solid #d4bd98; border-left:18px solid transparent; border-right: 18px solid transparent; z-index:10;}
+.BadgeRibbon span{display:block; position:absolute; width:100%;}
+.BadgeRibbon_New{border-bottom-color:#f0597d;}
+.BadgeRibbon_Best{ border-bottom-color:#bdada5;} 
+
+
+/* 더보기버튼 : 신청자목록의더보기 */
+.ListMORE_Btn{content:""; clear:both; display:block; position:relative; width:100%; text-align:center; padding:2%;}
+.ListMORE_Btn button{display:inline-block; width:50%; height:2.5em; font-size:11pt; font-weight:bold; line-height:1em; text-align:center; font-family:'Noto Sans KR', sans-serif; border:1px solid #4e4e4e; background-color:#fff;}
+.ListMORE_Btn button:hover{color:#ffffff; background-color:#362727;}
+/* 더보기버튼 : 전체이벤트보기 */
+.Event_Group_Btn{content:""; clear:both; display:block; position:relative; width:100%; text-align:center; display:none;}
+.Event_Group_Btn .InnerContainer{}
+.Event_Group_Btn a{display:block; width:100%; color:#ffffff; font-size:16pt; line-height:3em; text-align:center;  border:1px solid #4e4e4e; border-radius:5px; background-color:#362727;}
+.Event_Group_Btn a:hover{}
+
+/* 안내문구 */
+.Tax_InfoText{position:absolute; left:30px; bottom:8px; text-align:right;} /* position:absolute; left:30px; bottom:8px; */
+.Tax_InfoText p{color:#939393; font-size:8pt;}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* 탑으로이동(바형)>>숨김20191104  */
+.Quick_GoTopBar{display:block; position:fixed; left:50%;  bottom:0px; width:1100px; height:auto; margin-left: -550px; z-index:998;  display:none;}/* 숨김 */
+.Quick_GoTopBar p{display:block; width:100%; font-size:14pt; line-height:12pt; font-weight:bold; letter-spacing:3px; text-align:center; border:none; background:none; outline:none; cursor:pointer; margin:0px; padding:0px; border-radius:10px 10px 0px 0px; background-color:#ffffff; border:1px solid #000000; border-bottom:none; padding:1.5%;}
+/* 하단퀵버튼 이벤트페이지용(이벤트혜택받기로이동 - 첫버째폼으로 이동하기 201811227)>>숨김20191104  */
+.GoEvent_EventContents{display:block; position:fixed; left:50%;  bottom:0px; width:1100px; height:auto; margin-left: -550px; z-index:998; display:none;} /* 숨김 */
+.GoEvent_EventContents a{display:block; width:100%; font-size:14pt; line-height:12pt; font-weight:bold; letter-spacing:3px; text-align:center; border:none; background:none; outline:none; cursor:pointer; margin:0px; padding:0px; border-radius:10px 10px 0px 0px; background-color:#ffffff; border:1px solid #000000; border-bottom:none; padding:1.5%;}
+
+/* 하단퀵버튼 이벤트상세페이지용(이벤트혜택받기로이동 - 20210315 )  */
+.Btn_GoForm{display:block; position:fixed; left:0px; bottom:0px; width:100%; z-index:998;} /* background-color:#fff; box-shadow:0px -3px 6px -2px rgba(0, 0, 0, 0.1); padding:0.5em;   */
+.Btn_GoForm .Inner{margin:auto;}
+.Btn_GoForm a{display:block; width:100%; color:#fff; font-size:14pt; line-height:1.6em; font-weight:bold; letter-spacing:2px; text-align:center; box-shadow:0px -3px 6px -2px rgba(0, 0, 0, 0.1); border-radius:10px 10px 0px 0px; background-color:#999; border-bottom:none; cursor:pointer; padding:0.5em;}
+.EventDetailPage .FooterBusinessInfo_Area{} /* 퀵메뉴만큼여백주기 */
+
+/* 구분 */
+.NC00001 .Btn_GoForm a{background-color:#000000;} /* 네트워크1 */
+.NC00001.C00003 .Btn_GoForm a{background-color:#000000;}
+0000000 .Btn_GoForm a{background-color:#532e6e;} /* 네트워크3 */
+.NC00032 .Btn_GoForm a{background-color:#4a3771;} /* 네트워크5 */
+.NC00076 .Btn_GoForm a{background-color:#31b2aa;} /* 네트워크8 */
+.NC00084 .Btn_GoForm a{background-color:#6092eb;}
+.NC00085 .Btn_GoForm a{background-color:#8aa1ff;}
+.NC00131 .Btn_GoForm a{background-color:#fc7770;}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* 월간배너 (0번배너와의 중복으로 PC만숨김처리 20200807) */
+.EventTopBanner{content:""; clear:both; display:block; text-align:center; padding:10px 0px; display:none;}
+.EventTopBanner img{display:inline-block; text-align:center; margin:auto;}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* 신청자목록 */
+.EventRqnListArea{content:""; clear:both; display:block; position:relative; color:#333333; font-family: 'NanumSquareRound',sans-serif; margin:50px auto;}
+.EventRqnListArea section.InnerContainer{border:2px solid #dadada; border-radius:10px; background-color:#ffffff; padding:20px 30px;}
+	/* 버튼 */
+	.EventRqnListArea .ListMore{display:inline-block; position:absolute; right:20px; top:20px; cursor:pointer;}
+	.EventRqnListArea .ListMore span{display:block; font-size:9pt; font-weight:bold; line-height:24px; text-align:center; border:1px solid #bababa; border-radius:50px; background-color:#fff; padding:0px 10px;}
+	.EventRqnListArea .ListMore span:hover{color:#ffffff; background-color:#1d1d1d;}
+	.EventRqnListArea .ListMore .Open{}
+	.EventRqnListArea .ListMore .Close{display:none;}
+	/* 누적신청자수 */
+	.EventRqnListArea .AccrueNum{font-size:14pt; font-weight:500; margin-bottom:10px;}
+	.EventRqnListArea .AccrueNum span{color:#bbbbbb; font-size:9pt;}
+	.EventRqnListArea .AccrueNum span b{font-weight:normal; font-family:'Roboto',sans-serif;}
+	/* 리스트 */
+	.EventRqnListBox{display:block; position:relative;}
+	.bx-wrapper{}
+	.bx-wrapper .bx-viewport{background:none;}
+	/* 항목공통 */
+	.EventRqnList{width:100%; text-align:center; margin-bottom:1px; margin-top:1px;}
+	.EventRqnList ul{}
+	.EventRqnList ul li{display:table; width:100%; table-layout:fixed;}
+	.EventRqnList ul li > div{display:table-cell; font-size:9pt; line-height:2em; text-align:left; vertical-align:bottom;}
+	.EventRqnList .Name{width:10%; }
+	.EventRqnList .Phone{width:15%;}
+	.EventRqnList .Title{}
+	.EventRqnList .Title span{display:inline-block; width:95%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin:0px; padding:0px; }
+	.EventRqnList .Date{width:18%; text-align:center; font-family:'Roboto',sans-serif;}
+	.EventRqnList .State{width:10%; text-align:right;}
+	
+	/* 구분 */
+	.NC00139 .eventListWrap .EventRqnListArea{display:none;}
+	.NC00139.EventDetailPage .EventRqnListArea{display:none;}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+/* 카드사혜택안내  */
+.Event_CardtArea{content:""; clear:both; display:block; position:relative; color:#333333;  margin:10px auto;}
+.Event_CardtArea .InnerContainer{border:2px solid #dadada; border-radius:10px; background-color:#ffffff; padding:20px 30px;}
+.Event_CardtArea p{font-size:14pt; font-weight:500; margin-bottom:10px;}
+.Event_CardtArea pre{display:block; font-size:9pt; line-height:1.8em; text-align:left; }
+
+
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* 썸네일(이벤트라벨) */ 
+fieldset .Event_Label_Thum{}
+.Event_Label_Thum{display:table; width:100%; text-align:center; margin:auto;}
+.Event_Label_Thum ul{content:""; clear:both; display:block; position:relative; table-layout:fixed; text-align:left;}
+.Event_Label_Thum ul li{display:inline-table; position:relative; width:33.3%; margin-left:-4px; table-layout:fixed; vertical-align:top; text-align:center; margin:auto;}
+.Event_Label_Thum label{width:100%; }
+.Event_Label_Thum label img{width:100%;}
+	/* ----------------------------------------------------------------------------------------------------------------------------------- */
+	/* 기본형라벨 */
+	.LabelThum{display:block; position:relative; vertical-align:top;}
+	.LabelThum a{display:block; position:relative;}
+	.LabelThum dl{display:table; position:relative; table-layout:fixed; width:100%; margin:0px; padding:0px;}
+	.LabelThum dt{position:relative; vertical-align:top; margin:0px; padding:0px; }
+	.LabelThum dd{position:relative; vertical-align:top; margin:0px; padding:0px;} 
+	.LabelThum label{display:block; position:relative; width:95%; height:auto; color:#393939; text-align:center; margin:auto; background-color:#ffffff; border:1px solid #dddddd; box-shadow:1px 1px 5px rgba(0,0,0, 0.05); cursor:pointer; }
+	.LabelThum label img{display:inline-block; width:100%; max-width:100%; text-align:center; margin:auto;}
+	.LabelThum label dl{display:block; position:relative; width:100%;}
+	.LabelThum label dt{display:block; position:relative; margin:0px; padding:0px;}
+	.LabelThum label dt u{display:block; position:absolute; bottom:5%; left:50%; margin-left:-30%; width:60%; font-size:10pt; line-height:1em; letter-spacing:1px; font-style:normal; font-weight:bold; text-decoration:none; border-radius:20px; background-color:rgba(255, 255, 255, 0.7); padding:5px 0px 5px 0px;}
+	.LabelThum label dt u span{display:inline-block;}
+	.LabelThum label dt u b{font-family:'Roboto',sans-serif; }
+	.LabelThum label dt em{display:none;/* table */; position:absolute; top:0px; left:0px; width:100%; color:#fff; font-size:11pt; line-height:1em; letter-spacing:-1px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; background-color:rgba(0,0,0, 0.6); padding:0.7em 0.7em;}
+	.LabelThum label dt em strong{display:table-cell; position:relative; text-align:left; vertical-align:middle; white-space:normal;}
+	.LabelThum label dt em span{display:table-cell; position:relative; text-align:right; vertical-align:middle; font-size:10pt;}
+	.LabelThum label dt img{}
+	.LabelThum label dd{display:block; position:relative; text-align:right; margin:0px; padding:0px; padding-top:15px;} 
+	.LabelThum label .TagBox{}
+	.LabelThum label small{display:block; position:relative; font-size:12pt; line-height:1.4em; text-align:left;}
+	.LabelThum label small > p{display:block; width:100%; text-align:left;}
+	.LabelThum label small > p .Badge{display:inline-block; margin-right:0.5em;}
+	.LabelThum label small > p span{display:block; color:#fff; background-color:#888; text-align:center; padding:0.6em 0.2em;}
+	.LabelThum label small > p b{font-weight:500; font-size:13pt;}
+	.LabelThum label small mark{display:block; min-height:1em; line-height:1.1em; color:#362727; font-size:11.5pt; padding:17px 0 0 15px; margin:0 auto; font-weight:normal; background:none; color:#999;}
+	.LabelThum label small pre{display:block; width:100%; height:4em; line-height:1.4em; font-size:12.5pt; letter-spacing:-1px; white-space:normal; border:none; background:none; margin:0px; padding:8px 0 0 15px;}
+	/*  height:4.2em; font-size:11.5pt; line-height:1.4em; */
+	.LabelThum label small .NameBox{display:block; position:relative; height:8.4em; line-height:1.4em; font-size:11.5pt; letter-spacing:-1px; word-break: keep-all; text-align:left; margin-top:0.3em;}
+	.LabelThum label small .NameBox .Box{display:block; position:relative;}
+	.LabelThum label small .NameBox p{display:inline; position:relative; padding-right:0.5em;}
+	.LabelThum label small .NameBox p + p{padding-left:1em;}
+	.LabelThum label small .NameBox p + p:before{content:'+'; clear:both; position:absolute; left:0em; top:0px; bottom:0px; font-size:14pt; line-height:1em; font-weight:200;}
+	.LabelThum label small .NameBox strong{position:relative; font-weight:normal;}	
+	.LabelThum label small .NameBox span{color:#9a9a9a; padding-left:2px;}
+	
+	.LabelThum label big{display:inline-table; position:relative; width:70%; font-size:12pt; text-align:right;  white-space:nowrap; padding-right:0.7em;} 
+	.LabelThum label big u{display:table-cell; color:#fff; font-size:9pt; text-align:left; vertical-align:bottom; text-decoration:none; display:none;}
+	.LabelThum label big u b{font-style:normal;}
+ 	.LabelThum label big strong{display:table-cell; position:relative; text-align:left; vertical-align:bottom;}
+	.LabelThum label big strong p{display:inline-block; font-size:15pt; text-align:center; margin:auto; overflow:hidden;}
+	.LabelThum label big strong p i{font-style:normal;} /* 글자일경우 */
+	.LabelThum label big strong p b{font-family:'Roboto',sans-serif;} /* 퍼센트일경우 */
+	.LabelThum label big strong p b + span{}
+	.LabelThum label big em{display:table-cell; position:relative; width:40%; color:#920000; font-size:13pt; font-weight:normal; font-style:normal; vertical-align:bottom; text-align:right; height:2em;}
+	.LabelThum label big em b{color:#920000; font-size:20pt; font-style:normal; font-weight:500}
+	.LabelThum label big em b.sale{display:none; font-size:16pt;} /* 네트워크Pd 전용 */
+	.LabelThum label big strike{display:table-cell; width:30%; color:#9a9a9a; vertical-align:bottom;  text-align:right;}
+	.LabelThum label big strike b{color:#9a9a9a; font-weight:normal; font-family:'Roboto',sans-serif;}
+	.LabelThum label big strike span{}
+	.LabelThum label:hover{}
+	.LabelThum .LableThum_BranchName{display:block; text-align:center; font-size:17px; text-align:center; margin:0px 0px 15px 0px; font-weight:bold;}
+		/* 아이콘삽입했을때 */
+		.LabelThum .Icon_Live{display:none;}
+		/* 가로형일때 */
+		.LabelThum_Width{}
+		.LabelThum_Width .LabelThum{display:inline-table; width:49%;}
+		.LabelThum_Width .LabelThum + .LabelThum{ margin-bottom:2em;}
+		.LabelThum_Width .LabelThum:last-child{}
+		.LabelThum_Width .LabelThum dl{padding:0%;}
+		.LabelThum_Width .LabelThum dt{display:table-cell; width:41%; }
+		.LabelThum_Width .LabelThum dd{display:table-cell; padding:1.2em 1.5em 0.9em 1.5em;}
+		.LabelThum_Width .LabelThum label{width:97%;}
+		.LabelThum_Width .LabelThum label dt u{width:70%; margin-left:-35%;}
+		.LabelThum_Width .LabelThum label img{}
+		.LabelThum_Width .LabelThum label .TagBox{margin-bottom:0.2em;}
+		.LabelThum_Width .LabelThum label .TagIcon + .TagIcon{margin-left:0px;}
+		.LabelThum_Width .LabelThum label small{} 
+		.LabelThum_Width .LabelThum label small pre{height:8.4em; } /* height:7em;  */
+		.LabelThum_Width .LabelThum label small .NameBox{} /* height:8.4em;최대6줄 */
+		/* 세로형일때*/
+		.LabelThum_Height{}
+		.LabelThum_Height .LabelThum{display:inline-table; width:25%; margin-left:-4px; table-layout:fixed; margin-top:2.5em;} /* height:450px; */
+		.LabelThum_Height .LabelThum label{width:96%; } /* height:41em; */
+		.LabelThum_Height .LabelThum dl{}
+		.LabelThum_Height .LabelThum dt{display:block; width:100%;}
+		.LabelThum_Height .LabelThum dd{display:block; width:100%; text-align:right; padding:0 0 1em 0;}
+		.LabelThum_Height .LabelThum label img{width:100%;}
+		.LabelThum_Height .LabelThum label dt u{}
+		.LabelThum_Height .LabelThum label .TagBox{position:absolute; z-index:1; top:10px; left:10px;}
+		.LabelThum_Height .LabelThum label small{}
+		.LabelThum_Height .LabelThum label small > p{}
+		.LabelThum_Height .LabelThum label small mark{}
+		.LabelThum_Height .LabelThum label small pre{ } /* height:5em; line-height:1.2em; */
+		.LabelThum_Height .LabelThum label small .NameBox{} /* height:8.4em;최대6줄 */
+		.LabelThum_Height .LabelThum label big{}
+		.LabelThum_Height .LabelThum label big u{}
+		.LabelThum_Height .LabelThum label big strong{}
+		.LabelThum_Height .LabelThum label big strong p{top:-0%;}
+		.LabelThum_Height .LabelThum label big strike{}
+		.LabelThum_Height .LabelThum label big em{font-weight:normal; font-size:13pt;}
+		/* 세로형일때_(한칸형)테두리색 여러개주기 */
+		.LabelThum_Height .LabelThum.Action label{}
+		.LabelThum_Height .LabelThum.Action label img{}
+		.LabelThum_Height > li:nth-child(odd){text-align:left;} /* 홀수열은 썸네일 */
+		.LabelThum_Height > li:nth-child(odd) label{}
+		.LabelThum_Height > li:nth-child(even){text-align:right;} /* 짝수열은 컨텐츠  */
+		/*
+			썸네일이 롤링배너에있을 경우(혹은 롤링배너 같은 레이아이웃)
+			- 테두리라운드, 카피문구&시술명 1줄만 보이기
+			* 메인팝업, 메인내 MI&MI BEST EVENT, 시술전후게시판내 본문하단영역, 시술페이지내 관련이벤트, 이벤트상세페이지내 전체이벤트
+			* 메인팝업만 1줄이상보이기
+		*/
+
+		.EventMultiSlider{}
+		.EventMultiSlider .LabelThum{}
+		.EventMultiSlider .LabelThum .Icon_Live{display:none;}
+		.EventMultiSlider .LabelThum .Icon_Best{display:none;}
+		.EventMultiSlider .LabelThum .BadgeBox{display:block; position:relative; height:1.6em; text-align:left; display:none;}
+		.EventMultiSlider .LabelThum .Badge{padding:3px 7px;}
+		.EventMultiSlider .LabelThum .Badge_Best{display:inline-table;}
+		.EventMultiSlider .LabelThum .Badge_Percent{display:none;}
+		.EventMultiSlider .LabelThum label{border-radius:20px; box-shadow: 3px 0px 10px rgba(0,0,0, 0.10); padding:2em;}
+		.EventMultiSlider .LabelThum label dd{}
+		.EventMultiSlider .LabelThum label dt u{/* display:none; */}
+		.EventMultiSlider .LabelThum label .TagBox{} /* 한줄만보이게 */
+		.EventMultiSlider .LabelThum label .TagBox .TagIcon{}
+		.EventMultiSlider .LabelThum label small > p span{/* display:none; */}
+		.EventMultiSlider .LabelThum label small mark{white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+		.EventMultiSlider .LabelThum label small pre{width:100%; height:auto; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+		.EventMultiSlider .LabelThum label small .NameBox{height:auto; font-size:11pt; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+		.EventMultiSlider .LabelThum label small .NameBox .Box{white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+		.EventMultiSlider .LabelThum label big{margin-top:1em;}
+		.EventMultiSlider.LabelThum_Height .LabelThum{margin-bottom:4em;}
+		.EventMultiSlider.LabelThum_Height .LabelThum label{}
+		.EventMultiSlider.LabelThum_Height .LabelThum label dd{padding:0px; /* padding-top:1em; */}
+		.EventMultiSlider.LabelThum_Height .LabelThum label big{width:80%;}
+		.EventMultiSlider.LabelThum_Width .LabelThum{}
+		.EventMultiSlider.LabelThum_Width .LabelThum label{}
+		.MainMultiSlider.EventMultiSlider .slick-list{} /* for 웨일 max-height:35em; */
+		
+		/* 구분(이벤트) */
+		.NC00001 .LabelThum label small > p span{background-color:#000000;} /* 네트워크1 */
+		.NC00001 .LabelThum label big em{color:#000000;}
+		.NC00001 .LabelThum label big em b{color:#000000;}
+		.NC00001.C00003 .LabelThum label small > p span{background-color:#000000;}
+		.NC00001.C00003 .LabelThum label big em{color:#000000;}
+		.NC00001.C00003 .LabelThum label big em b{color:#000000;}
+		
+		.NC00010 .LabelThum label small > p span{background-color:#78bc27;} /* 네트워크3 */
+		.NC00010 .LabelThum label big em{color:#78bc27;}
+		.NC00010 .LabelThum label big em b{color:#78bc27;}
+		
+		.NC00030 .LabelThum label small > p span{background-color:#fabf3a;} /* 네트워크4 */
+		.NC00030 .LabelThum label big strike{display:none;}
+		.NC00030 .LabelThum label big strong{display:none;}
+		.NC00030 .LabelThum label small pre{display:block; padding:25px 0 0 0; height:0em; width:69%; font-size:14pt; font-weight:500;}
+		
+		.NC00032 .LabelThum label{padding:1.5em;}
+		.NC00032 .LabelThum_Height .LabelThum label big{width:100%; cursor:}
+		.NC00032 .LabelThum_Height .LabelThum label big strong p{color:#393939; border:1px solid #393939; border-radius:50px; padding:0px 10px; font-size:10pt;}
+		.NC00032 .LabelThum_Height .LabelThum label big strong p b{font-weight:normal; font-size:11pt;}
+		.NC00032 .LabelThum_Height .LabelThum dt{overflow:hidden; border-radius:10px 10px 0 0;} /* 네트워크5 */
+		.NC00032 .LabelThum label small > p span{background-color:#5b4785; border-radius:0 0 10px 10px;}
+		.NC00032 .LabelThum label small pre{padding-left:0;}
+		.NC00032 .LabelThum label small mark{padding-left:0;}
+		.NC00032 .LabelThum label small{font-size:10pt; letter-spacing:-1px;}
+		.NC00032 .LabelThum label big em{color:#5b4785;}
+		.NC00032 .LabelThum label big em b{color:#5b4785; font-weight:500;}
+
+		.NC00076 .LabelThum label small > p span{background-color:#31b2aa;}
+		.NC00076 .LabelThum label big em{color:#31b2aa;}
+		.NC00076 .LabelThum label big em b{color:#31b2aa;}
+
+		.NC00084 .LabelThum label small > p span{background-color:#6092eb;}
+		.NC00084 .LabelThum label big em{color:#6092eb;}
+		.NC00084 .LabelThum label big em b{color:#6092eb;}
+		
+		.NC00085 .LabelThum label small > p span{background-color:#8aa1ff;}
+		.NC00085 .LabelThum label big em{color:#8aa1ff;}
+		.NC00085 .LabelThum label big em b{color:#8aa1ff;}
+		
+		.NC00131.subtWrap .LabelThum label{padding:1.5em;}
+		.NC00131.subtWrap .LabelThum_Height .LabelThum label big{width:100%; cursor:}
+		.NC00131.subtWrap .LabelThum_Height .LabelThum label big strong p{color:#393939; border:1px solid #393939; border-radius:50px; padding:0px 10px; font-size:10pt;}
+		.NC00131.subtWrap .LabelThum_Height .LabelThum label big strong p b{font-weight:normal; font-size:11pt;}
+		.NC00131.subtWrap .LabelThum_Height .LabelThum dt{overflow:hidden; border-radius:10px 10px 0 0;}
+		.NC00131.subtWrap .LabelThum label small > p span{border-radius:0 0 10px 10px;}
+		.NC00131.EventDetailPage .LabelThum label{padding:1.5em;}
+		.NC00131.EventDetailPage .LabelThum_Height .LabelThum label big{width:100%; cursor:}
+		.NC00131.EventDetailPage .LabelThum_Height .LabelThum label big strong p{color:#393939; border:1px solid #393939; border-radius:50px; padding:0px 10px; font-size:10pt;}
+		.NC00131.EventDetailPage .LabelThum_Height .LabelThum label big strong p b{font-weight:normal; font-size:11pt;}
+		.NC00131.EventDetailPage .LabelThum_Height .LabelThum dt{overflow:hidden; border-radius:10px 10px 0 0;} 
+		.NC00131.EventDetailPage .LabelThum label small > p span{border-radius:0 0 10px 10px;}
+		.NC00131 .LabelThum label dt u span{display:none;}
+		.NC00131 .LabelThum label small > p b{font-size:12pt;}
+		.NC00131 .LabelThum label small > p span{background-color:#fc7770;}
+		.NC00131 .LabelThum label big em{color:#fe6e7b;}
+		.NC00131 .LabelThum label big em b{color:#fe6e7b; font-size:23pt;}
+		.NC00131 .LabelThum_Height .LabelThum label small mark{font-size:;}
+		.NC00131 .LabelThum_Height .LabelThum label small pre{font-size:;}
+		.NC00131 .LabelThum_Height .LabelThum label dt u{width:33%; top:5%; bottom:auto; right:5%; left:auto; padding:0.5em 0.3em;}
+		
+		.NC00143.subtWrap .LabelThum label{padding:1.5em;}
+		.NC00143.subtWrap .LabelThum_Height .LabelThum label big{width:100%; cursor:}
+		.NC00143.subtWrap .LabelThum_Height .LabelThum label big strong p{color:#393939; border:1px solid #393939; border-radius:50px; padding:0px 10px; font-size:10pt;}
+		.NC00143.subtWrap .LabelThum_Height .LabelThum label big strong p b{font-weight:normal; font-size:11pt;}
+		.NC00143.subtWrap .LabelThum_Height .LabelThum dt{overflow:hidden; border-radius:10px 10px 0 0;}
+		.NC00143.subtWrap .LabelThum label small > p span{border-radius:0 0 10px 10px;}
+		.NC00143 .eventListWrap .LabelThum_Height .LabelThum{width:33.33%;}
+		.NC00143.EventDetailPage .LabelThum label{padding:1.5em;}
+		.NC00143.EventDetailPage .LabelThum_Height .LabelThum label big{width:100%; cursor:}
+		.NC00143.EventDetailPage .LabelThum_Height .LabelThum label big strong p{color:#393939; border:1px solid #393939; border-radius:50px; padding:0px 10px; font-size:10pt;}
+		.NC00143.EventDetailPage .LabelThum_Height .LabelThum label big strong p b{font-weight:normal; font-size:11pt;}
+		.NC00143.EventDetailPage .LabelThum_Height .LabelThum dt{overflow:hidden; border-radius:10px 10px 0 0;} 
+		.NC00143.EventDetailPage .LabelThum label small > p span{border-radius:0 0 10px 10px;}
+		.NC00143 .LabelThum label dt u span{display:none;}
+		.NC00143 .LabelThum label small > p b{font-size:12pt;}
+		.NC00143 .LabelThum label small > p span{background-color:#5b86e5;}
+		.NC00143 .LabelThum label small pre{height:2em;}
+		.NC00143 .LabelThum label big{display:none;}
+		.NC00143 .LabelThum label big em{color:#5b86e5;}
+		.NC00143 .LabelThum label big em b{color:#5b86e5; font-size:23pt;}
+		.NC00143 .LabelThum_Height .LabelThum label small mark{font-size:;}
+		.NC00143 .LabelThum_Height .LabelThum label small pre{font-size:;}
+		.NC00143 .LabelThum_Height .LabelThum label dt u{width:33%; top:5%; bottom:auto; right:5%; left:auto; padding:0.5em 0.3em;}
+		
+		.NC00161 .LabelThum label small > p span{background-color:#cbacaa;}
+		.NC00161 .LabelThum label big em{color:#a8716e;}
+		.NC00161 .LabelThum label big em b{color:#a8716e;}
+		.NC00161 .LabelThum label small pre{height:2.2em; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; padding:8px 15px;}
+		.NC00161 .EventMultiSlider .LabelThum label{padding:1.5em 1.5em 1.5em 2em;}
+		.NC00161 .EventMultiSlider .LabelThum label big{margin-top:0;}
+		.NC00161 .EventDetailPageArea .Event_BestEventArea .BasicTitle{width:19%;}
+		.NC00161 .LabelThum_1 label big em b.sale{display:block;} /* 첫번째상품 > 텍스트만 노출 */
+		.NC00161 .LabelThum_2 label big em b.sale{display:block;} /* 두번째상품 > 텍스트만 노출 */
+		.NC00161 #frmInput_287 .LabelBlockThum label big em b.sale{display:block;} /* 첫번째상품 > 텍스트만 노출 */
+		
+
+		.NC00221 .LabelThum label small > p span{background-color:#d9d9d9;} 
+
+
+	/* ----------------------------------------------------------------------------------------------------------------------------------- */
+	/* 패키지목록형 : 이벤트상세페이지내 신청폼속 목록, 시술페이지 */
+	.Event_Label_PackageList{}
+	.Event_Label_PackageList .Title{display:block;  font-size:12pt; font-weight:bold; text-align:left;  font-family:'NanumSquareRound',sans-serif; margin-bottom:2%;}
+	.Event_Label_PackageList .List{display:block; position:relative; background-color:#fff; border:1px solid #ccc; }
+	.Event_Label_PackageList .List li{display:block; position:relative; width:100%; text-align:left;}
+	.Event_Label_PackageList .List li + li{border-top:1px solid #dedede;}
+	.Event_Label_PackageList .List li:last-child{}
+	.Event_Label_PackageList .LIst li label{border-top:1px dotted #dadada;}
+		/* 기본라벨 */	
+		.PackageListThum{content:""; clear:both; display:block; position:relative; color:#393939; text-align:left; padding:1em 1em;}
+		.PackageListThum label{display:table; width:100%; position:relative; text-align:left; cursor:pointer;}
+		.PackageListThum label > *{}
+		.PackageListThum label:hover{}
+		.PackageListThum label i{display:table-cell; width:10%; color:#393939; font-size:15pt; letter-spacing:-1px; text-align:center; font-style:normal; font-weight:bold; font-family:'Roboto',sans-serif; display:none;}
+		.PackageListThum label i span{display:block;}
+		.PackageListThum label small{display:table-cell; table-layout:fixed; position:relative; width:75%; margin-bottom:20px;}
+		.PackageListThum label small input{display:none;}
+		.PackageListThum label small em{display:table-cell; position:relative; width:2em; font-style:normal; font-weight:normal; margin-right:10px;}
+		.PackageListThum label small em b{display:block; position:relative; top:3px; left:3px; width:100%; height:2em; border:1px solid #000; border-radius:2px; background-color:#ffffff; box-shadow:1px 2px 5px 0px #ededed inset;}
+		.PackageListThum label small em b:after{content: ''; display:block; position:absolute; top:-1px; left:5px; width:6px; height:13px; border-bottom:3px solid #333333; border-right:3px solid #333333; transform:rotate( 45deg ); -webkit-transform:rotate( 45deg );-moz-transform:rotate( 45deg ); display:none;} 
+		.PackageListThum label small pre{display:table-cell; height:auto; color:#333333; font-size:10.5pt; line-height:1.8em; letter-spacing:-1px; font-weight:normal; vertical-align:top; white-space:normal; word-break:keep-all; margin:0px; padding:0px; padding-left:6px}
+		.PackageListThum label small pre mark{display:block; width:100%; color:#b1578a; font-size:9.5pt; line-height:12pt; font-weight:normal; text-align:left; letter-spacing:-1px; background:none; margin-top:1%;}
+		.PackageListThum label small input:checked ~ em{}
+		.PackageListThum label small input:checked ~ em b:after{display:block;}
+		.PackageListThum label small input:checked ~ pre{color:#000000;}
+		.PackageListThum label:hover small em b{}
+		.PackageListThum label big{display:table-cell; width:25%; table-layout:fixed; font-size:12pt; line-height:12pt; letter-spacing:0px; text-align:right; vertical-align:bottom; white-space:nowrap;  margin:0px; padding:0px;}
+		.PackageListThum label big strong{display:table-cell; width:25%; color:#d50429; text-align:left; font-weight:normal; display:none;}
+		.PackageListThum label big strong span{}
+		.PackageListThum label big em{display:inline-block; width:50%; color:#393939; text-align:right; font-style:normal; font-weight:normal; font-weight:bold;  word-break:keep-all;}
+		.PackageListThum label big em b{font-size:16pt; font-family:'Roboto',sans-serif;}
+		.PackageListThum label big strike{display:inline-block; width:50%; color:#9a9a9a; text-align:right;}
+		.PackageListThum label big strike b{font-weight:normal; font-family:'Roboto',sans-serif;}
+		.PackageListThum label > em{display:table-cell; text-align:right;  vertical-align:middle;}
+		.PackageListThum label > em button{font-size:22pt; font-weight:100; line-height:0.52em; font-family:'Roboto' , 'sans-serif';}
+		.PackageListThum label:after{content:""; clear:both; display:block;}
+		.PackageListThum:after{content:""; clear:both; display:block;}
+		/*
+		.PackageListThum label button{display:block; position:absolute; right:20px; bottom:15px; color:#ffffff; font-size:12pt; line-height:10pt; letter-spacing:-1px; font-family:'Roboto',sans-serif; background-color:#d50429; cursor:pointer; margin:0px; padding:0px; padding:15px 20px; border:none; outline:none; box-shadow:2px 2px 5px 0px #dadada; display:none;}
+		*/
+			/* for IE8 */
+			@media \0screen { 
+				.PackageListThum label small input{display:inline-block; position:relative; top:6px;}
+				.PackageListThum label small em{display:none;}
+			}
+			/* 대표일때  */
+			.PackageListThum.Classic{}
+			/* 패키지일때  */
+			.PackageListThum.Package{}
+
+	/* ----------------------------------------------------------------------------------------------------------------------------------- */
+	/* 시술명설명형(시술명+시술명설명) : 이벤트상세페이지 */
+	.Event_Label_BlockThumList{display:block; position:relative;}
+	.Event_Label_BlockThumList .Title{color:#999; font-weight:normal; text-align:right; margin-bottom:0.5em;}
+	.Event_Label_BlockThumList .List{display:block; position:relative;}
+	.Event_Label_BlockThumList .List li{display:block; position:relative;}
+	.Event_Label_BlockThumList .List li + li{margin-top:1em;}
+		/* 기본라벨 */
+		.LabelBlockThum{content:""; clear:both; display:block; position:relative; color:#393939; text-align:left;}
+		.LabelBlockThum .Icon_Live{}
+		.LabelBlockThum .TagBox{}
+		.LabelBlockThum .BadgeRibbon{}
+
+		.LabelBlockThum label{display:table; width:100%; position:relative; text-align:left; border:1px solid #c1c1c1; background-color:#fff; padding:1.2em 1.5em; overflow:hidden; cursor:pointer;}
+		.LabelBlockThum label i{display:none;}
+		.LabelBlockThum label i span{}
+		.LabelBlockThum label small{display:table-cell; table-layout:fixed; position:relative; width:75%; vertical-align:middle; padding-right:1em; }
+		.LabelBlockThum label small input{display:none;}
+		.LabelBlockThum label small em{display:table-cell; position:relative; width:2.7em; text-align:left; vertical-align:middle; font-style:normal; font-weight:normal;}
+		.LabelBlockThum label small em b{display:block; position:relative; width:29px; height:29px; border:1px solid #777; border-radius:5px; background-color:#ffffff;}
+		.LabelBlockThum label small em b:after{content: ''; display:block; position:absolute; left:8px; top:1px; width:7px; height:16px; border-bottom:3px solid #777; border-right:3px solid #777; transform:rotate( 45deg ); -webkit-transform:rotate( 45deg );-moz-transform:rotate( 45deg ); display:none;} 
+		.LabelBlockThum label small pre{display:table-cell; position:relative; height:100%; color:#333333; font-size:13pt; line-height:1.8em; letter-spacing:-1px; font-weight:600; vertical-align:top; white-space:normal; margin:0px; padding:0px; padding-left:6px;}
+		.LabelBlockThum label small pre mark{display:block; width:100%; color:#b1578a; font-size:9.5pt; line-height:12pt; font-weight:normal; text-align:left; letter-spacing:-1px; background:none; margin-top:1%;}
+		.LabelBlockThum label small .NameBox{display:table-cell; position:relative; vertical-align:middle; }
+		.LabelBlockThum label small .NameBox .Box{display:block; display:flex; flex-wrap:wrap; position:relative;}
+		.LabelBlockThum label small .NameBox p{display:inline-block; position:relative;  letter-spacing:-1px; text-align:center; vertical-align:top; padding-right:0.4em;}	
+		.LabelBlockThum label small .NameBox p strong{display:block; font-size:13pt;}	
+		.LabelBlockThum label small .NameBox p span{display:block; color: #9a9a9a; font-size:9pt;}
+		.LabelBlockThum label small .NameBox p + p{padding-left:1.5em;}
+		.LabelBlockThum label small .NameBox p + p:before{content:'+'; clear:both; position:absolute; left:0px; top:0px; bottom:0px; color:#393939; font-size:16pt; }
+		.LabelBlockThum label small input:checked ~ em{}
+		.LabelBlockThum label small input:checked ~ em b:after{display:block;}
+		.LabelBlockThum label small input:checked ~ pre{}
+		.LabelBlockThum label:hover small em b{}
+		.LabelBlockThum label big{display:table-cell; position:relative; width:25%; vertical-align:middle; table-layout:fixed; line-height:1em; letter-spacing:0px; font-family:'Roboto',sans-serif; text-align:right; white-space:nowrap; margin:0px; padding:0px; }
+		.LabelBlockThum label big strike{display:block; position:relative; width:60%; color:#9a9a9a; font-size:10.5pt; line-height:1.2em; text-align:right;}
+		.LabelBlockThum label big strike b{font-weight:normal; font-family:'Roboto',sans-serif;}
+		.LabelBlockThum label big em{display:block; position:relative; width:60%; color:#920000; font-size:13pt; line-height:1.6em; text-align:right; font-style:normal; font-weight:normal; word-break:keep-all;}
+		.LabelBlockThum label big em b.sale{display:none; font-size:14pt; font-weight:600;} /* 네트워크Pd 전용 */
+		.LabelBlockThum label big em b{}
+		.LabelBlockThum label big strong{display:block; position:absolute; bottom:0px; right:0px; width:40%; color:#393939; font-size:16pt; line-height:2em; text-align:right; font-weight:bold;}
+		.LabelBlockThum label big strong span{}
+		.LabelBlockThum label > em{display:table-cell; text-align:right;  vertical-align:middle;}
+		.LabelBlockThum label > em button{font-size:22pt; font-weight:100; line-height:0.52em; font-family:'Roboto' , 'sans-serif';}
+		.LabelBlockThum label:after{content:""; clear:both; display:block;}
+		.LabelBlockThum:hover label{}
+
+		/* 이벤트상세페지이별도처리(쇼핑몰옵션관련 숨김처리) 
+		.EventDetailPageVer2{}
+		.EventDetailPageVer2 .Goods_SelectBox .SelectBtn{display:none;}
+		.EventDetailPageVer2 .Goods_SelectedOption{display:none;}
+		.EventDetailPageVer2 .EventDetail_Form .Event_Label_Personal{}
+		.EventDetailPageVer2 .EventDetail_Form .Event_Label_Personal > ul{} 
+		*/
+		
+		/* 구분 */
+		.NC00001 .LabelBlockThum label big em{color:#000000;} /* 네트워크1 */
+		.NC00001.C00003 .LabelBlockThum label big em{color:#000000;} 
+		.NC00010 .LabelBlockThum label big em{color:#78bc27;} /* 네트워크3 */
+		.NC00030 .LabelBlockThum label big em{color:#c0121e;} /* 네트워크4 */
+		.NC00032 .LabelBlockThum label big em{color:#5b4785;} /* 네트워크5 */
+		.NC00076 .LabelBlockThum label big em{color:#31b2aa;} /* 네트워크8 */
+		.NC00084 .LabelBlockThum label big em{color:#6092eb;} /* 스완성형외과 */
+		.NC00131 .Event_Label_BlockThumList .Title{margin-bottom:1em;}
+		.NC00131 .Event_Label_BlockThumList .List li + li{margin-top:0em;}
+		.NC00131 .LabelBlockThum label{padding:0.4em 1em; border:none; background:none;}
+		.NC00131 .LabelBlockThum label small{width:73%;}
+		.NC00131 .LabelBlockThum label big strike{display:inline-block; width:25%;}
+		.NC00131 .LabelBlockThum label big em{display:inline-block; width:40%; color:#ff6157; font-size:11pt;}
+		.NC00131 .LabelBlockThum label big em b{font-size:16pt;}
+		.NC00131 .LabelBlockThum label big strong{position:relative;display:inline-block; width:35%; font-size:12pt;}
+		.NC00131 .LabelBlockThum label small pre{line-height:1.2em;}
+
+	/* ----------------------------------------------------------------------------------------------------------------------------------- */
+	/* 가격표형라벨 : 비용문의가격표 */
+	.Event_Label_CostThumList{display:block; position:relative; vertical-align:top;}
+	.Event_Label_CostThumList .List{display:block; position:relative; text-align:left; margin:auto;}
+	.Event_Label_CostThumList .List li{display:inline-table; position:relative; width:49%; vertical-align:top; text-align:center; margin-bottom:1.2em;}
+	.Event_Label_CostThumList .List li:nth-child(even){} /* 짝수 */
+	.Event_Label_CostThumList .List li:last-child{}
+	.Event_Label_CostThumList .List li + li{}
+		.LabelCostThum .Icon_Live{display:none;}
+		.LabelCostThum u{text-decoration:none;}
+		.LabelCostThum label{display:block; position:relative; width:98%; text-align:center; background-color:#ffffff; border-radius:10px; border:1px solid #dddddd; box-shadow:1px 1px 5px rgba(0,0,0, 0.05); padding:15px 20px; margin:auto; cursor:pointer;}
+		.LabelCostThum label img{display:block; width:100%; max-width:100%; text-align:center; margin:auto;}
+		.LabelCostThum label dl{display:block; position:relative; width:100%; } 
+		.LabelCostThum label dt{display:block; position:relative; display:none}
+		.LabelCostThum label dt u{}
+		.LabelCostThum label dt img{}
+		.LabelCostThum label dd{display:table; position:relative; width:100%; table-layout:fixed; text-align:left; } 
+		.LabelCostThum label .TagBox{margin-bottom:0.5em;}
+		.LabelCostThum label .TagBox .TagIcon{}
+		.LabelCostThum label .TagIcon + .TagIcon{margin-left:0px;}
+		.LabelCostThum label small{display:table-cell; position:relative; width:70%; vertical-align:top; padding-right:1em;}
+		.LabelCostThum label small > p{display:block; width:100%; font-size:12pt; text-align:left;} 
+		.LabelCostThum label small > p span{display:block; position:relative; letter-spacing:1px; font-family:'NanumSquareRound',sans-serif; margin-bottom:15px;}
+		.LabelCostThum label small > p b{font-weight:800; }
+		.LabelCostThum label small mark{display:block; font-weight:bold; background:none; margin-top:5px; display:none;}
+		.LabelCostThum label small i{display:none;}
+		.LabelCostThum label small i span{}
+		.LabelCostThum label small pre{display:block; width:100%; height:6em; font-size:11.5pt; line-height:1.4em; letter-spacing:-1px; white-space:normal;} 
+
+		.LabelCostThum label small .NameBox{display:block; position:relative; height:6em; font-size:11.5pt; line-height:1.4em; letter-spacing:-1px; word-break: keep-all; text-align:left;}
+		.LabelCostThum label small .NameBox .Box{display:block; position:relative;}
+		.LabelCostThum label small .NameBox p{display:inline; position:relative; padding-right:0.5em;}
+		.LabelCostThum label small .NameBox p + p{padding-left:1em;}
+		.LabelCostThum label small .NameBox p + p:before{content:'+'; clear:both; position:absolute; left:0em; top:0px; bottom:0px; font-size:14pt; line-height:1em; font-weight:200;}
+		.LabelCostThum label small .NameBox strong{position:relative; font-weight:normal;}	
+		.LabelCostThum label small .NameBox span{color:#9a9a9a; padding-left:2px;}
+
+		.LabelCostThum label big{display:table-cell; position:relative; font-size:11pt; vertical-align:middle; text-align:center; white-space:nowrap; border-left:1px dashed #dddddd;} 
+		.LabelCostThum label big u{display:table-cell; vertical-align:bottom; font-size:10pt; text-align:left; display:none;}
+		.LabelCostThum label big u b{font-weight:normal; font-family: 'Roboto',sans-serif;}
+		.LabelCostThum label big strong{display:table-cell; position:relative; width:25%; vertical-align:bottom; display:none;}
+		.LabelCostThum label big strong p{display:inline-block;}
+		.LabelCostThum label big strong p b{font-weight:normal; font-family: 'Roboto',sans-serif;}
+		.LabelCostThum label big strong p span{}
+		.LabelCostThum label big em{display:block; position:relative; height:100%; color:#c0121e; font-size:13pt; font-weight:normal; vertical-align:bottom; text-align:right; }
+		.LabelCostThum label big em span{}
+		.LabelCostThum label big em b{font-weight:normal;  font-family: 'Roboto',sans-serif;}
+		.LabelCostThum label big strike{display:table-cell; position:relative; vertical-align:bottom; color: #9a9a9a; font-size:12pt; text-align:right; display:none;}	
+		.LabelCostThum label big strike b{font-weight:normal; font-family: 'Roboto',sans-serif;}
+		.LabelCostThum label big strike span{}
+		.LabelCostThum label:hover{border-color:#666; background-color:#f9f9f9;}
+
+
+
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* 이벤트페이지(/event_new/event.php) */
+.eventListWrap{}
+.eventListArea{}
+	/* 카테고리탭메뉴형레이아웃 */
+	.Event_GroupArea{content:""; clear:both; display:block; position:relative; width:100%; display:none;}
+	.Event_GroupArea .InnerContainer{}
+		/* 탭메뉴 */
+		.event .LeftTapMenu{margin-top:100px;} /* 이벤트페이지에있을때 */
+		.EventDetailPage .LeftTapMenu{top:0px; margin-top:0px;} 
+		@media all and (max-width:1100px){
+		.event .LeftTapMenu{margin-top:2em;}
+		}
+		/* 탭컨텐츠 */
+		.Event_GroupContent{content:""; clear:both; display:block;}
+		.Event_GroupContent .CategoryTitle{text-align:left;}
+		@media all and (max-width:1100px){
+			/* 탭메뉴 */
+			.EventDetailPage .LeftTapMenu{margin-bottom:2em;}
+		}
+
+	/* 인기이벤트 */
+	.Event_BasicsThumArea{content:""; clear:both; display:block; width:100%; position:relative; text-align:center; margin:auto;} /*  background-color:#f1f1f1;  Event_Label_ThumArea */
+	.Event_BasicsThumArea > section.InnerContainer{}
+	.Event_BasicsThumArea fieldset{content:""; clear:both; display:block; position:relative; text-align:center; margin:auto;}
+	.Event_BasicsThumArea .CategoryTitle{display:none; text-align:left;}
+
+	/* 이벤트썸네일: HOT이벤트  */
+	.Event_HotArea{content:""; clear:both; display:block; position:relative; width:100%; border-top:1px solid #dddddd;}
+	.Event_HotArea .Inner{}
+	/* 컨텐츠 */
+	.Event_HotContent{}
+ 	.Event_HotContent .Icon_Best{}
+
+	/* 카테고리BEST */
+	.Event_BestArea{content:""; clear:both; display:block; position:relative; width:100%; border-top:1px solid #dddddd;}
+	.Event_BestArea .InnerContainer{}
+	.Event_BestArea  + .Event_Group_Btn{margin-top:1.5em;}
+		/* 탭메뉴 */
+		.Event_BestArea .TapMenu3{}
+		/* 탭컨텐츠 */
+		.Event_BestContent{content:""; clear:both; display:block;}
+		.Event_BestContent .Icon_Best{}
+
+	/* 고객사진컨텐츠 (숨김20210127) */
+	.Event_GuesContentstArea{content:""; clear:both; display:block; margin-top:2em; display:none;}
+	.Event_GuesContentstArea .InnerContainer{}
+
+/* ========================================================================================= */
+/* 이벤트페이지 게시판형(202011) */
+/* 썸네일리스트 */
+.Event_Label_ThumBoard{content:""; clear:both; display:block; position:relative;}
+.Event_Label_ThumBoard .List{display:block; position:relative; border-top:1px solid #b8b8b8; margin:auto;}
+.Event_Label_ThumBoard .List li{border-bottom:1px solid #b8b8b8;}
+	/* 기본라벨구성  */
+	.LabelThumBoard{display:block; position:relative; vertical-align:middle; padding:2em 2em; cursor:pointer;}
+	.LabelThumBoard label{display:block; position:relative; vertical-align:middle; text-align:center; margin:auto; cursor:pointer;}
+	.LabelThumBoard label img{display:block; max-width:100%; margin:auto;}
+ 	.LabelThumBoard label u{display:inline-block; font-size:10pt; text-align:center; text-decoration:none; border-radius:20px; background-color:rgba(255, 255, 255, 0.7); padding:0.1em 1em;}
+	.LabelThumBoard label u span{}
+	.LabelThumBoard label u b{font-weight:normal; }
+	.LabelThumBoard label dl{display:inline-table; position:relative; vertical-align:middle;}
+	.LabelThumBoard label dt{display:table-cell; position:relative; width:42%; vertical-align:middle; text-align:left; overflow:hidden;}
+	.LabelThumBoard label dt img{width:100%;}
+	.LabelThumBoard label dt u{display:none;}
+	.LabelThumBoard label dt .Icon_Live{display:none;}
+	.LabelThumBoard label dt .Icon_Live > div{border-color:#000;}
+	.LabelThumBoard label dt .Icon_Live > span{border-top-color:#000;}
+	.LabelThumBoard label dt .Icon_Live big{background-color:#000;}
+	.LabelThumBoard label dd{display:table-cell; position:relative; vertical-align:middle; text-align:left; padding-left:2em;} 
+	.LabelThumBoard label small{display:block; position:relative; letter-spacing:-1px;} 
+	.LabelThumBoard label small p{display:block; font-size:13pt; display:none;}
+	.LabelThumBoard label small p > span{}
+	.LabelThumBoard label small p b{}
+	.LabelThumBoard label small pre{display:block; font-size:19pt; font-weight:600; line-height:1.8em; }
+	.LabelThumBoard label small mark{display:block; color:#9a9a9a; font-size:13pt; font-weight:300; background:none;}
+	.LabelThumBoard label big{display:inline-table; position:relative; margin-top:1em; display:none; } /* 숨김처리 */
+	.LabelThumBoard label big > *{display:table-cell; padding-left:1em;}
+	.LabelThumBoard label big u{display:none;}
+	.LabelThumBoard label big strong{color:#fff; font-weight:300; background-color:#000; padding:0px 0.5em; border-radius:5px;}
+	.LabelThumBoard label big strong p{}
+	.LabelThumBoard label big strong p i{font-weight:normal;} /* 글자일경우 */
+	.LabelThumBoard label big strong p b{font-weight:300;} /* 퍼센트일경우 */
+	.LabelThumBoard label big strong p b + span{}
+	.LabelThumBoard label big strike{color:#9a9a9a; font-size:11pt;}
+	.LabelThumBoard label big strike b{font-weight:normal;}
+	.LabelThumBoard label big strike span{}
+	.LabelThumBoard label big em{color: #c0121e;} 
+	.LabelThumBoard label big em b{}
+	.LabelThumBoard label:hover{}
+	.LabelThumBoard label:hover dt:after{display:block;}
+	.LabelThumBoard label:hover dt img{transform: scale(1.1); transition:all 0.3s linear; -webkit-ransition:all 0.3s linear;  -moz-transition:all 0.3s linear;}
+	.LabelThumBoard label dt:after{content:"+"; clear:both; display:block; position:absolute; top:0%; left:0%; width:100%; height:100%; color:#fff; font-size:40pt; font-weight:100; line-height:4.5em; text-align:center; background-color:rgba(0, 0, 0, 0.6); display:none;}  /* 일단슴김 */
+
+	.LabelThumBoard .Icon_BoxText1{display:inline-table; width:12%; vertical-align:middle;} /* 진행중 */
+	.LabelThumBoard .Icon_BoxText1 + dl{display:inline-table; position:relative; width:75%; } 
+	.LabelThumBoard .Icon_BoxText2{display:inline-table; width:12%; vertical-align:middle;} /* 더보기 */
+
+	
+/* ========================================================================================= */
+/* [이벤트상세페이지] 랜딩컨텐츠영역(/event/eventView.php) */
+.EventDetailPage{content:""; clear:both;  display:block; position:relative; text-align:center; margin:auto; }
+.EventDetailPage .event{}
+.EventDetailPageArea section{display:block; position:relative;}
+.EventDetailPageArea .PointText.Top{display:block; max-width:1300px; margin:0 auto;}
+.EventDetailPageArea .BasicTitle{display:none; width:16%; margin:0 auto; border-radius:100px;position:relative; font-size:25px; font-weight:500; text-align:center; border:1px solid #444; color:#444;  padding:15px 0px 15px 0px; background-color:#fff;}
+.EventDetailPageArea .Event_BestEventArea .BasicTitle{display:block; width:16%; margin:0 auto; border-radius:100px;position:relative; font-size:25px; font-weight:500; text-align:center; border:1px solid #444; color:#444;  padding:15px 0px 15px 0px; background-color:#fff;}
+	
+	/* 상단영역(이벤트상세&시술페이지에 사용 중) */
+	.EventDetail_HeaderArea{display:block; position:relative; background-color:#f8f8f8; padding:3em 0em;}
+		/* 카테고리탭메뉴 */
+		.EventDetailPage .LeftTapMenuArea{display:none;}
+		.EventDetailPage .LeftTapMenuArea .Inner{}
+		@media all and (max-width:1100px){
+		.EventDetailPage .LeftTapMenuArea{}
+		}
+		/* 썸네일과신청폼 : 이벤트상세페이지, 시술페이지 */
+		.EventDetailPage .EventDetail_Header{}
+		.EventDetail_Header{} 
+		.EventDetail_Header .Inner{display:table; table-layout:fixed;}
+			/* 왼쪽 상품썸네일 */
+			.EventDetail_HeaderLeft{display:table-cell; position:relative; width:40%; vertical-align:top;}
+			.EventDetail_HeaderLeft .LabelThum_Width .LabelThum{width:100%;}
+			.EventDetail_HeaderLeft .LabelThum label{width:100%; background:none;}
+			.EventDetail_HeaderLeft .LabelThum label dt{display:block !important; width:100% !important; cursor:auto;}
+			.EventDetailPage .EventDetail_HeaderLeft .LabelThum label dt u{font-size:12pt; line-height:1.8em; font-weight: 900; font-family: 'NanumSquareRound',sans-serif; border-radius:30px; width:40%; margin-left:-20%; background-color:rgba(255, 255, 255, 0.7);}
+			.EventDetail_HeaderLeft .LabelThum label dt .Icon_Best{display:none;}
+			.EventDetail_HeaderLeft .LabelThum label dt .Icon_Hot{display:none;}
+			.EventDetail_HeaderLeft .LabelThum label dd{display:none;}
+			.EventDetail_HeaderLeft .LabelThum label .TagBox{display:none;}
+			.EventDetail_HeaderLeft .Icon_LiveMessage{position:absolute; top:10px; left:15px; display:none; }
+
+			/* 오른쪽 상품영역 */
+			.EventDetail_HeaderRight{display:table-cell; position:relative; width:60%; vertical-align:top; padding-left:3em;}
+				/* ------------------------------------------------------------------------------------------------- */	
+				/* 대표썸네일  */
+				.EventDetail_HeaderRight .LabelThum{display:block; margin-bottom:0.5em;}
+				.EventDetail_HeaderRight .LabelThum .Badge_Best{display:none;}
+				.EventDetail_HeaderRight .LabelThum label{width:100%; background:none; border:none; box-shadow:none;}
+				.EventDetail_HeaderRight .LabelThum label dd{padding-top:0px;}
+				.EventDetail_HeaderRight .LabelThum label dt{}
+				.EventDetail_HeaderRight .LabelThum label dd{cursor:auto;}
+				.EventDetail_HeaderRight .LabelThum label .TagBox{}
+				.EventDetail_HeaderRight .LabelThum label small > p span{background:none !important; text-align:left; color:#000; font-weight:500; padding:0.5em 0; margin:0;}
+				.EventDetail_HeaderRight .LabelThum label small > p span b{font-size:18pt;}
+				.EventDetail_HeaderRight .LabelThum label small mark{font-size:13pt; font-weight:normal; margin-top:0px; padding:0.3em 0;}
+				.EventDetail_HeaderRight .LabelThum label small pre{display:none;}/* height:auto; margin-bottom:1em; */
+				.EventDetail_HeaderRight .LabelThum label big{width:35%; padding-right:1em; display:none;}
+				.EventDetail_HeaderRight .LabelThum label small .NameBox{height:auto;}
+				
+				/* 구분 */
+				.NC00030 .EventDetail_HeaderRight{width:44%;}
+				.NC00030 .EventDetail_HeaderRight .LabelThum label small pre{display:block;}
+				.NC00030 .EventDetail_HeaderRight .LabelThum label big{display:inline;}
+				/* ------------------------------------------------------------------------------------------------- */	
+				/* 옵션선택  */
+				.GoodsSelectArea{display:block;}
+					/* 옵션선택(시술펼침) */
+					.Goods_SelectOption{}
+						.SelectBox{display:block; position:relative; font-size:10pt; text-align:left;}
+						.SelectBox .SelectBtn{display:block; position:relative;}
+						.SelectBox .SelectBtn:hover .SelectOptionLIst{}
+						.SelectBox .SelectBtn a{display:block; position:relative; width:100%;  border:1px solid #dedede; background-color:#ffffff; padding:8px 15px;}
+						.SelectBox .SelectBtn a:after{content:'▼'; display:block; position:absolute; top:10px; right:15px;}
+						.SelectBox .SelectBtn + .SelectOptionLIst:not([style*='display: none']){}
+						.SelectBox .SelectOptionLIst{display:block; position:absolute; width:100%; border:1px solid #dedede; background-color:#ffffff; margin-top:-1px; z-index:100; display:none;} /* 일단숨김 */
+						.SelectBox .SelectOptionLIst li{display:block; border-bottom:1px solid #f1f1f1; }
+						.SelectBox .SelectOptionLIst li:last-child{border-bottom:none;}
+						.SelectBox .SelectOptionLIst a{display:block; padding:8px 15px;}
+						.SelectBox .SelectOptionLIst a:hover{background-color:#fafafa;}
+						.SelectBox .SelectOptionLIst .OptionSoldout a{color:#a9a9a9; cursor:no-drop;} /* 품절 */
+						.SelectBox + .SelectBox{margin-top:1em;} /* 근접 */
+					.Goods_SelectBox{display:block; position:relative; text-align:left;}		
+					.Goods_SelectBox .SelectBtn{display:block; position:relative;}
+					.Goods_SelectBox .SelectBtn a{display:block; position:relative; width:100%; border:1px solid #dedede; background-color:#ffffff; padding:1.2em 1em;}
+					.Goods_SelectBox .SelectBtn a:after{content:'▼'; display:block; position:absolute; top:40%; right:1.5em;}
+					.Goods_SelectBox:hover .SelectBtn a,
+					.Goods_SelectBox .SelectBtn a:focus-within{border-color:#272727;}
+					.Goods_SelectBox .SelectBtn + .SelectOptionLIst:not([style*='display: none']){}
+					.Goods_SelectBox .SelectOptionLIst{display:block; position:absolute; width:100%; background-color:#ffffff; border:1px solid #272727; border-top:1px solid #dedede; margin-top:-2px; z-index:100; display:none;} /* 일단숨김 */
+					.Goods_SelectBox .SelectOptionLIst li:hover{background-color:#fafafa;}
+					/* 선택된옵션 */
+					.Goods_SelectedOption{display:block; position:relative; margin-top:1em;}
+					.Goods_SelectedOption .List{border:none; background-color: #fff;}
+					.Goods_SelectedOption .List li{border:1px dashed #d9d9d9;} 
+					.Goods_SelectedOption .List li + li{border-top:none;}
+					.Goods_SelectedOption .PackageListThum label small{width:70%;}
+					.Goods_SelectedOption .PackageListThum label small em{display:none;}
+					.Goods_SelectedOption .PackageListThum label big{width:25%;}
+					.Goods_SelectedOption .PackageListThum label > em{width:5%;}
+				/* ------------------------------------------------------------------------------------------------- */	
+				/* 신청폼 */
+				.EventDetail_FormArea{display:block; position:relative;}
+				.EventDetail_Form{display:block; position:relative; background:none; border:none;}
+				.EventDetail_Form .Title{display:block; font-size:12pt;}
+					/* 이벤트내역 ------------------------------------------------------------------------------------------------- */
+					.EventDetail_Form .EventDetail_Form_EventArea{display:block; position:relative;}
+					.EventDetail_Form .PackageListThum{}
+						/* 안내문구 */
+						.EventDetail_Form .Tax_InfoText{}
+						.EventDetail_Form .Tax_InfoText{position:static; left:0px; bottom:0px; margin:5px 0 5px 0;}
+					/* 신청영역 ------------------------------------------------------------------------------------------------- */
+					/* 기본신청폼 */
+					form#frmInputPage1{display:none;} /* 이벤트신청폼 첫번째 */
+					form#frmInputPage2{margin:5% auto; display:none;} /* 이벤트신청폼 두번째 */
+					..EventDetail_Form .EventDetail_Form_ApplyArea{}
+					.EventDetail_Form_ApplyArea{content:""; clear:both; display:block; width:100%; vertical-align:top; margin-top:20px;}
+					.EventForBranch .EventDetail_Form_ApplyArea{vertical-align:middle;} /* 지점일때 */
+						/* 지점선택 */
+						.EventDetail_Form .Event_Label_Branch{display:inline-block; width:100%; text-align:left; vertical-align:top;padding:16px 20px; border:1px solid #444; margin-bottom:15px;}
+						.EventDetail_Form .Event_Label_Branch > .Title{display:inline-block; width:20%; color:#444444; font-size:13pt; font-weight:500; vertical-align:middle;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch dl{display:block; width:100%; font-size:10pt; text-align:left;  margin-top:1.5%;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch dl dt{display:block; width:100%; vertical-align:top; margin-bottom:1%;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{ font-size:11pt; color:#999;line-height:10pt;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch dl dd{display:block; vertical-align:top;} 
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label{display:inline-table; position:relative; width:24%; line-height:11pt; letter-spacing:-1px; font-weight:normal; cursor:pointer; margin-bottom:5px;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label input{display:none;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label em{display:inline-block; position:relative; top:1px; width:20px; height:20px; font-style:normal; font-weight:normal; border:1px solid #dadada; border-radius:50%; background-color:#ffffff;  margin-right:5px;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label em span{position:absolute; top:5px; left:5px; width:8px; height:8px; text-indent:-100000px; background-color:#777; border-radius:50%; display:none;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label strong{display:inline-block; color:#333333; font-weight:normal; letter-spacing:-1px; margin:0px; padding:0px; font-size:11pt; vertical-align:middle;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label input:checked ~ em{}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label input:checked ~ em span{display:block;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label input:checked ~ b{color:#000000;}
+						.EventDetail_Form .Event_Label_Branch .SelectBranch label:hover em{}
+						/* 하단정보 */
+						.EventDetail_Form .Event_Label_Personal{content:""; clear:both; display:block;}
+						.NC00143 form#frmInput_203 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00145{display:none;}
+						.NC00143 form#frmInput_204 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00145{display:none;}
+						.NC00143 form#frmInput_213 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00144{display:none;}
+						.NC00143 form#frmInput_216 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00145{display:none;}
+						.NC00143 form#frmInput_215 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00145{display:none;}
+						.NC00143 form#frmInput_217 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00144{display:none;}
+						.NC00143 form#frmInput_598 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00145{display:none;}
+						.NC00143 form#frmInput_711 .EventDetail_Form .Event_Label_Branch .SelectBranch label.C00144{display:none;}
+							/* 인풋 개인정보  */
+							.EventDetail_Form .Event_Label_Personal ul{display:table; width:100%; table-layout:fixed; margin-bottom:0.8em;}
+							.EventDetail_Form .Event_Label_Personal>ul:first-child{display:inline-block; margin-bottom:15px}
+							.EventDetail_Form .Event_Label_Personal>ul:first-child li{display:inline-block; width:49.1%; text-align:left; vertical-align:top;padding:16px 20px; border:1px solid #444; margin-right:8px;}
+							.EventDetail_Form .Event_Label_Personal>ul:first-child li:nth-child(2){margin-right:0px}
+							.EventDetail_Form .Event_Label_Personal .Title{display:inline-block; width:20%; color:#444444; font-size:13pt; font-weight:500; vertical-align:middle;}
+							.EventDetail_Form .Event_Label_Personal .InputBox{display:inline-block; width:75%; font-size:13pt; text-align:left; text-indent:0px; margin:0px;} /* box-shadow:1px 1px 5px 0px #d7d7d7 inset;  */
+							.EventDetail_Form .Event_Label_Personal .InputBox input,
+							.EventDetail_Form .Event_Label_Personal .InputBox select{display:table-cell; width:100%; font-size:13pt; border:none; background:none; outline:none; margin:0px; padding:0px; color:#444; font-weight:300;}
+							/* 신청버튼 */
+							.EventDetail_Form_EnterBtn{content:""; clear:both; display:block; position:relative; width:100%; text-align:center;  margin:auto;}
+							.EventDetail_Form_EnterBtn button{display:block; width:100%; color:#ffffff; letter-spacing:1px;  text-align:center; background-color:#999; border:none; border-radius:8px; cursor:pointer; padding:1.4em 0px;}
+							.EventDetail_Form_EnterBtn p{display:inline-block; font-size:15pt; line-height:1em; letter-spacing:-1px; font-weight:500; padding:0px;}
+							.EventDetail_Form_EnterBtn button:hover{}
+							.EventDetail_Form_EnterBtn ul{display:table; width:100%; border:1.5px solid #999; background:#999;}
+							.EventDetail_Form_EnterBtn li{display:table-cell; width:100% !important;}
+							.EventDetail_Form_EnterBtn li:first-child button{width:100%; color:#fff;}
+							/* .EventDetail_Form_EnterBtn li:first-child button:after{position:absolute; top:50%; right:50%; width:1px; height:31px; margin-top:-15px; background:#fff; content:'';} */
+							.EventDetail_Form_EnterBtn li button{width:100%; border:none; border-radius:0px;}
+							.EventDetail_Form_EnterBtn li button:hover{background-color:#666;}
+							/* 동의(기존) */
+							.EventDetail_Form .Event_Label_Personal .CheckBox{content:""; clear:both; display:block; text-align:left;}
+							.EventDetail_Form .Event_Label_Personal .CheckBox label{color:#939293; font-size:9pt; margin:0px; padding:0px;}
+							.EventDetail_Form .Event_Label_Personal .CheckBox label input{margin:0px; padding:0px; margin-right:3px; }
+							.EventDetail_Form .Event_Label_Personal .CheckBox label span{}
+							.EventDetail_Form .Event_Label_Personal .CheckBox a{color:#939293;}
+							/* 동의(체크박스) */
+							.EventDetail_Form .Form_CheckBox{content:""; clear:both; display:block; text-align:left; padding:0px;}
+							.EventDetail_Form .Form_CheckBox label{display:table; position:relative; width:100%; color:#939293; font-size:8pt; cursor:pointer;}
+							.EventDetail_Form .Form_CheckBox label input{display:none;}
+							.EventDetail_Form .Form_CheckBox label input:checked ~ em{}
+							.EventDetail_Form .Form_CheckBox label input:checked ~ em span.Check{display:block;}
+							.EventDetail_Form .Form_CheckBox label input:checked ~ pre{color:#000000;}
+							.EventDetail_Form .Form_CheckBox label em{display:table-cell; position:relative; width:15px; font-style:normal; font-weight:normal; vertical-align:middle;}
+							.EventDetail_Form .Form_CheckBox label em b{display:block; position:relative; top:0; width:100%; height:15px; font-style:normal; border:1px solid #dadada; border-radius:3px; background-color:#ffffff; box-shadow:1px 2px 5px 0px #ededed inset;}
+							.EventDetail_Form .Form_CheckBox label em b:after{content: ''; display:block; position:absolute; top:0px; left:3px; width:4px; height:9px; border-bottom:2px solid #929292; border-right:2px solid #929292; transform:rotate( 45deg ); -webkit-transform:rotate( 45deg );-moz-transform:rotate( 45deg ); display:none;} 
+							.EventDetail_Form .Form_CheckBox label p{display:table-cell; vertical-align:middle; padding-left:3px; line-height:1.5em;}
+							.EventDetail_Form .Form_CheckBox a{color:#939293; font-size:9pt;}
+							.EventDetail_Form .Form_CheckBox label:first-child{margin-bottom:3px;}
+							.EventDetail_Form .Form_CheckBox label input:checked ~ em{}
+							.EventDetail_Form .Form_CheckBox label input:checked ~ em b:after{display:block;}
+
+			/* 스크롤시고정
+			.EventDetail_Header.Fixed{position:fixed; width:100%; bottom:0px; background-color:#fff; z-index:999999;}
+			.EventDetail_Header.Fixed .EventDetail_HeaderLeft{display:none;}
+			.EventDetail_Header.Fixed .EventDetail_HeaderRight{}
+			 */
+			 
+			 /* 구분 */
+			.NC00001 .EventDetail_Form .Event_Label_Branch{border-color:#000000;} /* 네트워크1 */
+			.NC00001 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#000000;}
+			.NC00001 .EventDetail_Form_EnterBtn li button{background-color:#000000;}
+			.NC00001 .EventDetail_Form_EnterBtn li button:hover{background-color:#333333;}
+			.NC00001 .EventDetail_Form_EnterBtn ul{border:1.5px solid #000000; background:#000000;}
+			.NC00001 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #000000;}
+			.NC00001.C00003 .EventDetail_Form .Event_Label_Branch{border-color:#000000;}
+			.NC00001.C00003 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#000000;}
+			.NC00001.C00003 .EventDetail_Form_EnterBtn li button{background-color:#000000;}
+			.NC00001.C00003 .EventDetail_Form_EnterBtn li button:hover{background-color:#333333;}
+			.NC00001.C00003 .EventDetail_Form_EnterBtn ul{border:1.5px solid #000000; background:#000000;}
+			.NC00001.C00003 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #000000;}
+			
+			.NC00010 .EventDetail_Form .Event_Label_Branch{border-color:#78bc27;} /* 네트워크3 */
+			.NC00010 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#78bc27;}
+			.NC00010 .EventDetail_Form_EnterBtn li button{background-color:#78bc27;} 
+			.NC00010 .EventDetail_Form_EnterBtn li button:hover{background-color:#649c21;} 
+			.NC00010 .EventDetail_Form_EnterBtn ul{border:1.5px solid #78bc27; background:#78bc27;}
+			.NC00010 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #78bc27;}
+			
+			.NC00030 .EventDetail_Form_EnterBtn li:nth-child(2){display:none;}
+			.NC00030 .EventDetail_Form_EnterBtn li:first-child button:after{display:none;}
+			.NC00030 .EventDetail_Form_EnterBtn li button:hover{background-color:#f5b31f;}
+			.NC00030 .EventDetail_Form_EnterBtn ul{border:1.5px solid #f5bf45; background-color:#f5bf45;}
+			.NC00030 .EventDetail_Form_EnterBtn button{background-color:#f5bf45;}
+			.NC00030 .EventDetail_Form .EventDetail_Form_EventArea{display:none;}
+			.NC00030 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #f5b31f; margin-right:7px;}
+			.NC00030 .EventDetail_Form .Event_Label_Personal>ul:first-child li:nth-child(2){margin-right:0px}
+			
+			.NC00032 .EventDetail_Form .Event_Label_Branch{border-color:#5b4785;} /* 네트워크5 */
+			.NC00032 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#5b4785;}
+			.NC00032 .EventDetail_Form_EnterBtn li button:hover{background-color:#4a3771;}
+			.NC00032 .EventDetail_Form_EnterBtn button{background-color:#5b4785;}
+			.NC00032 .EventDetail_Form_EnterBtn ul{border:1.5px solid #5b4785; background:#5b4785;}
+			.NC00032 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #5b4785;}
+
+			.NC00076 .EventDetail_Form .Event_Label_Branch{border-color:#31b2aa;} /* 네트워크8 */
+			.NC00076 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#31b2aa;}
+			.NC00076 .EventDetail_Form_EnterBtn li button{background-color:#31b2aa;}
+			.NC00076 .EventDetail_Form_EnterBtn li button:hover{background-color:#31b2aa;}
+			.NC00076 .EventDetail_Form_EnterBtn ul{border:1.5px solid #31b2aa; background:#31b2aa;}
+			.NC00076 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #31b2aa;}
+
+			.NC00084 .EventDetail_Form .Event_Label_Branch{border-color:#6092eb;}
+			.NC00084 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#6092eb;}
+			.NC00084 .EventDetail_Form_EnterBtn li button{background-color:#6092eb;}
+			.NC00084 .EventDetail_Form_EnterBtn li button:hover{background-color:#6092eb;}
+			.NC00084 .EventDetail_Form_EnterBtn ul{border:1.5px solid #6092eb; background:#6092eb;}
+			.NC00084 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #6092eb;}
+
+			.NC00085 .EventDetail_Form .Event_Label_Branch{border-color:#8aa1ff;}
+			.NC00085 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#8aa1ff;}
+			.NC00085 .EventDetail_Form_EnterBtn li button{background-color:#8aa1ff;}
+			.NC00085 .EventDetail_Form_EnterBtn li button:hover{background-color:#8aa1ff;}
+			.NC00085 .EventDetail_Form_EnterBtn ul{border:1.5px solid #8aa1ff; background:#8aa1ff;}
+			.NC00085 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #8aa1ff;}
+			 
+			.NC00131 .EventDetail_Form .Tax_InfoText{margin-top:0.7em;}
+			.NC00131 .EventDetail_Form .Event_Label_Personal .Title{color:#ff6157;}
+			.NC00131 .EventDetail_Form .Event_Label_Branch{border-color:#ff6157;}
+			.NC00131 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#ff6157;}
+			.NC00131 .EventDetail_Form_EnterBtn li button{background-color:#fc7770;}
+			.NC00131 .EventDetail_Form_EnterBtn li button:hover{background-color:#f16d66;}
+			.NC00131 .EventDetail_Form_EnterBtn ul{border:1.5px solid #ff6157; background:#ff6157;}
+			.NC00131 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #ff6157;}
+			
+			.NC00133.EventDetailPage .EventDetail_Form .Title{display:none;}
+			.NC00133.EventDetailPage .LabelBlockThum label big{display:none;}
+			.NC00133.EventDetailPage .Tax_InfoText p{display:none;}
+			.NC00133.EventDetailPage .EventMultiSlider.LabelThum_Height .LabelThum label big{display:none;}
+			
+			.NC00143.EventDetailPage .LabelBlockThum label big{display:none;}
+			.NC00143.EventDetailPage .EventDetail_HeaderLeft .LabelThum label dt u{top:5%; bottom:auto; right:3%; left:auto;}
+			.NC00143 .EventDetail_Form .Tax_InfoText{margin-top:0.7em;}
+			.NC00143 .EventDetail_Form .Tax_InfoText span{display:none;}
+			.NC00143 .EventDetail_Form .Event_Label_Personal .Title{color:#5b86e5;}
+			.NC00143 .EventDetail_Form .Event_Label_Branch{border-color:#5b86e5;}
+			.NC00143 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#5b86e5;}
+			.NC00143 .EventDetail_Form_EnterBtn li button{background-color:#5b86e5;}
+			.NC00143 .EventDetail_Form_EnterBtn li button:hover{background-color:#5178d0;}
+			.NC00143 .EventDetail_Form_EnterBtn ul{border:1.5px solid #5b86e5; background:#5b86e5;}
+			.NC00143 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #5b86e5;}
+			
+			.NC00161 .EventDetail_Form .Event_Label_Branch{border-color:#cbacaa;}
+			.NC00161 .EventDetail_Form .Event_Label_Branch .SelectBranch dl dt p{color:#cbacaa;}
+			.NC00161 .EventDetail_Form_EnterBtn li button{background-color:#cbacaa;}
+			.NC00161 .EventDetail_Form_EnterBtn li button:hover{background-color:#be9795;}
+			.NC00161 .EventDetail_Form_EnterBtn ul{border:none; background:#cbacaa;}
+			.NC00161 .EventDetail_Form .Event_Label_Personal>ul:first-child li{border:1px solid #cbacaa;}
+
+
+
+	/* 상품설명(상품관리) */
+	.EventDetailPage .EventDetailGoods{}
+	.EventDetail_Goods{content:""; clear:both; display:block; text-align:center; font-family:'NanumSquareRound',sans-serif; margin:auto;}
+	.EventDetail_Goods .InnerContainer,
+	.EventDetail_Goods .Inner{padding:4em 0em;}
+		/* 카드혜택과신청자수 -------------------------------------------------------------------------------------------------  */
+		.EventDetail_CardNRequest{display:table; position:relative; width:100%; table-layout:fixed;}
+		.EventDetail_CardNRequest > .InnerContainer,
+		.EventDetail_CardNRequest > .Inner{display:table; position:relative; table-layout:fixed; margin:auto;}
+			/* 카드혜택 */
+			.EventDetailPage .Event_CardtArea{display:table-cell; width:50%; padding-right:1em;}
+			.EventDetailPage .Event_CardtArea p{text-align:center;}
+			.EventDetailPage .Event_CardtArea pre{height:13em; word-break:keep-all; border:1px solid #ddd; border-radius:20px; padding:15px 25px;}
+			/* 신청자목록 */
+			.EventDetailPage .EventRqnListArea{display:table-cell; width:50%;}
+			.EventDetailPage .EventRqnListArea section.InnerContainer{min-width:100%; max-width:100%; border:none; padding:0px;}
+			.EventDetailPage .EventRqnListArea .AccrueNum{text-align:center;}
+			.EventDetailPage .EventRqnListArea .AccrueNum b{} /* color: #bd0122; */
+			.EventDetailPage .EventRqnListArea .EventRqnList{background-color:#f8f8f8; border:1px solid #ddd; border-radius:20px; padding:15px 25px;}
+			.EventDetailPage .EventRqnListArea .ListMore{right:0px; top:0px;}
+		/* 기본설명 -------------------------------------------------------------------------------------------------  */
+		.EventDetailPage .EventDetail_Basic{}
+		.EventDetail_Basic{display:block; position:relative; text-align:center; margin:auto;}
+		.EventDetail_Basic section{}
+		.EventDetail_Basic .Inner{margin:auto;}
+		.EventDetail_Basic img{/*display:block;*/ max-width:100%; text-align:center; margin:auto;}
+		.EventDetail_Basic .inner_Text{font-size:13pt; line-height:1.8em; font-family:'NanumSquareRound',sans-serif;}
+		.EventDetail_Basic .Movie_IframArea{margin:auto;}
+		.EventDetail_Basic section .PointText img{height:auto;}
+			/* 시술안내(내용1,2,3) */
+			.InfoSection_Basic{text-align:center;}
+			.InfoSection_Basic .Inner{padding-top:0em;}
+			.InfoSection_Basic .PointText{display:block; position:relative; font-size:20pt; line-height:1.8em; text-align:center;}
+			.InfoSection_Basic .PointText strong{font-weight:900;}
+			/* 시술과정(최대6단계) */
+			.InfoSection_Process{}
+			.InfoSection_Process.ProcedureProcess{display:none;}
+			.InfoSection_Process .List{display:table; position:relative; width:100%;}
+			.InfoSection_Process .List li{display:table-cell; vertical-align:top; width:24%; text-align:center;}
+				.ProcessThum{position:relative;}
+				.ProcessThum dl{display:block; position:relative; width:98%;}
+				.ProcessThum dt{display:block; position:relative; height:14.8em; border:1px solid #ddd; border-radius:20px; overflow:hidden;}
+				.ProcessThum dt img{display:block; width:100%; border:1px solid #ddd;}
+				.ProcessThum dd{display:block; position:relative; padding-top:3em;}
+				.ProcessThum dd p{display:block; position:relative; font-size:12pt; font-weight:800;}
+				.ProcessThum dd span{display:block; position:absolute; top:-25px; left:50%; margin-left:-25px; width:50px; height:50px; line-height:50px; color:#fff; font-size:9pt; font-weight:500; border-radius:50%; background-color:#aaaaaa; z-index:90; }
+				.ProcessThum dt + dd span{background-color:#bd0122;} /* 이미지가있을시 */
+			/* 시술장점(내용4) */
+			.InfoSection_Advantages{}
+			/* 시술대상(내용5) */
+			.InfoSection_Target{}
+			/* 시술종류(관련장비) */
+			.InfoSection_Device{}
+			.InfoSection_Device .List{display:block; position:relative; width:100%; margin:auto;}
+			.InfoSection_Device .List li{display:inline-table; position:relative; width:24%; text-align:center; vertical-align:top; table-layout:fixed; margin-bottom:0.7em;}
+				.DeviceThum{display:block; position:relative; width:96%; line-height:1.6em;  letter-spacing:-1px; border:1px solid #ddd; border-radius:20px; box-shadow:1px 1px 5px 0px #e4e4e4; background-color:#fff; text-align:center; margin:auto; padding:2em; overflow: hidden;}
+				.DeviceThum dt{display:block; position:relative;}
+				.DeviceThum dt img{display:block; position:relative; width:auto; max-width:100%; height:200px; margin:auto;}
+				.DeviceThum dd{display:block; position:relative; padding-top:1em;}
+				.DeviceThum dd span{color:#fff; font-weight:normal; background-color:#333; border-radius:3px; padding:1px 4px; display:none;}
+				.DeviceThum dd strong{display:block; font-size:13pt; font-weight:800;}
+				.DeviceThum dd p{display:-webkit-box;  -webkit-line-clamp:3; -webkit-box-orient:vertical;  width:100%; height:4.4em; color:#666; font-size:10pt; line-height:1.5em;  text-overflow:ellipsis;  text-overflow:ellipsis;  word-wrap:break-word;  white-space:pre-line; margin-top:0.5em; overflow:hidden;}
+			/* 시술전후 */
+			.InfoSection_BnFboard{}
+			.InfoSection_BnFboard .BnfLThum{width:96%; background: #f8f8f8; border-radius:20px; cursor:default;}
+			.InfoSection_BnFboard .BnfLThum dl{}
+			.InfoSection_BnFboard .BnfLThum dt{}
+			.InfoSection_BnFboard .BnfLThum dt label strong{}
+			.InfoSection_BnFboard .BnfLThum dd{}
+			.InfoSection_BnFboard .BnfLThum dd pre{}
+			.InfoSection_BnFboard .BnfLThum dd b{}
+			.InfoSection_BnFboard .BnfList li:hover .BnfLThum:after{border-radius:20px; display:none; }
+			/* 시술후주의사항및부작용 */
+			.InfoSection_Careful{}
+
+		/* 추천이벤트 -------------------------------------------------------------------------------------------------  */
+		.Event_CategoryBestArea{font-family:'NanumSquareRound',sans-serif; }
+		.Event_CategoryBestArea .LabelThum{}
+		.Event_CategoryBestArea .LabelThum label{border-radius:15px; overflow:hidden;} /* background-color: #f8f8f8; */
+		.Event_CategoryBestArea .LabelThum label dd{}
+		.Event_CategoryBestArea .LabelThum_Width .LabelThum dt{}
+		.Event_CategoryBestArea .LabelThum label dt u{font-size:9pt; border:1px solid #ddd; background-color:#fff;}
+		.Event_CategoryBestArea .LabelThum label dt u b{font-weight:normal;}
+
+		/* 전체이벤트 -------------------------------------------------------------------------------------------------  */
+		.Event_BestEventArea{font-family:'NanumSquareRound',sans-serif; padding-bottom:3em;}
+		.Event_BestEventArea .MainMultiSlider{}
+		.Event_BestEventArea .LabelThum{}
+
+
+	/* 상품설명(상품관리)>>시술페이지내용표기될경우  */
+	.EventDetailPage.getURL{}
+	.EventDetail_Basic .eventViewWith{margin-top:50px; overflow-x:hidden;}
+	.EventDetail_Basic .eventViewWith .InnerContainer{min-width:1300px;}
+	.EventDetail_Basic .eventViewWith .Section_ClinicDevice{display:none !important;}
+
+
+/* ========================================================================================= */
+/* [이벤트상세페이지] eventViewSpecial.php */
+.eventViewSpecialWrap{}
+.eventViewSpecialWrap .EventDetail_HeaderArea{padding:0;}
+	/* 별도처리 -------------------------------------------- */
+	/* 월간배너 */
+	.eventViewSpecialWrap .EventTopBanner{display:none;}
+	/* 썸네일과신청폼 */
+	.eventViewSpecialWrap .EventDetail_Header{margin-top:0px;}
+	.eventViewSpecialWrap .EventDetail_Header .Inner{display:block; }
+	.eventViewSpecialWrap .EventDetail_Header  > .Inner{width:100%; max-width:100%; min-width:100%;}
+		/* 썸네일 */
+		.eventViewSpecialWrap .EventDetail_Header .Event_BasicsThumArea{}
+		.eventViewSpecialWrap .EventDetail_Header .EventDetail_FormArea.Inner{}
+		.eventViewSpecialWrap .EventDetail_Header .EventDetail_FormArea{}
+		.eventViewSpecialWrap .EventDetail_Header .EventDetail_FormArea > section{display:table; width:100%; table-layout:fixed;}
+		.eventViewSpecialWrap .EventDetail_Header .LabelThum_Width{}
+		.eventViewSpecialWrap .EventDetail_Header .LabelThum_Width .LabelThum{}
+		.eventViewSpecialWrap .EventDetail_Header .LabelThum_Width .LabelThum label{border:none; box-shadow:none;}
+		.eventViewSpecialWrap .EventDetail_Header .LabelThum label dt{text-align:center;}
+		.eventViewSpecialWrap .EventDetail_Header .LabelThum label dt img{width:auto; margin:auto;}
+		.eventViewSpecialWrap .EventDetail_Header .LabelThum label dt u{width:14%; margin-left:-6%;}
+		.eventViewSpecialWrap .EventDetail_Header .EventDetail_FormArea .LabelThum_Subject{display:table-cell; width:40%; vertical-align:top; padding-right:1em;}
+		.eventViewSpecialWrap .EventDetail_Header .EventDetail_FormArea form{display:table-cell; width:60%; vertical-align:top;}
+		.eventViewSpecialWrap .EventDetail_HeaderRight{display:block; margin:auto; padding:3em 0 2em 0;}
+		.eventViewSpecialWrap .LabelThum_Subject label small p > span{margin-bottom:0px;}
+		.eventViewSpecialWrap .LabelThum_Subject label big{margin-top:2em;}
+
+	/* 남은시간카운트_202307 */
+	.eventViewSpecialWrap .TimeBox{position:fixed; top:0; left:50%; margin:0 auto; margin-left:-540px; display:table; background-color:#fff; padding:1em; width:1080px; overflow:hidden; border:5px solid #222; text-align:center; z-index:2;}
+	.eventViewSpecialWrap .TimeBox *{line-height:1;}
+	.eventViewSpecialWrap .TimeBox .TimeBadge{position:relative; display:inline-table; vertical-align:middle; padding:8px 10px; background-color:#222; border-radius:5px;} /* 배지 */
+	.eventViewSpecialWrap .TimeBox .TimeBadge em{color:#fff; font-weight:600; font-size:15pt;}
+	.eventViewSpecialWrap .TimeBox .TimeLeft{position:relative; display:inline-table; vertical-align:middle; margin-left:1.5em;}
+	.eventViewSpecialWrap .TimeBox .TimeLeft .Text{position:relative; display:inline-table; letter-spacing:-1px; font-size:17pt;}
+	.eventViewSpecialWrap .TimeBox .TimeLeft .Text + .Text{padding-left:15px;}
+	.eventViewSpecialWrap .TimeBox .TimeLeft .Text span{font-size:25pt; font-weight:600; letter-spacing:0;} /* 숫자 */
+		/* 구분 */
+		.NC00009.eventViewSpecialWrap .EventDetail_HeaderLeft{padding-top:78px;}
+
+	/* sns이벤트용퀵바_202307 */
+	.eventViewSpecialWrap .EventDetail_Quick{position:fixed; right:1%; bottom:2%; z-index:3;}
+	.eventViewSpecialWrap .EventDetail_Quick .QuickThum{position:relative; display:block;}
+	.eventViewSpecialWrap .EventDetail_Quick .QuickThum a{}
+	.eventViewSpecialWrap .EventDetail_Quick .QuickThum a:hover{opacity:.8; transition-duration:300ms;}
+	.eventViewSpecialWrap .EventDetail_Quick .QuickThum img{position:relative; display:block; max-width:10em;}
+	.eventViewSpecialWrap .EventDetail_Quick .QuickThum.Thum01{}
+	.eventViewSpecialWrap .EventDetail_Quick .QuickThum.Thum02{}
+
+	/* ------------------------------------------------------------------------------------------------- */
+	/* 스페셜페이지 단순화(202108) */
+	.eventViewSpecialWrap{}
+	.eventViewSpecialWrap .HeaderNav_Area{display:none;}
+	.eventViewSpecialWrap .HeaderNav_GNBmenu{display:none;}
+	.eventViewSpecialWrap .EventDetail_CardNRequest{display:none;}
+	.eventViewSpecialWrap .Event_BestEventArea{display:none;}
+	.eventViewSpecialWrap .Event_CategoryBestArea{display:none;}
+	.eventViewSpecialWrap .Company_Area .Link{display:none;}
+	.eventViewSpecialWrap .QuickArea{display:none;}
+
+	.eventViewSpecialWrap .EventDetail_HeaderLeft{padding:0px;}
+
+
+	
+/* ========================================================================================= */
+/* 
+[이벤트페이지] 하단퀵(이벤트폼띄우기)  : 숨김처리(20181227)
+*/
+#eventQuickForm{display:none;}
+.FrontQuickEvent{position:fixed; left:50%; bottom:0px; margin-left:-450px; width:900px;  height:auto;  z-index:998;}
+.EventFormPop{display:block; position:relative;}
+.EventFormPop .EventFormPop_Close{display:none;}
+.EventFormPop_Open{display:none;}
+.EventFormPop_Form{background-color:#f5f5f5; border-top:1px solid #cccccc;}
+	/* 이벤트혜택받기_열고닫는버튼 */
+	.EventFormPop_Btn{} /* position:absolute; z-index:99999999;  */
+	.EventFormPop_Btn p{position:relative; margin-bottom:-3px; z-index:999; width:100%; text-align:center; margin:auto; }
+	.EventFormPop_Btn p span{display:inline-block; width:80px; font-size:10pt; border-radius:10px 10px 0px 0px; padding:5px 0px 5px 0px; cursor:pointer;} 
+	.EventFormPop_Btn p.Open span{color:#ffffff; background-color:#bd0122; border:1px solid #bd0122; border-bottom:2px solid #bd0122;}
+	.EventFormPop_Btn p.Close{display:none;} /* 일단숨김 */
+	.EventFormPop_Btn p.Close span{color:#bd0122; background-color:#f4f4f4; border:1px solid #bd0122; border-bottom:2px solid #f4f4f4;}
+	.EventFormPop_Btn_Open{display:block; width:100%; color:#ffffff; font-size:15pt; line-height:12pt; font-weight:bold; letter-spacing:3px; text-align:center; border:none; background:none; outline:none; cursor:pointer; margin:0px; padding:0px; border-radius:10px 10px 0px 0px; background-color:#bd0122; padding:2%;}
+	/* 퀵메뉴전용폼 */
+	#layerEventForm{display:none;} /* 일단숨김 display:none; */
+	/* 이벤트신청폼 */
+	.EventFormPop_Form{content:""; clear:both; display:block; position:relative; border:none; background-color:#f4f4f4; margin:10px 0px 10px 0px;} /* border-top:1px solid #bd0122; border-bottom:1px solid #bd0122;  */
+	.FrontQuickEvent .EventFormPop_Form{margin:0px; border:1px solid #bd0122; border-bottom:none; border-radius:10px 10px 0px 0px; } /* 퀵고정일땐여백빼기 */
+	.EventFormPop_Form form{margin:0; margin:0;}
+	.EventFormPop_Form form fieldset{display:block; margin:0; margin:0; text-align:center; margin:auto; padding:15px;} /*  padding:2% 2%; */
+		/* 선택테이블 */
+		.EventFormPop_Table{display:table; table-layout:fixed; width:100%; text-align:left;}
+		.EventFormPop_Table td{padding:5px; vertical-align:middle;}
+		.EventFormPop_Table tbody tr{}
+		.EventFormPop_Table tbody tr td{position:relative; /* padding-bottom:1.5%; */}
+		.EventFormPop_Table tfoot td{}
+		.EventFormPop_Table .InputBox{display:inline-block; width:100%; font-size:12pt; text-indent:0px; border:none; border-radius:5px; background-color:#ffffff; box-shadow:1px 1px 3px 0px #d7d7d7; margin:0px; padding:0px; padding:10px 10px; } /*  border:1px solid #e1e1e1; */
+		.EventFormPop_Table .InputBox *{}
+		.EventFormPop_Table tbody input,
+		.EventFormPop_Table tbody select{display:table-cell; width:100%; font-size:10pt; border:none; background:none; outline:none; margin:0px; padding:0px;}
+		.EventFormPop_Table tbody input{}
+		.EventFormPop_Table tbody select{ }
+		.EventFormPop_Table .EvnetBtn{display:table; width:100%; height:65px; color:#ffffff; font-size:17px; font-weight:bold; text-align:center; vertical-align:middle; border-radius:5px; background-color:#bd0122; box-shadow:1px 1px 3px 0px #959595;}
+		.EventFormPop_Table .EvnetBtn span{display:table-cell; width:100%; height:inherit; vertical-align:middle; text-align:center;}
+		/* 신청버튼(이미지에서 코딩으로교체 : 20180710) */
+		.EventFormPop_EnterBtn{content:""; clear:both; display:block; position:relative; width:100%; height:80px; color:#ffffff;  letter-spacing:1px;  text-align:center; background-color:#d50429; border:none; border-radius:8px; cursor:pointer;}
+		.EventFormPop_EnterBtn span{display:block; width:100%; font-size:16px; text-indent:inherit;}
+		.EventFormPop_EnterBtn span strong{font-size:25px; font-weight:bold; font-family:'Roboto', sans-serif;}
+		.EventFormPop_EnterBtn p{display:inline-block; width:80%; font-size:23px; font-weight:bold; padding:0px;} /*  border-top:1px solid #ffffff;  */
+		.EventFormPop_EnterBtn:hover{background-color:#e8447e;}	
+			/* 선택항목 : 이벤트내용펼침(셀렉트코딩) */
+			.SelectBox{position:absolute; bottom:40px; margin-top:-1px; width:99%; z-index:99999999; display:none;} /* 일단숨김 margin-top:-3.5%;  */
+			.SelectBox *{vertical-align:bottom;}
+				/* 인풋일때 */
+				.SelectBox_Input{cursor:pointer;}
+				.SelectBox_Input p{display:table; position:relative; width:100%; font-size:10.5pt; margin:0; padding:0; overflow:hidden;}
+				.SelectBox_Input p span{}
+				.SelectBox_Input p button{position:absolute; top:0%; right:2%; height:1em; font-size:10pt; border:none; background:none; outline:none; cursor:pointer; background-color:#ffffff; margin:0px; padding:0px;}
+				/* 선택일때 */
+				.SelectBox_Select{display:block; width:100%; height:auto; background-color:#ffffff; border:1px solid #e1e1e1; border-radius:5px 5px 0px 0px; overflow:hidden;} /*  box-shadow:2px 2px 5px 0px #959595; overflow-y:scroll; */
+				.SelectBox_Select ul{}
+				.SelectBox_Select ul li{padding:6px 10px; cursor:pointer;}
+				.SelectBox_Select ul li:nth-child(2n){background-color:#f4f4f4;}
+				.SelectBox_Select ul li.InfoLabel{display:none;} /* 숨김 */
+				.SelectBox_Select label{display:block; position:relative; color:#606060; cursor:pointer;}
+				.SelectBox_Select label *{font-size:10.5pt;}
+				.SelectBox_Select label small{float:left; width:80%; }
+				.SelectBox_Select label small i{display:inline-block; font-style:normal; font-family:'Roboto',sans-serif;}
+				.SelectBox_Select label small pre{display:inline-block; width:93%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin:0px; padding:0px; }
+				.SelectBox_Select label big{float:right; width:20%; text-align:right;}
+				.SelectBox_Select label big span{padding-right:2%;}
+				.SelectBox_Select label big span b{font-family:'Roboto',sans-serif;}
+				.SelectBox_Select label button{color:#d50429; border:none; background:none; outline:none; cursor:pointer; margin:0px; padding:0px; display:none;}	/* 숨김 */
+				.SelectBox_Select ul li:hover{background-color:#1f1f1f;}
+				.SelectBox_Select ul li:hover label *{color:#ffffff;}
+				/* 선택된이벤트(20181012) min-height:80px; */
+				.SelectedBox{display:block; width:100%;}
+				.SelectedBox *{font-size:10pt;}
+				.SelectedBox label{display:inline-block; width:49%; position:relative; color:#606060; background-color:#ffffff; border-radius:5px; box-shadow:1px 1px 5px 0px #d7d7d7; margin-top:3px; padding:8px 10px; cursor:pointer; }
+				.SelectedBox label small{float:left; width:80%; line-height:11pt;}
+				.SelectedBox label small i{display:inline-block; font-style:normal; font-family:'Roboto',sans-serif; margin:0px; padding:0px;}
+				.SelectedBox label small pre{display:inline-block; width:93%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin:0px; padding:0px; }
+				.SelectedBox label big{float:right; width:20%; line-height:9pt; text-align:right; white-space:nowrap; border-left:1px dotted #e6e6e6; margin:0px; padding:0px; }
+				.SelectedBox label big span{display:inline-block; line-height:8pt;}
+				.SelectedBox label big span b{font-weight:normal; font-family:'Roboto',sans-serif; margin-right:2%;}
+				.SelectedBox label big button{display:inline-block; color:#d50429; font-size:16pt; line-height:8pt; font-weight:bold; cursor:pointer; border:none; background:none; outline:none; margin:0px; padding:0px;}	
+			/* 동의 */
+			.EventFormPop_Form .CheckBox{display:block; text-align:left;}
+			.EventFormPop_Form .CheckBox label{color:#939293; font-size:9pt; margin:0px; padding:0px;}
+			.EventFormPop_Form .CheckBox label input{margin:0px; padding:0px; margin-right:3px; }
+			.EventFormPop_Form .CheckBox label span{}
+
+
+/* ======================================================================= */
+/* [이벤트상세페이지] 설문조사형상세(20191218 > 업그레이드20200115) */
+.EventDetailPage_Survey{}
+	/* 썸네일과신청폼 */
+	.EventDetailPage_Survey .EventDetail_Header{padding-bottom:0px;}
+	.EventDetailPage_Survey .EventDetail_Header > section.InnerContainer{display:block; width:900px; min-width:900px;}
+
+		/* ------------------------------------------------------------------------------------------------- */	
+		/* 상품썸네일영역 */
+		.EventDetailPage_Survey .Event_BasicsThumArea{display:block; width:100%; padding:0% }
+		.EventDetailPage_Survey .Event_BasicsThumArea section{}
+		.EventDetailPage_Survey .Event_BasicsThumArea section ul.ThumList{width:600px; margin:1% auto 5% auto; display:none;} /* 업그레이드형에서 숨김20200115 */
+			/* 설문조사폼 */
+			.SurveyForm{display:block; position:relative; text-align:center; border:5px solid #ddd; margin-top:3%;}
+				/* 타이틀이미지 */
+				.SurveyForm .Clip{display:inline-block; position:absolute; top:-2.2%; left:50%; margin-left:-5%;  width:auto; z-index:100;}
+				.SurveyTitleImg{text-align:center;}
+				.SurveyTitleImg img{display:inline-block; width:auto;}
+				/* 설문체크항목 */
+				.QuestionList{display:block; position:relative; background-color:#F7F7F7; padding:2em 3em;}
+				.QuestionList > p{display:table; table-layout:fixed; width:100%; margin-bottom:0.6em;}
+				.QuestionList > p em{display:table-cell; width:2.3em; vertical-align:middle; text-align:left;}
+				.QuestionList > p em b{display:inline-block; width:2.3em; height:2.3em; line-height:2.3em; color:#fff; font-size:10pt; letter-spacing:-1px; font-weight:bold; text-align:center; font-family:'Roboto',sans-serif; border-radius:50%; background-color:#bd0122; overflow:hidden; }
+				.QuestionList > p strong{display:table-cell; vertical-align:middle; font-size:12pt; letter-spacing:-1px; font-weight:bold; text-align:left; padding-left:10px;}
+				.QuestionList ul{display:table; table-layout:fixed; width:95%; margin-left:5%;}
+				.QuestionList li{display:table-cell; text-align:left;}
+				.QuestionList  .Checkbox small em b{border-color:#888;}
+				.QuestionList  .Checkbox big p{color:#333;  letter-spacing:-1px;}
+				/* 참여방법안내 */
+				.Survey_Bottom{display:block; position:relative; margin-top:3em;}
+				.Survey_Bottom img{}
+
+		/* ------------------------------------------------------------------------------------------------- */	
+		/* 실시간신청자수 */
+		.EventDetailPage_Survey .Event_LiveMessage{position:relative; margin:auto; margin-top:1em;}
+
+		/* ------------------------------------------------------------------------------------------------- */	
+		/* [이벤트] 랜딩속신청폼 */
+		.EventDetailPage_Survey .EventDetail_Form{background-color:#fff; border:8px solid #f7f7f7; margin-top:4%;}
+			/* ------------------------------------------------------------------------------------------------- */
+			/* 이벤트내역 */
+			.EventDetailPage_Survey .EventDetail_Form_EventArea{background-color:#fff; padding:3%;}
+			.EventDetailPage_Survey .EventDetail_FormArea{display:block; width:100%;}
+			.EventDetailPage_Survey .EventDetail_Form .EventDetail_Form_ApplyArea{margin:0px;}
+			.EventDetailPage_Survey .EventDetail_FormArea .Event_Label_Personal{margin:0px; padding:2%;}
+			.EventDetailPage_Survey .PackageListThum label{background-color:#fff; }
+				/* 타이틀형라벨 */
+				.EventDetailPage_Survey .EventDetail_Header .EventDetail_FormArea .LabelThum_Subject{display:none;}
+		/* ------------------------------------------------------------------------------------------------- */	
+		/* 신청자목록*/
+		.EventDetailPage_Survey .EventRqnListArea{}
+		.EventDetailPage_Survey .EventRqnListArea > .InnerContainer{width:900px; min-width:900px;}
+
+
+/* ========================================================================================= */
+/* [비용문의] 기본라벨구성 */
+.CostAsk_EventArea{display:block; position:relative; min-height:500px; margin-bottom:1em;} /* 상품의수가적어서 탭메뉴보다 짧을경우 푸터와 탭메뉴가 겹치므로 최소 높이를 부여 */
+.CostAsk_EventArea .InnerContainer{display:block; position:relative;}
+.CostAsk_EventArea .Title{display:block; font-size:16pt; font-weight:600; margin-top:0px;}
+	/* 탭메뉴 */
+	.CostAsk_EventArea .LeftTapMenu{}
+	.CostAsk_EventArea .LeftTapMenu .Title{}
+	/* 탭내용(리스트구성) */
+	.CostAskEvent_LabelThum{display:block; position:relative; vertical-align:top;}
+	.CostAskEvent_LabelThum .Title{padding-bottom:10px; border-bottom:1px solid #dddddd; margin-bottom:1.5em;}
+	.CostAskEvent_LabelThum .CategoryTitle{display:none;}
+	.CostAskEvent_LabelThum .Event_Label_CostThumList{}
+
+
+/* ========================================================================================= */
+/* [시술전후] 기본라벨구성 */
+.BnfBoard_EventArea{display:block; position:relative; margin:2em auto;}
+.BnfBoard_EventArea .Inner{display:block; position:relative;}
+.BnfBoard_EventArea .MainMultiSlider{}
+.BnfBoard_EventArea .LabelThum{}
+
+
+/* ========================================================================================= */
+/* 구분 */
+.NC00032{} /* 네5 */
+.NC00032.EventDetailPage .EventDetail_CardNRequest{display:none;}
+
+
+/* ========================================================================================= */
+/* [SNS랜딩용] eventView의활용(202108) */
+/* [공통] 숨김처리및조정 */
+body.snsevent{}
+.snsevent .TopBannerLinkArea{display:none;} /* 0번배너 */
+.snsevent header{display:none;} /* 상단메뉴 */
+.snsevent .HeaderNav_Area{display:none;} 
+.snsevent .SubNav_Area{display:none;} /* 서브메뉴 */
+.snsevent .Quick{display:none;} /* 퀵 */
+.snsevent .QuickAre{display:none;}
+.snsevent .QuickAreaLeft{display:none;}
+.snsevent .CommArea_Tail{display:none;} /* 하단공통 */
+.snsevent .Quick_BottomArea{display:none;} /* 하단퀵 */
+.snsevent footer{} /* 푸터 */
+.snsevent .Footer_Area{} 
+.snsevent .Contact_Quick{display:none;} /* 빠른상담신청 */
+.snsevent .Footer_Area .BranchrNetwork{} /* 지점전체정보 */
+.snsevent .Footer_Area .Banner30{display:none;} /* 공통배너 */
+.snsevent .Footer_Area .Company_Area{display:none;} /* 진료시간 */
+.snsevent .Footer_Area .Banner27{display:none;} /* 공통배너 */
+.snsevent .Footer_Area .Bottom_Area{} /* 사업자정보 */
+.snsevent .Footer_Area .Bottom_Area .Link{display:none;}
+.snsevent .Footer_Area .BranchBox{} /* 지점정보 */
+/* 별도처리 -------------------------------------------- */
+/* 버전1 */
+.snseventV1{}
+/* 버전2 */
+.snseventV2{}
+.snseventV2 .EventDetail_Form .LabelBlockThum label big{display:none;}
+.snseventV2 .EventDetail_Header .LabelThum label dt u{display:none;}
+
+.snsevent .InfoSection_Basic .PointText{margin-bottom:0px;}
+.snsevent .EventDetail_HeaderLeft .LabelThum label dd u{}
+
+/* ------------------------------------------------------------------------------------------------- */	
+/* [SNS랜딩용] /event/snseventV1.php - 기존스페셜과동일  */
+body.snseventV1{}
+.snseventV1{}
+
+
+/* ------------------------------------------------------------------------------------------------- */	
+/* [SNS랜딩용] /event/snseventV2.php - 신청폼위로내용1위치 */
+body.snseventV2{}
+.snseventV2{}
+.snseventV2 .EventDetail_Header{}
+.snseventV2 .EventDetail_Header .EventDetail_Basic{} /* 내용1 */
+.snseventV2 .EventDetail_Goods{}
+.snseventV2 .EventDetail_Goods .EventDetail_Basic{}
+.snseventV2 .EventDetail_Goods .EventDetail_Basic .InfoSection_TopMovie{display:none;} /* 내용1 */
+
+
+/* ========================================================================================= */
