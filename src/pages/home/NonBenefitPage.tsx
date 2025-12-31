@@ -1,38 +1,7 @@
-import { useMemo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ForteHeader from "./components/ForteHeader";
 import Footer from "./components/Footer";
-import nonBenefitData from "./data.json";
 import '../../styles/miho-header.css';
-
-interface NonBenefitItem {
-  middleCategory: string;
-  smallCategory: string;
-  code: string;
-  name: string;
-  cost: string;
-  minCost: string;
-  maxCost: string;
-  materialIncluded: string;
-  drugIncluded: string;
-  remarks: string;
-  lastUpdated: string;
-}
-
-// Ensure the data is treated as a flat list for the table since Rene's table is one big table usually
-// But our JSON is grouped by category if I recall?
-// Let's check data.json structure again.
-// The parser script created a list of { category: string, items: [...] }.
-// But Rene's HTML is one big table.
-// To implement rowspan correctly across the whole table, we might need to flatten it first or process it group by group.
-// Rene's table has 'Middle Category' as the first column.
-// So we should flatten everything into one list of items, then calculate rowspans.
-
-interface FlattenedItem extends NonBenefitItem {
-    middleCategoryRowSpan: number;
-    smallCategoryRowSpan: number;
-    printMiddleCategory: boolean;
-    printSmallCategory: boolean;
-}
 
 const NonBenefitPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,60 +13,6 @@ const NonBenefitPage = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Flatten data
-  const items: FlattenedItem[] = useMemo(() => {
-      const rawGroups = nonBenefitData as { category: string, items: NonBenefitItem[] }[];
-      const flat: FlattenedItem[] = [];
-
-      rawGroups.forEach(group => {
-          group.items.forEach(item => {
-              flat.push({
-                  ...item,
-                  middleCategory: item.middleCategory || group.category, // Use group category if item's is missing
-                  middleCategoryRowSpan: 0,
-                  smallCategoryRowSpan: 0,
-                  printMiddleCategory: false,
-                  printSmallCategory: false
-              });
-          });
-      });
-
-      // Calculate RowSpans
-      for (let i = 0; i < flat.length; i++) {
-          const current = flat[i];
-          
-          // Middle Category RowSpan
-          if (i === 0 || current.middleCategory !== flat[i - 1].middleCategory) {
-              current.printMiddleCategory = true;
-              let span = 1;
-              for (let j = i + 1; j < flat.length; j++) {
-                  if (flat[j].middleCategory === current.middleCategory) {
-                      span++;
-                  } else {
-                      break;
-                  }
-              }
-              current.middleCategoryRowSpan = span;
-          }
-
-          // Small Category RowSpan (scoped within Middle Category)
-          if (i === 0 || current.smallCategory !== flat[i - 1].smallCategory || current.middleCategory !== flat[i-1].middleCategory) {
-              current.printSmallCategory = true;
-              let span = 1;
-              for (let j = i + 1; j < flat.length; j++) {
-                  if (flat[j].smallCategory === current.smallCategory && flat[j].middleCategory === current.middleCategory) {
-                      span++;
-                  } else {
-                      break;
-                  }
-              }
-              current.smallCategoryRowSpan = span;
-          }
-      }
-
-      return flat;
   }, []);
 
   return (
@@ -119,74 +34,8 @@ const NonBenefitPage = () => {
       <main className="flex-grow bg-white py-12">
           <div className="max-w-[1400px] mx-auto px-6">
               
-              {/* Rene Style Table Container */}
+              {/* 시술 항목 */}
               <div className="overflow-x-auto border-t-2 border-[#272727]">
-                  <table className="w-full border-collapse text-center table-fixed">
-                      <colgroup>
-                          <col className="w-[10%]" />
-                          <col className="w-[10%]" />
-                          <col className="w-[8%]" />
-                          <col className="w-[17%]" />
-                          <col className="w-[10%]" />
-                          <col className="w-[10%]" />
-                          <col className="w-[10%]" />
-                          <col className="w-[5%]" />
-                          <col className="w-[5%]" />
-                          <col className="w-[10%]" />
-                          <col className="w-[5%]" />
-                      </colgroup>
-                      <thead>
-                          <tr className="bg-[#f4f4f4] text-gray-800 text-[11pt] font-semibold border-b border-[#cdcdcd]">
-                              <th rowSpan={2} className="border border-[#cdcdcd] py-3">중분류</th>
-                              <th rowSpan={2} className="border border-[#cdcdcd] py-3">소분류</th>
-                              <th colSpan={2} className="border border-[#cdcdcd] py-3">항목</th>
-                              <th colSpan={5} className="border border-[#cdcdcd] py-3">진료비용 등</th>
-                              <th rowSpan={2} className="border border-[#cdcdcd] py-3">특이사항</th>
-                              <th rowSpan={2} className="border border-[#cdcdcd] py-3">검색</th>
-                          </tr>
-                          <tr className="bg-[#f4f4f4] text-gray-800 text-[11pt] font-semibold border-b border-[#cdcdcd]">
-                              <th className="border border-[#cdcdcd] py-2">코드</th>
-                              <th className="border border-[#cdcdcd] py-2">명칭</th>
-                              <th className="border border-[#cdcdcd] py-2">비용</th>
-                              <th className="border border-[#cdcdcd] py-2">최저비용</th>
-                              <th className="border border-[#cdcdcd] py-2">최고비용</th>
-                              <th className="border border-[#cdcdcd] py-2 text-[10pt]">치료재료대<br/>포함여부</th>
-                              <th className="border border-[#cdcdcd] py-2 text-[10pt]">약제비<br/>포함여부</th>
-                          </tr>
-                      </thead>
-                      <tbody className="bg-white">
-                          {items.map((item, index) => (
-                              <tr key={index} className="text-[11pt] text-gray-700 hover:bg-gray-50">
-                                  {item.printMiddleCategory && (
-                                      <td rowSpan={item.middleCategoryRowSpan} className="border border-[#cdcdcd] py-3 bg-[#fafafa] font-medium">
-                                          {item.middleCategory}
-                                      </td>
-                                  )}
-                                  {item.printSmallCategory && (
-                                      <td rowSpan={item.smallCategoryRowSpan} className="border border-[#cdcdcd] py-3">
-                                          {item.smallCategory}
-                                      </td>
-                                  )}
-                                  <td className="border border-[#cdcdcd] py-3 text-gray-500 text-[10pt]">{item.code || '-'}</td>
-                                  <td className="border border-[#cdcdcd] py-3 text-left px-4">{item.name}</td>
-                                  
-                                  {/* Cost Columns - Right Aligned as per Rene CSS */}
-                                  <td className="border border-[#cdcdcd] py-3 text-right px-2">{item.cost ? item.cost + '원' : '-'}</td>
-                                  <td className="border border-[#cdcdcd] py-3 text-right px-2">{item.minCost ? item.minCost + '원' : '-'}</td>
-                                  <td className="border border-[#cdcdcd] py-3 text-right px-2">{item.maxCost ? item.maxCost + '원' : '-'}</td>
-                                  
-                                  <td className="border border-[#cdcdcd] py-3">{item.materialIncluded}</td>
-                                  <td className="border border-[#cdcdcd] py-3">{item.drugIncluded}</td>
-                                  <td className="border border-[#cdcdcd] py-3 text-left px-2 text-[10pt] whitespace-pre-wrap">{item.remarks}</td>
-                                  <td className="border border-[#cdcdcd] py-3 text-[9pt] text-gray-400">{item.lastUpdated || '-'}</td>
-                              </tr>
-                          ))}
-                      </tbody>
-                  </table>
-              </div>
-
-              {/* 추가 표 1: 시술 항목 */}
-              <div className="mt-12 overflow-x-auto border-t-2 border-[#272727]">
                   <table className="w-full border-collapse text-center table-fixed">
                       <colgroup>
                           <col className="w-[20%]" />
@@ -351,27 +200,24 @@ const NonBenefitPage = () => {
               <div className="mt-12 overflow-x-auto border-t-2 border-[#272727]">
                   <table className="w-full border-collapse text-center table-fixed">
                       <colgroup>
-                          <col className="w-[10%]" />
-                          <col className="w-[30%]" />
                           <col className="w-[20%]" />
+                          <col className="w-[25%]" />
                           <col className="w-[20%]" />
+                          <col className="w-[15%]" />
                           <col className="w-[20%]" />
                       </colgroup>
                       <thead>
                           <tr className="bg-[#f4f4f4] text-gray-800 text-[11pt] font-semibold border-b border-[#cdcdcd]">
-                              <th rowSpan={2} className="border border-[#cdcdcd] py-3">8</th>
-                              <th colSpan={4} className="border border-[#cdcdcd] py-3">진찰료/제증명</th>
-                          </tr>
-                          <tr className="bg-[#f4f4f4] text-gray-800 text-[11pt] font-semibold border-b border-[#cdcdcd]">
-                              <th className="border border-[#cdcdcd] py-2">항목</th>
-                              <th className="border border-[#cdcdcd] py-2">상세</th>
-                              <th className="border border-[#cdcdcd] py-2">수량/단위</th>
-                              <th className="border border-[#cdcdcd] py-2">가격</th>
+                              <th className="border border-[#cdcdcd] py-3">분류</th>
+                              <th className="border border-[#cdcdcd] py-3">항목</th>
+                              <th className="border border-[#cdcdcd] py-3">상세</th>
+                              <th className="border border-[#cdcdcd] py-3">수량/단위</th>
+                              <th className="border border-[#cdcdcd] py-3">가격</th>
                           </tr>
                       </thead>
                       <tbody className="bg-white">
                           <tr className="text-[11pt] text-gray-700 hover:bg-gray-50">
-                              <td rowSpan={4} className="border border-[#cdcdcd] py-3 bg-[#fafafa] font-medium">8</td>
+                              <td rowSpan={4} className="border border-[#cdcdcd] py-3 bg-[#fafafa] font-medium">진찰료/제증명</td>
                               <td className="border border-[#cdcdcd] py-3 text-left px-4">진료확인서</td>
                               <td className="border border-[#cdcdcd] py-3 text-left px-4">(진단명X)</td>
                               <td className="border border-[#cdcdcd] py-3">1장</td>
